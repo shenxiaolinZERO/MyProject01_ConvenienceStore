@@ -1,0 +1,39 @@
+.table ,.table2 {
+    max-width: 100%; backgroud-color:transparent;
+}
+th{
+    text-align: left;
+}
+.table {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.table>thead>tr>th,
+.table>tbody>tr>th,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>tbody>tr>td,
+.table>tfoot>tr>td {
+    padding: 8px;          /**设置单元格的内边距*/
+    line-height: 1.428571429;
+    vertical-align: top;
+    border-top: 1px solid #ddd; /**每行记录都有1条1个像素的横线*/
+}
+.table>thead>tr>th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #ddd; /**thead有一条2个像素的横线*/
+}
+
+.table >tbody+tbody {
+    border-top: 2px solid #ddd; /**如果表格里有2个tbody，两者之间也会有1条2个像素宽的横线*/
+}
+.table .tr .td {
+    align-content:center;
+}
+.table2 td{
+    padding: 20px;
+}
+.table2{
+    width: 100%;
+    height: 15px;
+}

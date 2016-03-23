@@ -1,0 +1,1912 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script>
+	function isMobilePhone() {
+	
+		function getCookie(sName) {
+			var sCookies = document.cookie ;
+			if ("string" == typeof(sName)) {
+				var sRE = "(?:; )?"+sName+"=([^;]*);?" ;
+				var reRE = new RegExp(sRE) ;
+				if (reRE.test(sCookies)) {
+					return decodeURIComponent(RegExp["$1"]) ;
+				} else {
+					return null ;
+				}
+			} else {
+				return sCookies ;
+			}
+		}
+				
+		var pcPageTip = '您将要跳转到电脑版网页，会使用较多手机上网流量，是否继续？';
+		var cUrl = window.location.href;
+		var referrer = document.referrer;
+		var mIndex = 'http://m.jd.com/?v=1';
+		
+		var mFlag = window.location.hash, pcmFlag = getCookie('pcm');
+		
+		/*
+		if(mFlag == '#m'){
+			if (confirm(pcPageTip)) {
+				return;
+			}
+		}
+		*/
+		
+        var userAgent = navigator.userAgent;
+        if(userAgent){
+			userAgent = userAgent.toUpperCase();
+			if(userAgent.indexOf("PAD")>-1){
+                 return;
+            }
+			var mobilePhoneList = ["IOS","IPHONE","ANDROID","WINDOWS PHONE"];
+			for(var i=0,len=mobilePhoneList.length;i<len;i++){
+				if(userAgent.indexOf(mobilePhoneList[i])>-1){
+									
+											function isPcPage(url) {
+							var pcDomains = ['sale.jd.com', 'pinpaijie.jd.com', 'jrj.jd.com'];
+							for (var i = 0, len = pcDomains.length; i < len; i++) {
+								if (url.indexOf(pcDomains[i]) != -1) return true;
+							}
+							return false;
+						}
+						
+        				var mUrl = cUrl.replace(/sale\.jd\.com\/act/,'m.jd.com/sale/act');
+						
+						// no sale m & mc
+						if(isPcPage(mUrl) || mFlag == '#m' || pcmFlag == '1') {
+							if (confirm(pcPageTip)) {
+								return;
+							} else {
+								/*
+								if (referrer && referrer != '') {
+									if (referrer === cUrl) {
+										window.location.href = mIndex;
+										return;
+									} else {
+										window.location.href = referrer;
+										return;
+									}
+								} else {
+									window.location.href = mIndex;
+									return;
+								}
+								*/
+								window.location.href = 'http://m.jd.com';
+								return;
+							}
+						}
+						
+						// M page
+						if (mUrl.indexOf('m.jd.com') != -1) {
+							var tempUrl = cUrl.replace("http://","");
+							var newmUrl = "http://h5.m.jd.com/active/fastshop/index.html?url="+tempUrl;
+							window.location.href = newmUrl;
+							return;
+						}
+        							}
+             }
+         }
+     }
+	 
+	 
+			 isMobilePhone();
+	 </script>
+	    <!--JA统计-->
+	<script>var jdpts=new Object();jdpts._st=new Date().getTime();</script>
+    <meta content="京东11月活动活动为您推荐当下最流行的品牌null,欢迎参加京东11月活动" name="description">
+    <meta content="京东11月活动,京东家用电器活动,京东" name="keywords">
+	<title>
+							11月活动 - 京东家用电器专题活动-京东
+			</title>
+	<link rel="icon" href="http://www.jd.com/favicon.ico" mce_href="http://www.jd.com/favicon.ico" type="image/x-icon">
+	
+		<link rel="stylesheet" type="text/css" href="http://misc.360buyimg.com/lib/skin/2013/base.css?t=1511111506" charset="gb2312"/>
+    <link type="text/css" rel="stylesheet"  href="http://misc.360buyimg.com/jdf/1.0.0/unit/??ui-base/1.0.0/ui-base.css,shortcut/2.0.0/shortcut.css,global-header/1.0.0/global-header.css,myjd/2.0.0/myjd.css,nav/2.0.0/nav.css,shoppingcart/2.0.0/shoppingcart.css,global-footer/1.0.0/global-footer.css,service/1.0.0/service.css"/>
+	<link rel="stylesheet" type="text/css" href="http://static.360buyimg.com/jshop/sale-p/view/20150708113635/css/??jdCssInit.css,css_cube_application_layout.css?t=201510261400"/>	
+	
+	<script src="http://misc.360buyimg.com/jdf/lib/jquery-1.6.4.js?t=1511111506"></script>
+	<!--[if lte IE 7]><script type="text/javascript" src="http://static.360buyimg.com/jshop/common/jquery/json2.js"></script><![endif]-->
+	<script type="text/javascript" src="http://misc.360buyimg.com/??jdf/1.0.0/unit/base/1.0.0/base.js"></script>
+	<script type="text/javascript" src="http://static.360buyimg.com/jshop/sale-p/view/stable/??seajs-combo.js?t=1511111506"></script>
+	
+    <style>
+		
+.single-place{position:absolute;bottom:0;left:0;}
+.jGoodsRecommend-150173 .mt{}
+.jGoodsRecommend-150173 .mc{background:#fff; overflow:hidden;}
+.jGoodsRecommend-150173 .mb{display:none;}
+.jGoodsRecommend-150173 .mc ul{width:100%;}
+.jGoodsRecommend-150173 li{float:left; width:235px; padding:5px 0; margin:0 5px; overflow:hidden; display:inline; position:relative;}
+.jGoodsRecommend-150173 .jItem{height:auto; background:#fff; border:solid 1px #d9d9d9;}
+.jGoodsRecommend-150173 .jPic{position:relative; text-align:center; background:#fff; _height:100%;}
+.jGoodsRecommend-150173 .jPic img{vertical-align:top;}
+.jGoodsRecommend-150173 .jPic a{padding:5px 0; width:220px; height:220px; display:block; margin:0 auto;}
+.jGoodsRecommend-150173 .jGoodsInfo{overflow:hidden; position:relative; padding:4px 50px 5px 5px; border-bottom:solid 5px #bd0000; *zoom:1;}
+.jGoodsRecommend-150173 .jDesc{height:32px; line-height:1.3; overflow:hidden; font-weight:bold;}
+.jGoodsRecommend-150173 .jDesc a{color:#717171; text-decoration:none;}
+.jGoodsRecommend-150173 .jDesc a:hover{text-decoration:underline;}
+.jGoodsRecommend-150173 .jDesc .jSlogan{color:#ff0000!important;}
+.jGoodsRecommend-150173 .jPrice{height:20px; overflow:hidden;}
+.jGoodsRecommend-150173 .jPrice span{float:left; display:inline;}
+.jGoodsRecommend-150173 .jPrice .jsNumNo{text-decoration:none;}
+.jGoodsRecommend-150173 .jdPrice{color:#bd0000; font-weight:bold; height:20px; line-height: 24px; overflow:hidden;}
+.jGoodsRecommend-150173 .jdPrice .jRmb{font-size:12px;}
+.jGoodsRecommend-150173 .jdPrice .jText{font-size:12px;}
+.jGoodsRecommend-150173 .jdPrice .jdNum{font-size:19px;}
+.jGoodsRecommend-150173 .jdPrice .jdNumNo{font-size:16px;}
+.jGoodsRecommend-150173 .jBtnArea{overflow:hidden; position:absolute; right:0; bottom:0; _bottom: -1px;}
+.jGoodsRecommend-150173 .jBtnArea a{display:block; background:url(http://img10.360buyimg.com/cms/g7/M03/0F/1E/rBEHZVC8bNMIAAAAAAAHT8aVooYAADHTwIYVnoAAAdn445.gif) no-repeat;  _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://img10.360buyimg.com/cms/g7/M03/0F/1E/rBEHZVC8bNMIAAAAAAAHT8aVooYAADHTwIYVnoAAAdn445.gif'); _background-image:none; width:52px; height:52px; text-indent:-9999px;}
+.jGoodsRecommend-150173 .jPromotionLabel{width:40px; height:66px; background:url(http://img10.360buyimg.com/cms/g8/M02/0F/11/rBEHZ1C0Ma8IAAAAAAAIpkn1m8MAADCTQP_7yMAAAi-795.png) no-repeat;  _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://img10.360buyimg.com/cms/g8/M02/0F/11/rBEHZ1C0Ma8IAAAAAAAIpkn1m8MAADCTQP_7yMAAAi-795.png'); _background-image:none;  position:absolute; top:5px; right:10px;}
+.jGoodsRecommend-150173 .jPromotionTextArea{overflow:hidden; text-align:center; padding-top:22px; line-height:1.2; color:#fff;}
+.jGoodsRecommend-150173 .jPromotionText1{display:block;}
+.jGoodsRecommend-150173 .jPromotionNum{}
+.jGoodsRecommend-150173 .jPromotionText2{}
+.userdefined-153704 .j-module{zoom:1; overflow:hidden;}
+
+    </style>		
+	<!-- 支持所有活动在IPAD上正常显示 -->
+	<script type="text/javascript" >
+		if(/ipad/i.test(navigator.userAgent)){
+			if(!/safari/i.test(navigator.userAgent) || /jdapp/i.test(navigator.userAgent)){
+			 jQuery('head').append('<style>.d-pad{display:none;}</style');
+			}
+		}
+	</script>
+	
+	<!-- 京东主站相关 -->
+	<script type="text/javascript">window.pageConfig.compatible = true;</script>
+	<script type="text/javascript">
+		seajs.use('jdf/1.0.0/unit/globalInit/2.0.0/globalInit.js',function(globalInit){
+			globalInit();
+		});
+		//如果使用首页热搜词
+		seajs.use("jdf/1.0.0/unit/hotwords/1.0.0/hotwords",function(hotwords){
+			hotwords();
+		});
+	</script>
+	
+</head>
+<body> 
+
+	<input type="hidden"  id="JSHOP_CHANNEL_FLAG" value="jd"/>
+	<input type="hidden" value="383400" id="pageInstance_appId"/>
+	<input type="hidden" value="9300904" id="pageInstance_id"/>
+	<input id="layoutSortUrl" type="hidden" value="http://sale.jd.com/act/CrnkVKxl5HAyOmR.html" />
+	<input type="hidden"  id="moduleScript" value='<script type="text/javascript" moduleinit="module" src="http://sale.jd.com/jm.htm?js=/script/module/goods-rec/GoodsRec.js,/script/module/user-define/UserDefine.js&t=1511111506"></script>'/>
+	<input id="resourcePath" type="hidden" value="http://static.360buyimg.com/jshop/sale-p/view/20150708113635/"/>
+    <input id="timestamp" type="hidden" value="201510261400"/>
+	<input id="testSidebar" type="hidden" value="test"/>
+	
+	<div class="d-pad">
+		<div id="shortcut-2014">
+	<div class="w">
+    	<ul class="fl">
+    		<li class="dorpdown" id="ttbar-mycity"></li>
+    	</ul>
+    	<ul class="fr">
+			<li class="fore1" id="ttbar-login">
+				<a target="_blank" href="javascript:login();" class="link-login">你好，请登录</a>  <a href="javascript:regist();" class="link-regist style-red">免费注册</a>
+			</li>
+			<li class="spacer"></li>
+			<li class="fore2">
+				<div class="dt">
+					<a target="_blank" href="http://order.jd.com/center/list.action">我的订单</a>
+				</div>
+			</li>
+			<li class="spacer"></li>
+			<li class="fore3 dorpdown" id="ttbar-myjd">
+				<div class="dt cw-icon">
+					<i class="ci-right"><s>◇</s></i>
+					<a target="_blank" href="http://home.jd.com/">我的京东</a>
+				</div>
+				<div class="dd dorpdown-layer"></div>
+			</li>
+			<li class="spacer"></li>
+			<li class="fore4">
+				<div class="dt">
+					<a target="_blank" href="http://vip.jd.com/">京东会员</a>
+				</div>
+			</li>
+			<li class="spacer"></li>
+			<li class="fore5">
+				<div class="dt">
+					<a target="_blank" href="http://b.jd.com/">企业采购</a>
+				</div>
+			</li>
+			<li class="spacer"></li>
+			<li class="fore6 dorpdown" id="ttbar-apps">
+				<div class="dt cw-icon">
+					<i class="ci-left"></i>
+					<i class="ci-right"><s>◇</s></i>
+					<a target="_blank" href="http://app.jd.com/">手机京东</a>
+				</div>
+			</li>
+			<li class="spacer"></li>
+			<li class="fore7 dorpdown" id="ttbar-atte">
+				<div class="dt cw-icon">
+					<i class="ci-right"><s>◇</s></i>关注京东
+				</div>
+			</li>
+			<li class="spacer"></li>
+			<li class="fore8 dorpdown" id="ttbar-serv">
+				<div class="dt cw-icon">
+					<i class="ci-right"><s>◇</s></i>客户服务
+				</div>
+				<div class="dd dorpdown-layer"></div>
+			</li>
+			<li class="spacer"></li>
+			<li class="fore9 dorpdown" id="ttbar-navs">
+				<div class="dt cw-icon">
+					<i class="ci-right"><s>◇</s></i>网站导航
+				</div>
+				<div class="dd dorpdown-layer"></div>
+			</li>
+    	</ul>
+		<span class="clr"></span>
+    </div>
+</div>
+		<div class="w">
+    <div id="logo-2014">
+    	<a href="http://www.jd.com/" class="logo">京东</a>
+    </div>
+    <div id="search-2014" >
+		<ul id="shelper" class="hide"></ul>
+		<div class="form">
+			<input type="text" onkeydown="javascript:if(event.keyCode==13) search('key');" autocomplete="off" id="key" accesskey="s" class="text" />
+			<button onclick="search('key');return false;" class="button cw-icon"><i></i>搜索</button>
+		</div>
+    </div>
+    <div id="settleup-2014" class="dorpdown">
+		<div class="cw-icon">
+			<i class="ci-left"></i>
+			<i class="ci-right">></i>
+			<a target="_blank" href="http://cart.jd.com/cart/cart.html">我的购物车</a>
+		</div>
+		<div class="dorpdown-layer">
+			<div class="spacer"></div>
+			<div id="settleup-content">
+				<span class="loading"></span>
+			</div>
+		</div>
+	</div>
+    <div id="hotwords-2014"></div>
+    <span class="clr"></span>
+</div>
+
+<div id="nav-2014">
+    <div class="w">
+        <div class="w-spacer"></div>
+		<div id="categorys-2014" class="dorpdown" data-type="default">
+			<div class="dt">
+				<a target="_blank" href="http://www.jd.com/allSort.aspx">全部商品分类</a>
+			</div>
+		</div>
+		<div id="navitems-2014">
+			<ul id="navitems-group1">
+				<li id="nav-fashion" class="fore1" >
+					<a target="_blank" href="http://channel.jd.com/fashion.html">服装城</a>
+				</li>
+				<li id="nav-beauty" class="fore2" >
+					<a target="_blank" href="http://channel.jd.com/beauty.html">美妆馆</a>
+				</li>
+				<li id="nav-chaoshi" class="fore3" >
+					<a target="_blank" href="http://channel.jd.com/chaoshi.html">食品</a>
+				</li>
+				<li id="nav-decoration" class="fore4" >
+					<a target="_blank" href="http://channel.jd.com/jiazhuang.html">家装城</a>
+				</li>
+			</ul>
+			<div class="spacer"></div>
+			<ul id="navitems-group2">
+				<li id="nav-red" class="fore1" >
+					<a target="_blank" href="http://red.jd.com/">闪购</a>
+				</li>
+				<li id="nav-tuan" class="fore2" >
+					<a target="_blank" href="http://tuan.jd.com/">团购</a>
+				</li>
+				<li id="nav-auction" class="fore3" >
+					<a target="_blank" href="http://auction.jd.com/">夺宝岛</a>
+				</li>
+				<li id="nav-jr" class="fore4" >
+					<a target="_blank" href="http://jr.jd.com/">金融</a>
+				</li>
+			</ul>
+		</div>
+        <div id="treasure"></div>
+        <span class="clr"></span>
+    </div>
+</div>
+	</div>
+	
+	<div class="layoutcontainer" isfixed="1" style="margin:0 auto;width:px; background: url(http://img12.360buyimg.com/cms/jfs/t2329/108/1083471538/23624/c7f82191/5640e3a0N0f84df98.jpg) center top no-repeat;">
+			
+	
+	
+      <div class="layoutarea" >
+     <div class='layout' id="8751930"   >
+	<div class='layout_one w990 '>
+	 
+		 	</div>
+     </div>
+</div>
+
+	
+      <div class="layoutarea"  >
+     <div class='layout' id="9309399"  style="width:100%;"   >
+	<div class='layout_one  '>
+	 
+
+
+		<div class=' userdefined-153704' instanceId='9312053'  style="margin-bottom: 10px;" module-name="UserDefine" >
+
+		 <div class="mc" style=";min-height:0px;">
+		<div class="j-module" module-function="autoCenter,rid" module-param="{}">
+	<div class="userDefinedArea" style="width:1920px;">
+		<table id="__01" width="1920" border="0" cellpadding="0" cellspacing="0">
+ <tbody>
+  <tr>
+   <td><img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img13.360buyimg.com/cms/jfs/t1852/340/1158169327/292261/69d23a11/5644446cNc4945630.jpg" width="1920" height="345" alt="" /></td>
+  </tr>
+  <tr>
+   <td><img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img11.360buyimg.com/cms/jfs/t2566/91/324975388/285410/6d5e6db6/5644446dNd1f121dd.jpg" width="1920" height="304" alt="" /></td>
+  </tr>
+  <tr>
+   <td><img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img10.360buyimg.com/cms/jfs/t2407/103/1204010813/290246/468ac342/5644446dN76f4872a.jpg" alt="" width="1920" height="577" usemap="#Map" border="0" /></td>
+  </tr>
+  <tr>
+   <td><img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img13.360buyimg.com/cms/jfs/t2005/305/1040529826/293241/f71b4058/5644446eNdbd45ef0.jpg" alt="" width="1920" height="595" usemap="#Map2" border="0" /></td>
+  </tr>
+  <tr>
+   <td><img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img13.360buyimg.com/cms/jfs/t2281/362/1098438952/286383/cde2d76a/5644446fN2d879ad1.jpg" alt="" width="1920" height="597" usemap="#Map3" border="0" /></td>
+  </tr>
+  <tr>
+   <td><img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img11.360buyimg.com/cms/jfs/t2164/195/1234792299/297436/349b704d/5644446fN266b432e.jpg" alt="" width="1920" height="592" usemap="#Map4" border="0" /></td>
+  </tr>
+  <tr>
+   <td><img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img11.360buyimg.com/cms/jfs/t2311/142/1179269718/288270/4bec3875/56444470N23db7324.jpg" alt="" width="1920" height="566" usemap="#Map5" border="0" /></td>
+  </tr>
+  <tr>
+   <td><img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img12.360buyimg.com/cms/jfs/t1885/343/1072871591/296080/79de281/56444470Ndd28adf7.jpg" alt="" width="1920" height="600" usemap="#Map6" border="0" /></td>
+  </tr>
+  <tr>
+   <td><img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img11.360buyimg.com/cms/jfs/t1837/337/1064847309/295217/c48618ca/56444471Na097b7b3.jpg" alt="" width="1920" height="537" usemap="#Map7" border="0" /></td>
+  </tr>
+  <tr>
+   <td><img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img10.360buyimg.com/cms/jfs/t2266/356/1144349981/297042/672ce28d/56444471N66478e5a.jpg" alt="" width="1920" height="600" usemap="#Map8" border="0" /></td>
+  </tr>
+  <tr>
+   <td><img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img10.360buyimg.com/cms/jfs/t2275/356/1076166344/281178/31048cd7/56444472Nd3fcd3b8.jpg" alt="" width="1920" height="572" usemap="#Map9" border="0" /></td>
+  </tr>
+  <tr>
+   <td><img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img11.360buyimg.com/cms/jfs/t2416/264/1092256952/295752/7623bb8b/56444473N68ae8fcf.jpg" alt="" width="1920" height="686" usemap="#Map10" border="0" /></td>
+  </tr>
+ </tbody>
+</table>
+<map name="Map"> <area shape="rect" coords="584,5,1384,537" href="http://item.jd.com/1293744.html" target="_blank" clstag="sale|keycount|9312053|1"></area></map>
+<map name="Map2"> <area shape="rect" coords="554,51,1286,546" href="http://item.jd.com/1760133.html" target="_blank" clstag="sale|keycount|9312053|2"></area></map>
+<map name="Map3"> <area shape="rect" coords="701,51,1400,539" href="http://item.jd.com/1304897.html" target="_blank" clstag="sale|keycount|9312053|3"></area></map>
+<map name="Map4"> <area shape="rect" coords="451,10,1292,548" href="http://item.jd.com/1306173.html" target="_blank" clstag="sale|keycount|9312053|4"></area></map>
+<map name="Map5"> <area shape="rect" coords="727,85,1413,482" href="http://item.jd.com/1760129.html" target="_blank" clstag="sale|keycount|9312053|5"></area></map>
+<map name="Map6"> <area shape="rect" coords="556,174,1219,540" href="http://item.jd.com/895588.html" target="_blank" clstag="sale|keycount|9312053|6"></area></map>
+<map name="Map7"> <area shape="rect" coords="675,119,1403,448" href="http://item.jd.com/1777021.html" target="_blank" clstag="sale|keycount|9312053|7"></area></map>
+<map name="Map8"> <area shape="rect" coords="663,111,1357,476" href="http://item.jd.com/1989244.html" target="_blank" clstag="sale|keycount|9312053|8"></area></map>
+<map name="Map9"> <area shape="rect" coords="493,17,1263,523" href="http://item.jd.com/1571535.html" target="_blank" clstag="sale|keycount|9312053|9"></area></map>
+<map name="Map10"> <area shape="rect" coords="577,101,1410,591" href="http://item.jd.com/1607297.html#product-detail" target="_blank" clstag="sale|keycount|9312053|10"></area></map>
+	</div>
+</div>
+	 </div>
+	 </div>
+
+		 	</div>
+     </div>
+</div>
+
+      <div class="layoutarea" >
+     <div class='layout' id="9309406"   >
+	<div class='layout_one w990 '>
+	 
+
+
+		<div class=' userdefined-153704' instanceId='9309408'  style="margin-bottom: 10px;" module-name="UserDefine" >
+
+		 <div class="mc" style=";min-height:0px;">
+		<div class="j-module" module-function="autoCenter,rid" module-param="{}">
+	<div class="userDefinedArea" style="width:auto;">
+		<div id="dfg"> 
+ <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img11.360buyimg.com/cms/jfs/t2437/148/1019508747/54734/2eb23bdf/563eee72N26d622ff.jpg" width="990" height="145" alt="" />
+</div>
+	</div>
+</div>
+	 </div>
+	 </div>
+
+
+
+		<div class=' jGoodsRecommend-150173' instanceId='9309508'  style="margin-bottom: 10px;" module-name="GoodsRec" >
+
+		 <div class="mc" style=";min-height:0px;">
+		<div class="j-module" module-function="autoLayoutEllipsis" module-param="{node:'li', spacingType:'margin', size:0.5, title:'.jDesc a', count:20, text:'...'}" >
+    <ul>
+                <li  clstag="sale|keycount|9309508|1_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/1881028.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img11.360buyimg.com/n6/jfs/t2032/283/171247435/27433/d63688d3/55f2790dN81929911.jpg" alt="西门子（SIEMENS）KG28EV2S0C 268升 双门冰箱 （浅金色）" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS）KG28EV2S0C 268升 双门冰箱 （浅金色） ">
+                        <a href="http://item.jd.com/1881028.html" target="_blank">西门子（SIEMENS）KG28EV2S0C 268升 双门冰箱 （浅金色）</a>
+                        <span class="jSlogan"></span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='1881028' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=1881028&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+                <li  clstag="sale|keycount|9309508|2_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/1231016.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img11.360buyimg.com/n6/jfs/t355/93/795412207/30500/7a197026/5423f53eNe2da4a32.jpg" alt="西门子（SIEMENS）KG23D8110W 226升 三门冰箱  组合冷冻（白色渐变点）" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS）KG23D8110W 226升 三门冰箱  组合冷冻（白色渐变点） ">
+                        <a href="http://item.jd.com/1231016.html" target="_blank">西门子（SIEMENS）KG23D8110W 226升 三门冰箱  组合冷冻（白色渐变点）</a>
+                        <span class="jSlogan"></span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='1231016' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=1231016&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+                <li  clstag="sale|keycount|9309508|3_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/1169480.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img12.360buyimg.com/n6/jfs/t145/37/1861756318/46395/6945f501/53bcde14N86804312.jpg" alt="西门子（SIEMENS）KG33NA2L0C 322升 风冷无霜 双门冰箱（不锈钢色）" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS）KG33NA2L0C 322升 风冷无霜 双门冰箱（不锈钢色） ">
+                        <a href="http://item.jd.com/1169480.html" target="_blank">西门子（SIEMENS）KG33NA2L0C 322升 风冷无霜 双门冰箱（不锈钢色）</a>
+                        <span class="jSlogan"></span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='1169480' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=1169480&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+                <li  clstag="sale|keycount|9309508|4_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/1304897.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img14.360buyimg.com/n6/jfs/t511/83/931760276/37450/8897c426/549a963eN7f7a7a4c.jpg" alt="西门子（SIEMENS）KG28FA2SPC 279升 三门冰箱 绿色零度保鲜（拉丝银）" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS）KG28FA2SPC 279升 三门冰箱 绿色零度保鲜（拉丝银） ">
+                        <a href="http://item.jd.com/1304897.html" target="_blank">西门子（SIEMENS）KG28FA2SPC 279升 三门冰箱 绿色零度保鲜（拉丝银）</a>
+                        <span class="jSlogan"></span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='1304897' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=1304897&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+                <li  clstag="sale|keycount|9309508|5_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/1293744.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img10.360buyimg.com/n6/jfs/t835/305/51158879/37038/c04e48a1/54f65c49N4c05f5ba.jpg" alt="西门子（SIEMENS）KA92NV02TI 610升 风冷无霜 对开门冰箱（白色）" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS）KA92NV02TI 610升 风冷无霜 对开门冰箱（白色） ">
+                        <a href="http://item.jd.com/1293744.html" target="_blank">西门子（SIEMENS）KA92NV02TI 610升 风冷无霜 对开门冰箱（白色）</a>
+                        <span class="jSlogan"></span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='1293744' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=1293744&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+                <li  clstag="sale|keycount|9309508|6_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/1293747.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img13.360buyimg.com/n6/jfs/t982/324/3038432/37510/b666fceb/54d99c56N9abb0a72.jpg" alt="西门子（SIEMENS）KG28UA1S0C 280升 变频混冷无霜 三门冰箱 无霜零度（拉丝银）" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS）KG28UA1S0C 280升 变频混冷无霜 三门冰箱 无霜零度（拉丝银） ">
+                        <a href="http://item.jd.com/1293747.html" target="_blank">西门子（SIEMENS）KG28UA1S0C 280升 变频混冷无霜 三门冰箱 无霜零度（拉丝银）</a>
+                        <span class="jSlogan"></span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='1293747' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=1293747&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+                <li  clstag="sale|keycount|9309508|7_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/1364577.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img12.360buyimg.com/n6/jfs/t823/267/562225471/43920/70ce0bc8/55306e08N9982fe44.jpg" alt="西门子（SIEMENS）KA92NV03TI 610升 变频风冷无霜 对开门冰箱 （浅金色）" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS）KA92NV03TI 610升 变频风冷无霜 对开门冰箱 （浅金色） ">
+                        <a href="http://item.jd.com/1364577.html" target="_blank">西门子（SIEMENS）KA92NV03TI 610升 变频风冷无霜 对开门冰箱 （浅金色）</a>
+                        <span class="jSlogan"></span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='1364577' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=1364577&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+                <li  clstag="sale|keycount|9309508|8_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/899834.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img11.360buyimg.com/n6/jfs/t241/227/362174919/51917/abddbade/53e9f7d0N8eccca44.jpg" alt="西门子（SIEMENS） BCD-401W（KM40FS50TI）401升 多门冰箱 零度保鲜（黑色）" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS） BCD-401W（KM40FS50TI）401升 多门冰箱 零度保鲜（黑色） ">
+                        <a href="http://item.jd.com/899834.html" target="_blank">西门子（SIEMENS） BCD-401W（KM40FS50TI）401升 多门冰箱 零度保鲜（黑色）</a>
+                        <span class="jSlogan"></span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='899834' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=899834&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+            </ul>
+</div>
+	 </div>
+	 </div>
+
+
+
+		<div class=' userdefined-153704' instanceId='9309533'  style="margin-bottom: 10px;" module-name="UserDefine" >
+
+		 <div class="mc" style=";min-height:0px;">
+		<div class="j-module" module-function="autoCenter,rid" module-param="{}">
+	<div class="userDefinedArea" style="width:auto;">
+		<img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img13.360buyimg.com/cms/jfs/t2077/175/1020405625/60235/8147c199/563eee7eNd56feca9.jpg" width="990" height="145" alt="" />
+	</div>
+</div>
+	 </div>
+	 </div>
+
+
+
+		<div class=' jGoodsRecommend-150173' instanceId='9309609'  style="margin-bottom: 10px;" module-name="GoodsRec" >
+
+		 <div class="mc" style=";min-height:0px;">
+		<div class="j-module" module-function="autoLayoutEllipsis" module-param="{node:'li', spacingType:'margin', size:0.5, title:'.jDesc a', count:20, text:'...'}" >
+    <ul>
+                <li  clstag="sale|keycount|9309609|1_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/1134821.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img10.360buyimg.com/n6/g16/M00/0C/03/rBEbRVOGpqcIAAAAAAEnuj4Vg5AAACXCQGw44EAASfS063.jpg" alt="西门子（SIEMENS）WM08X0601W 6公斤 滚筒洗衣机  智能经典系列（白色）" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS）WM08X0601W 6公斤 滚筒洗衣机  智能经典系列（白色） ">
+                        <a href="http://item.jd.com/1134821.html" target="_blank">西门子（SIEMENS）WM08X0601W 6公斤 滚筒洗衣机  智能经典系列（白色）</a>
+                        <span class="jSlogan"></span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='1134821' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=1134821&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+                <li  clstag="sale|keycount|9309609|2_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/1175392.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img13.360buyimg.com/n6/jfs/t160/361/2149864250/89957/a4295761/53c65f14N573d528d.jpg" alt="西门子（SIEMENS）WM08E1601W 7公斤 滚筒洗衣机 智能经典系列（白色）" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS）WM08E1601W 7公斤 滚筒洗衣机 智能经典系列（白色） ">
+                        <a href="http://item.jd.com/1175392.html" target="_blank">西门子（SIEMENS）WM08E1601W 7公斤 滚筒洗衣机 智能经典系列（白色）</a>
+                        <span class="jSlogan"></span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='1175392' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=1175392&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+                <li  clstag="sale|keycount|9309609|3_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/1760143.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img12.360buyimg.com/n6/jfs/t1744/175/166986020/96087/d3e86c10/55cc5e0cN37315ccd.jpg" alt="西门子（SIEMENS）WM10N0600W 7公斤 变频滚筒洗衣机 (白色)" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS）WM10N0600W 7公斤 变频滚筒洗衣机 (白色) ">
+                        <a href="http://item.jd.com/1760143.html" target="_blank">西门子（SIEMENS）WM10N0600W 7公斤 变频滚筒洗衣机 (白色)</a>
+                        <span class="jSlogan"></span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='1760143' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=1760143&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+                <li  clstag="sale|keycount|9309609|4_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/1268391.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img12.360buyimg.com/n6/jfs/t682/309/395865248/106717/88f4f329/54647ce8N931a2cf7.jpg" alt="西门子（SIEMENS）WS12K2C81W 6.2公斤 变频滚筒洗衣机（银色） " height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS）WS12K2C81W 6.2公斤 变频滚筒洗衣机（银色）  ">
+                        <a href="http://item.jd.com/1268391.html" target="_blank">西门子（SIEMENS）WS12K2C81W 6.2公斤 变频滚筒洗衣机（银色） </a>
+                        <span class="jSlogan"></span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='1268391' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=1268391&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+                <li  clstag="sale|keycount|9309609|5_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/1760129.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img12.360buyimg.com/n6/jfs/t1726/58/167381454/91205/ca2007d4/55cc5df4Nae0bf994.jpg" alt="西门子（SIEMENS）WM12P2C01W 9公斤 变频滚筒洗衣机 (白色)" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS）WM12P2C01W 9公斤 变频滚筒洗衣机 (白色) ">
+                        <a href="http://item.jd.com/1760129.html" target="_blank">西门子（SIEMENS）WM12P2C01W 9公斤 变频滚筒洗衣机 (白色)</a>
+                        <span class="jSlogan"></span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='1760129' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=1760129&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+                <li  clstag="sale|keycount|9309609|6_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/1169488.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img10.360buyimg.com/n6/jfs/t148/96/1943111295/116233/9903a097/53bcd9ccNe2f55643.jpg" alt="西门子（SIEMENS）WD15H5681W 7.5公斤 洗烘一体变频滚筒洗衣机 3D空气冷凝（银色）" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS）WD15H5681W 7.5公斤 洗烘一体变频滚筒洗衣机 3D空气冷凝（银色） ">
+                        <a href="http://item.jd.com/1169488.html" target="_blank">西门子（SIEMENS）WD15H5681W 7.5公斤 洗烘一体变频滚筒洗衣机 3D空气冷凝（银色）</a>
+                        <span class="jSlogan"></span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='1169488' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=1169488&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+                <li  clstag="sale|keycount|9309609|7_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/1169496.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img13.360buyimg.com/n6/jfs/t154/291/1860310806/121418/b3762d94/53bcda5aNe0fc78bd.jpg" alt="西门子（SIEMENS）XQG75-WD14H4681W 7.5公斤 洗烘一体变频滚筒洗衣机 3D空气冷凝（银色） " height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS）XQG75-WD14H4681W 7.5公斤 洗烘一体变频滚筒洗衣机 3D空气冷凝（银色）  ">
+                        <a href="http://item.jd.com/1169496.html" target="_blank">西门子（SIEMENS）XQG75-WD14H4681W 7.5公斤 洗烘一体变频滚筒洗衣机 3D空气冷凝（银色） </a>
+                        <span class="jSlogan"></span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='1169496' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=1169496&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+                <li  clstag="sale|keycount|9309609|8_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/1178240.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img11.360buyimg.com/n6/jfs/t181/318/2414173836/119863/511a6307/53cccd54N1a6014b9.jpg" alt="西门子（SIEMENS）WD15H5682W 8公斤 洗烘一体变频滚筒洗衣机 3D空气冷凝（银色）" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS）WD15H5682W 8公斤 洗烘一体变频滚筒洗衣机 3D空气冷凝（银色） ">
+                        <a href="http://item.jd.com/1178240.html" target="_blank">西门子（SIEMENS）WD15H5682W 8公斤 洗烘一体变频滚筒洗衣机 3D空气冷凝（银色）</a>
+                        <span class="jSlogan"></span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='1178240' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=1178240&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+            </ul>
+</div>
+	 </div>
+	 </div>
+
+
+
+		<div class=' userdefined-153704' instanceId='9309626'  style="margin-bottom: 10px;" module-name="UserDefine" >
+
+		 <div class="mc" style=";min-height:0px;">
+		<div class="j-module" module-function="autoCenter,rid" module-param="{}">
+	<div class="userDefinedArea" style="width:auto;">
+		<img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img10.360buyimg.com/cms/jfs/t1879/129/752812682/58643/62fb476d/5627b545N06f6c0c1.jpg" width="990" height="145" alt="" />
+	</div>
+</div>
+	 </div>
+	 </div>
+
+
+
+		<div class=' jGoodsRecommend-150173' instanceId='9309642'  style="margin-bottom: 10px;" module-name="GoodsRec" >
+
+		 <div class="mc" style=";min-height:0px;">
+		<div class="j-module" module-function="autoLayoutEllipsis" module-param="{node:'li', spacingType:'margin', size:0.5, title:'.jDesc a', count:20, text:'...'}" >
+    <ul>
+                <li  clstag="sale|keycount|9309642|1_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/1602202.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img10.360buyimg.com/n6/jfs/t1471/21/832340297/63346/d1487e3b/55adf504N165f61c7.jpg" alt="西门子（SIEMENS）LC45S950TI 欧式吸油烟机 （不锈钢色）" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS）LC45S950TI 欧式吸油烟机 （不锈钢色） 【3099元！金秋钜惠风暴！】静音，自清洁系统！大吸力，智能触控系统！">
+                        <a href="http://item.jd.com/1602202.html" target="_blank">西门子（SIEMENS）LC45S950TI 欧式吸油烟机 （不锈钢色）</a>
+                        <span class="jSlogan">【3099元！金秋钜惠风暴！】静音，自清洁系统！大吸力，智能触控系统！</span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='1602202' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=1602202&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+                <li  clstag="sale|keycount|9309642|2_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/1188294.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img10.360buyimg.com/n6/jfs/t2086/4/353624377/30075/b2dbb21d/5603d285N6976137f.jpg" alt="西门子（SIEMENS） LC45SK923W 欧式吸油烟机" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS） LC45SK923W 欧式吸油烟机 3299元西门子钜惠来袭！19立方米大吸力！智能自清洁！4档风力可调！感触DIGI智慧，尊享奢华风范！选择“套装”优惠！">
+                        <a href="http://item.jd.com/1188294.html" target="_blank">西门子（SIEMENS） LC45SK923W 欧式吸油烟机</a>
+                        <span class="jSlogan">3299元西门子钜惠来袭！19立方米大吸力！智能自清洁！4档风力可调！感触DIGI智慧，尊享奢华风范！选择“套装”优惠！</span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='1188294' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=1188294&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+                <li  clstag="sale|keycount|9309642|3_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/1527667.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img12.360buyimg.com/n6/jfs/t2008/152/434246834/51169/4d10d26d/560b9187N07051e04.jpg" alt="西门子（SIEMENS）LC46S955TI 欧式吸油烟机（不锈钢色）" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS）LC46S955TI 欧式吸油烟机（不锈钢色） 【5299元！西门子钜惠风暴！】 19立方米超大吸力，智能自清洁免拆洗！钢板打造，触摸操控，逼格极高！">
+                        <a href="http://item.jd.com/1527667.html" target="_blank">西门子（SIEMENS）LC46S955TI 欧式吸油烟机（不锈钢色）</a>
+                        <span class="jSlogan">【5299元！西门子钜惠风暴！】 19立方米超大吸力，智能自清洁免拆洗！钢板打造，触摸操控，逼格极高！</span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='1527667' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=1527667&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+                <li  clstag="sale|keycount|9309642|4_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/1193937.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img13.360buyimg.com/n6/jfs/t1642/158/834166488/73515/8d148a41/55adf488N6366e305.jpg" alt="西门子（SIEMENS）LS65S955TI 侧吸式吸油烟机（不锈钢色）" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS）LS65S955TI 侧吸式吸油烟机（不锈钢色） 18m3大吸力，智能自清洁！六面进风吸尽油烟！假日自动通风，创造无烟新境界！选择“套装”优惠！">
+                        <a href="http://item.jd.com/1193937.html" target="_blank">西门子（SIEMENS）LS65S955TI 侧吸式吸油烟机（不锈钢色）</a>
+                        <span class="jSlogan">18m3大吸力，智能自清洁！六面进风吸尽油烟！假日自动通风，创造无烟新境界！选择“套装”优惠！</span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='1193937' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=1193937&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+                <li  clstag="sale|keycount|9309642|5_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/1318107.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img14.360buyimg.com/n6/jfs/t832/158/102677453/111531/d3a8d453/54fe5243N0294c40f.jpg" alt="西门子（SIEMENS）ER71257MP 嵌入式燃气灶 （不锈钢色 天然气）" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS）ER71257MP 嵌入式燃气灶 （不锈钢色 天然气） 1299元钜惠来袭！全封闭面板好打理，西门子无极旋，自动熄火保护！">
+                        <a href="http://item.jd.com/1318107.html" target="_blank">西门子（SIEMENS）ER71257MP 嵌入式燃气灶 （不锈钢色 天然气）</a>
+                        <span class="jSlogan">1299元钜惠来袭！全封闭面板好打理，西门子无极旋，自动熄火保护！</span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='1318107' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=1318107&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+                <li  clstag="sale|keycount|9309642|6_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/1199807.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img12.360buyimg.com/n6/jfs/t382/243/56190511/99281/c5849001/54080c85Nf6cfd5cb.jpg" alt="西门子（SIEMENS）ER76K255MP 嵌入式燃气灶（不锈钢色 天然气）" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS）ER76K255MP 嵌入式燃气灶（不锈钢色 天然气） 2299元！ 蓝牙联动不锈钢灶具！大火力，无极旋钮控制，开创大火力调节范围！">
+                        <a href="http://item.jd.com/1199807.html" target="_blank">西门子（SIEMENS）ER76K255MP 嵌入式燃气灶（不锈钢色 天然气）</a>
+                        <span class="jSlogan">2299元！ 蓝牙联动不锈钢灶具！大火力，无极旋钮控制，开创大火力调节范围！</span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='1199807' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=1199807&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+                <li  clstag="sale|keycount|9309642|7_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/1240142.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img12.360buyimg.com/n6/jfs/t274/348/1349211754/75948/b7da24dc/543793b6N1cdfc26f.jpg" alt="西门子（SIEMENS）ER73F235MP 钢化玻璃方孔灶具 （黑色）" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS）ER73F235MP 钢化玻璃方孔灶具 （黑色） 1499元！大火力！0-230度大角度火力调节，烹饪火力随心所欲！">
+                        <a href="http://item.jd.com/1240142.html" target="_blank">西门子（SIEMENS）ER73F235MP 钢化玻璃方孔灶具 （黑色）</a>
+                        <span class="jSlogan">1499元！大火力！0-230度大角度火力调节，烹饪火力随心所欲！</span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='1240142' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=1240142&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+                <li  clstag="sale|keycount|9309642|8_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/1199802.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img12.360buyimg.com/n6/jfs/t214/92/1780391831/68928/65bc2f2c/53fdc5cdNe28f7899.jpg" alt="西门子（SIEMENS）ER76F232MP 嵌入式燃气灶（黑色 天然气）" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS）ER76F232MP 嵌入式燃气灶（黑色 天然气） 2099元！大火力，无极旋钮控制，开创大火力调节范围，控制火力大小！">
+                        <a href="http://item.jd.com/1199802.html" target="_blank">西门子（SIEMENS）ER76F232MP 嵌入式燃气灶（黑色 天然气）</a>
+                        <span class="jSlogan">2099元！大火力，无极旋钮控制，开创大火力调节范围，控制火力大小！</span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='1199802' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=1199802&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+                <li  clstag="sale|keycount|9309642|9_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/1571532.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img10.360buyimg.com/n6/jfs/t1801/341/1675781425/75021/2152fcdd/5603d248N9b293670.jpg" alt="西门子（SIEMENS）LC53955TI 欧式油烟机 （不锈钢色）" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS）LC53955TI 欧式油烟机 （不锈钢色） 3799钜惠！19立方大吸力！精钢打造，一体拉伸，拒绝卫生死角！">
+                        <a href="http://item.jd.com/1571532.html" target="_blank">西门子（SIEMENS）LC53955TI 欧式油烟机 （不锈钢色）</a>
+                        <span class="jSlogan">3799钜惠！19立方大吸力！精钢打造，一体拉伸，拒绝卫生死角！</span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='1571532' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=1571532&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+                <li  clstag="sale|keycount|9309642|10_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/1571535.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img13.360buyimg.com/n6/jfs/t1657/356/619929211/100954/d775f82e/55acd3e9N93c97cc2.jpg" alt="西门子（SIEMENS）LS65S940TI 侧吸式 油烟机 （不锈钢色）" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS）LS65S940TI 侧吸式 油烟机 （不锈钢色） 17立方米/分大风量！智能自清洁，内腔免拆洗！触摸控制，一擦即净！不锈钢一体灶具！">
+                        <a href="http://item.jd.com/1571535.html" target="_blank">西门子（SIEMENS）LS65S940TI 侧吸式 油烟机 （不锈钢色）</a>
+                        <span class="jSlogan">17立方米/分大风量！智能自清洁，内腔免拆洗！触摸控制，一擦即净！不锈钢一体灶具！</span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='1571535' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=1571535&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+                <li  clstag="sale|keycount|9309642|11_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/1607280.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img14.360buyimg.com/n6/jfs/t1522/14/870486798/98525/e1a13f65/55adf50dN499190ef.jpg" alt="西门子（SIEMENS）LC45S950TI 欧式油烟机 （不锈钢色）" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS）LC45S950TI 欧式油烟机 （不锈钢色） 18立方米/分超大风量，欧式T形美学机身，DIGI触摸控制，一擦即净，智能自清洁、假日自通风！不锈钢灶具，坚固耐用！西门子品质值得拥有！">
+                        <a href="http://item.jd.com/1607280.html" target="_blank">西门子（SIEMENS）LC45S950TI 欧式油烟机 （不锈钢色）</a>
+                        <span class="jSlogan">18立方米/分超大风量，欧式T形美学机身，DIGI触摸控制，一擦即净，智能自清洁、假日自通风！不锈钢灶具，坚固耐用！西门子品质值得拥有！</span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='1607280' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=1607280&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+                <li  clstag="sale|keycount|9309642|12_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/1204354.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img13.360buyimg.com/n6/jfs/t1501/339/858379514/82025/5ae355d7/55af5b95N2248a272.jpg" alt="西门子（SIEMENS） LS65S955TI+ER76F232MP/MQ 侧吸式吸油烟机" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS） LS65S955TI+ER76F232MP/MQ 侧吸式吸油烟机 ">
+                        <a href="http://item.jd.com/1204354.html" target="_blank">西门子（SIEMENS） LS65S955TI+ER76F232MP/MQ 侧吸式吸油烟机</a>
+                        <span class="jSlogan"></span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='1204354' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=1204354&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+            </ul>
+</div>
+	 </div>
+	 </div>
+
+
+
+		<div class=' userdefined-153704' instanceId='9309725'  style="margin-bottom: 10px;" module-name="UserDefine" >
+
+		 <div class="mc" style=";min-height:0px;">
+		<div class="j-module" module-function="autoCenter,rid" module-param="{}">
+	<div class="userDefinedArea" style="width:auto;">
+		<img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img10.360buyimg.com/cms/jfs/t2512/151/270675856/65601/c63be69b/5641e4cdN9e5e09de.jpg" width="990" height="145" alt="" />
+	</div>
+</div>
+	 </div>
+	 </div>
+
+
+
+		<div class=' jGoodsRecommend-150173' instanceId='9309738'  style="margin-bottom: 10px;" module-name="GoodsRec" >
+
+		 <div class="mc" style=";min-height:0px;">
+		<div class="j-module" module-function="autoLayoutEllipsis" module-param="{node:'li', spacingType:'margin', size:0.5, title:'.jDesc a', count:20, text:'...'}" >
+    <ul>
+                <li  clstag="sale|keycount|9309738|1_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/913885.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img13.360buyimg.com/n6/jfs/t274/218/537710063/78047/21b5e0b1/54169ea5Ne0f4950e.jpg" alt="西门子（SIEMENS） HB11AB521W 原装进口 电烤箱" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS） HB11AB521W 原装进口 电烤箱 希腊原装进口！四种加热模式，270度高温烹饪！72升超大容积！西门子尽显科技之美！">
+                        <a href="http://item.jd.com/913885.html" target="_blank">西门子（SIEMENS） HB11AB521W 原装进口 电烤箱</a>
+                        <span class="jSlogan">希腊原装进口！四种加热模式，270度高温烹饪！72升超大容积！西门子尽显科技之美！</span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='913885' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=913885&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+                <li  clstag="sale|keycount|9309738|2_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/913890.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img12.360buyimg.com/n6/jfs/t1534/202/349463958/67611/a71f776a/557804f1Nd9cf68f1.jpg" alt="西门子（SIEMENS） HB23AB521W 原装进口 电烤箱" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS） HB23AB521W 原装进口 电烤箱 希腊原装进口！五种加热模式，270度高温烹饪！67升超大容积！贴心的童锁设计 ！">
+                        <a href="http://item.jd.com/913890.html" target="_blank">西门子（SIEMENS） HB23AB521W 原装进口 电烤箱</a>
+                        <span class="jSlogan">希腊原装进口！五种加热模式，270度高温烹饪！67升超大容积！贴心的童锁设计 ！</span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='913890' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=913890&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+                <li  clstag="sale|keycount|9309738|3_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/1199799.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img10.360buyimg.com/n6/jfs/t346/61/232570577/86084/1caf2d5a/54057274Ndcbee814.jpg" alt="西门子（SIEMENS）HB33CB550W 德国进口嵌入式烤箱" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS）HB33CB550W 德国进口嵌入式烤箱 8种加热模式！270℃高温烹饪！火力、温度、时间随心掌控，悠然自得！">
+                        <a href="http://item.jd.com/1199799.html" target="_blank">西门子（SIEMENS）HB33CB550W 德国进口嵌入式烤箱</a>
+                        <span class="jSlogan">8种加热模式！270℃高温烹饪！火力、温度、时间随心掌控，悠然自得！</span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='1199799' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=1199799&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+                <li  clstag="sale|keycount|9309738|4_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/1199792.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img13.360buyimg.com/n6/jfs/t406/183/70539366/62502/ab89da7/540841c7N349b8240.jpg" alt="西门子（SIEMENS）HB23AB540W 西班牙进口嵌入式烤箱" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS）HB23AB540W 西班牙进口嵌入式烤箱 七种加热模式，270℃高温烹饪，62L超大容量！易清洁光滑搪瓷内胆！西班牙原装进口！">
+                        <a href="http://item.jd.com/1199792.html" target="_blank">西门子（SIEMENS）HB23AB540W 西班牙进口嵌入式烤箱</a>
+                        <span class="jSlogan">七种加热模式，270℃高温烹饪，62L超大容量！易清洁光滑搪瓷内胆！西班牙原装进口！</span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='1199792' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=1199792&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+                <li  clstag="sale|keycount|9309738|5_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/1191072.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img12.360buyimg.com/n6/jfs/t232/263/421302101/88861/aed8720f/53eb08f2N2b508eb2.jpg" alt="西门子（SIEMENS） HB25D5L2W 原装进口 嵌入式蒸箱" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS） HB25D5L2W 原装进口 嵌入式蒸箱 法国原装进口！20个自动烹饪程序！40°℃—100℃控温！成就“蒸”滋味！">
+                        <a href="http://item.jd.com/1191072.html" target="_blank">西门子（SIEMENS） HB25D5L2W 原装进口 嵌入式蒸箱</a>
+                        <span class="jSlogan">法国原装进口！20个自动烹饪程序！40°℃—100℃控温！成就“蒸”滋味！</span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='1191072' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=1191072&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+                <li  clstag="sale|keycount|9309738|6_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/1199800.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img11.360buyimg.com/n6/jfs/t223/149/1766606232/63327/308569b/53fdc5c3Nb4863f9d.jpg" alt="西门子（SIEMENS）HB24D552W 西班牙进口嵌入式蒸汽烤箱" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS）HB24D552W 西班牙进口嵌入式蒸汽烤箱 【11990元！西门子钜惠风暴！】35℃—100℃控温！20个自动烹饪程序！品质生活必备">
+                        <a href="http://item.jd.com/1199800.html" target="_blank">西门子（SIEMENS）HB24D552W 西班牙进口嵌入式蒸汽烤箱</a>
+                        <span class="jSlogan">【11990元！西门子钜惠风暴！】35℃—100℃控温！20个自动烹饪程序！品质生活必备</span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='1199800' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=1199800&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+                <li  clstag="sale|keycount|9309738|7_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/1191067.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img11.360buyimg.com/n6/jfs/t256/185/384373288/90196/d4a4fb6b/53eb08ebN03a9f291.jpg" alt="西门子（SIEMENS） HF15G564W 嵌入式微波炉（不锈钢色）" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS） HF15G564W 嵌入式微波炉（不锈钢色） 2799元钜惠来袭！八种烹饪程序！微波、烧烤二合一！多重微波功率选择，满足您对食材的不同需求！">
+                        <a href="http://item.jd.com/1191067.html" target="_blank">西门子（SIEMENS） HF15G564W 嵌入式微波炉（不锈钢色）</a>
+                        <span class="jSlogan">2799元钜惠来袭！八种烹饪程序！微波、烧烤二合一！多重微波功率选择，满足您对食材的不同需求！</span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='1191067' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=1191067&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+                <li  clstag="sale|keycount|9309738|8_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/1191409.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img13.360buyimg.com/n6/jfs/t214/292/433411359/95381/5a347f53/53eb0902N82c03c34.jpg" alt="西门子（SIEMENS） HF24G564W 嵌入式微波炉（不锈钢色）" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS） HF24G564W 嵌入式微波炉（不锈钢色） 3299元钜惠来袭！24L大容量！八种烹饪程序！微波、烧烤二合一！多重微波功率选择！">
+                        <a href="http://item.jd.com/1191409.html" target="_blank">西门子（SIEMENS） HF24G564W 嵌入式微波炉（不锈钢色）</a>
+                        <span class="jSlogan">3299元钜惠来袭！24L大容量！八种烹饪程序！微波、烧烤二合一！多重微波功率选择！</span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='1191409' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=1191409&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+            </ul>
+</div>
+	 </div>
+	 </div>
+
+
+
+		<div class=' userdefined-153704' instanceId='9309829'  style="margin-bottom: 10px;" module-name="UserDefine" >
+
+		 <div class="mc" style=";min-height:0px;">
+		<div class="j-module" module-function="autoCenter,rid" module-param="{}">
+	<div class="userDefinedArea" style="width:auto;">
+		<img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img14.360buyimg.com/cms/jfs/t2407/138/753420537/76407/80e182f1/5627b546Nd9f5e2c7.jpg" width="990" height="145" alt="" />
+	</div>
+</div>
+	 </div>
+	 </div>
+
+
+
+		<div class=' jGoodsRecommend-150173' instanceId='9310015'  style="margin-bottom: 10px;" module-name="GoodsRec" >
+
+		 <div class="mc" style=";min-height:0px;">
+		<div class="j-module" module-function="autoLayoutEllipsis" module-param="{node:'li', spacingType:'margin', size:0.5, title:'.jDesc a', count:20, text:'...'}" >
+    <ul>
+                <li  clstag="sale|keycount|9310015|1_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/859430.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img14.360buyimg.com/n6/jfs/t172/4/2768266395/106370/9338ea6e/53d8a890N1ec3ecb8.jpg" alt="西门子（SIEMENS） SR23E850TI 原装进口洗碗机" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS） SR23E850TI 原装进口洗碗机 【3959元！西门子狂欢钜惠！】 德国原装进口！高温蒸汽杀菌，余热冷凝烘干，省水、省电、省时间！">
+                        <a href="http://item.jd.com/859430.html" target="_blank">西门子（SIEMENS） SR23E850TI 原装进口洗碗机</a>
+                        <span class="jSlogan">【3959元！西门子狂欢钜惠！】 德国原装进口！高温蒸汽杀菌，余热冷凝烘干，省水、省电、省时间！</span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='859430' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=859430&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+                <li  clstag="sale|keycount|9310015|2_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/1240143.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img12.360buyimg.com/n6/jfs/t544/84/306475799/66984/96f6c6bb/545c88d1N76f9749e.jpg" alt="西门子（SIEMENS）SN53E531TI 半嵌式洗碗机" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS）SN53E531TI 半嵌式洗碗机 【5199元！西门子钜惠！】 半嵌入式洗碗机，可定制面板！高温蒸汽杀菌！！">
+                        <a href="http://item.jd.com/1240143.html" target="_blank">西门子（SIEMENS）SN53E531TI 半嵌式洗碗机</a>
+                        <span class="jSlogan">【5199元！西门子钜惠！】 半嵌入式洗碗机，可定制面板！高温蒸汽杀菌！！</span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='1240143' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=1240143&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+                <li  clstag="sale|keycount|9310015|3_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/1070355.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img12.360buyimg.com/n6/jfs/t880/233/876539791/90110/2f057a55/555477b1N7ad6f343.jpg" alt="西门子（SIEMENS） SC73M810TI 原装进口紧凑型洗碗机" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS） SC73M810TI 原装进口紧凑型洗碗机 货源紧俏！先到先得！西班牙原装进口！静音、省水、杀菌！品质生活新宠！">
+                        <a href="http://item.jd.com/1070355.html" target="_blank">西门子（SIEMENS） SC73M810TI 原装进口紧凑型洗碗机</a>
+                        <span class="jSlogan">货源紧俏！先到先得！西班牙原装进口！静音、省水、杀菌！品质生活新宠！</span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='1070355' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=1070355&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+                <li  clstag="sale|keycount|9310015|4_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/1235963.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img13.360buyimg.com/n6/jfs/t310/21/928587467/165347/375587b8/542a0cbdN35cf1b4c.jpg" alt="西门子（SIEMENS）SC76M540TI 原装进口洗碗机 （不锈钢色）" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS）SC76M540TI 原装进口洗碗机 （不锈钢色） 【7999元！西门子钜惠】全不锈钢面板打造！省水省电，清洁！强力去污、杀菌！">
+                        <a href="http://item.jd.com/1235963.html" target="_blank">西门子（SIEMENS）SC76M540TI 原装进口洗碗机 （不锈钢色）</a>
+                        <span class="jSlogan">【7999元！西门子钜惠】全不锈钢面板打造！省水省电，清洁！强力去污、杀菌！</span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='1235963' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=1235963&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+                <li  clstag="sale|keycount|9310015|5_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/858456.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img11.360buyimg.com/n6/jfs/t154/123/2741565055/87549/3d81314d/53d8a889Ncd9707fb.jpg" alt="西门子（SIEMENS） HS223600W 嵌入式消毒柜" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS） HS223600W 嵌入式消毒柜 核心智能科技！电脑触摸按键控制！臭氧+紫外线+高温多角度全方位消毒！">
+                        <a href="http://item.jd.com/858456.html" target="_blank">西门子（SIEMENS） HS223600W 嵌入式消毒柜</a>
+                        <span class="jSlogan">核心智能科技！电脑触摸按键控制！臭氧+紫外线+高温多角度全方位消毒！</span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='858456' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=858456&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+                <li  clstag="sale|keycount|9310015|6_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/1288200.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img13.360buyimg.com/n6/jfs/t649/250/798925767/87830/bca493cf/5487e780Na16500f1.jpg" alt="西门子（SIEMENS）HS363500W 嵌入式消毒柜 100L" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS）HS363500W 嵌入式消毒柜 100L 大容量任性！臭氧+紫外线组合消毒，光波烘干！多角度，全方位！杀菌彻底！">
+                        <a href="http://item.jd.com/1288200.html" target="_blank">西门子（SIEMENS）HS363500W 嵌入式消毒柜 100L</a>
+                        <span class="jSlogan">大容量任性！臭氧+紫外线组合消毒，光波烘干！多角度，全方位！杀菌彻底！</span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='1288200' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=1288200&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+                <li  clstag="sale|keycount|9310015|7_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/1074402.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img14.360buyimg.com/n6/g15/M02/0A/06/rBEhWVMWhn8IAAAAAAGGlpj_yNgAAJcoALSt2YAAYau350.jpg" alt="西门子（SIEMENS） HS243510W 嵌入式消毒柜" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS） HS243510W 嵌入式消毒柜 【2799元！火爆开启！】 110L超大容量，臭氧+紫外线组合消毒，光波管+风机烘干">
+                        <a href="http://item.jd.com/1074402.html" target="_blank">西门子（SIEMENS） HS243510W 嵌入式消毒柜</a>
+                        <span class="jSlogan">【2799元！火爆开启！】 110L超大容量，臭氧+紫外线组合消毒，光波管+风机烘干</span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='1074402' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=1074402&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+                <li  clstag="sale|keycount|9310015|8_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/1612389.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img10.360buyimg.com/n6/jfs/t886/274/1000720861/48060/19ae9335/5566f70eN09fa8106.jpg" alt="西门子（SIEMENS）HS363600W 嵌入式消毒柜 （黑色）" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS）HS363600W 嵌入式消毒柜 （黑色） 立体除菌，多维净护！三重杀菌，尊享智能生活！">
+                        <a href="http://item.jd.com/1612389.html" target="_blank">西门子（SIEMENS）HS363600W 嵌入式消毒柜 （黑色）</a>
+                        <span class="jSlogan">立体除菌，多维净护！三重杀菌，尊享智能生活！</span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='1612389' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=1612389&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+            </ul>
+</div>
+	 </div>
+	 </div>
+
+
+
+		<div class=' userdefined-153704' instanceId='9310029'  style="margin-bottom: 10px;" module-name="UserDefine" >
+
+		 <div class="mc" style=";min-height:0px;">
+		<div class="j-module" module-function="autoCenter,rid" module-param="{}">
+	<div class="userDefinedArea" style="width:auto;">
+		<img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img10.360buyimg.com/cms/jfs/t1864/130/751188075/59207/a6397429/5627b545N8c6a001d.jpg" width="990" height="145" alt="" />
+	</div>
+</div>
+	 </div>
+	 </div>
+
+
+
+		<div class=' jGoodsRecommend-150173' instanceId='9310032'  style="margin-bottom: 10px;" module-name="GoodsRec" >
+
+		 <div class="mc" style=";min-height:0px;">
+		<div class="j-module" module-function="autoLayoutEllipsis" module-param="{node:'li', spacingType:'margin', size:0.5, title:'.jDesc a', count:20, text:'...'}" >
+    <ul>
+                <li  clstag="sale|keycount|9310032|1_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/1168962.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img13.360buyimg.com/n6/jfs/t190/345/1842165873/44743/34617ec7/53bd0882N14af5758.jpg" alt="西门子（SIEMENS） DG250103TI 50升 众享系列电热水器" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS） DG250103TI 50升 众享系列电热水器 1199元！进口搪瓷粉！三级ELCB防漏电保护系统！">
+                        <a href="http://item.jd.com/1168962.html" target="_blank">西门子（SIEMENS） DG250103TI 50升 众享系列电热水器</a>
+                        <span class="jSlogan">1199元！进口搪瓷粉！三级ELCB防漏电保护系统！</span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='1168962' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=1168962&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+                <li  clstag="sale|keycount|9310032|2_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/1168966.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img10.360buyimg.com/n6/jfs/t148/151/1924803236/38118/9487bd88/53bd0897N6bdbd807.jpg" alt="西门子（SIEMENS） DG260103TI 60升 众享系列热水器" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS） DG260103TI 60升 众享系列热水器 一级能效！AA级进口搪瓷粉！三级ELCB防漏电保护系统！欲购从速！">
+                        <a href="http://item.jd.com/1168966.html" target="_blank">西门子（SIEMENS） DG260103TI 60升 众享系列热水器</a>
+                        <span class="jSlogan">一级能效！AA级进口搪瓷粉！三级ELCB防漏电保护系统！欲购从速！</span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='1168966' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=1168966&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+                <li  clstag="sale|keycount|9310032|3_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/1571531.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img13.360buyimg.com/n6/jfs/t1114/46/999265100/29953/7999953f/5566f6e1N2b816d63.jpg" alt="西门子（SIEMENS）DG50155STI 50升 速睿系列电热水器 （白色）" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS）DG50155STI 50升 速睿系列电热水器 （白色） 3200W速热！比利时进口搪瓷粉，承压发泡内胆，25万次耐冲压内胆，智能自动预约系统，省事又贴心！">
+                        <a href="http://item.jd.com/1571531.html" target="_blank">西门子（SIEMENS）DG50155STI 50升 速睿系列电热水器 （白色）</a>
+                        <span class="jSlogan">3200W速热！比利时进口搪瓷粉，承压发泡内胆，25万次耐冲压内胆，智能自动预约系统，省事又贴心！</span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='1571531' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=1571531&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+                <li  clstag="sale|keycount|9310032|4_1">
+            <div class="jItem">
+                <div class="jPic">
+                    <a href="http://item.jd.com/1571527.html" target="_blank">
+                        <img class="J_imgLazyload" src="http://img14.360buyimg.com/cms/g10/M00/13/04/rBEQWFFj4PUIAAAAAAAESxyqJLUAADvdAIHC9oAAARj186.gif"  original="http://img12.360buyimg.com/n6/jfs/t1252/56/1013083332/29953/7999953f/5566f6dcN9d90c8ab.jpg" alt="西门子（SIEMENS）DG65155STI 65升 速睿系列电热水器 （白色）" height="220" width="220" />
+                    </a>
+                </div>
+                <div class="jGoodsInfo">
+                    <div class="jDesc" title="西门子（SIEMENS）DG65155STI 65升 速睿系列电热水器 （白色） 3200W速热！比利时进口搪瓷粉，承压发泡内胆，25万次耐冲压内胆，智能自动预约系统，省事又贴心！">
+                        <a href="http://item.jd.com/1571527.html" target="_blank">西门子（SIEMENS）DG65155STI 65升 速睿系列电热水器 （白色）</a>
+                        <span class="jSlogan">3200W速热！比利时进口搪瓷粉，承压发泡内胆，25万次耐冲压内胆，智能自动预约系统，省事又贴心！</span>
+                    </div>                          
+                   <div class="jPrice">
+                        <div class="jdPrice">
+                            <span class="jText">促销价：</span>
+                            <span class="jRmb">￥</span>
+                            <span class='jdNum'  jshop='price'  jdprice='1571527' ></span>
+                        </div>
+                    </div>
+                    <div class="jBtnArea">
+                        <a target="_blank" href="http://cart.jd.com/cart/dynamic/gate.action?pid=1571527&amp;pcount=1&amp;ptype=1">放入购物车</a>
+                    </div>
+                </div>
+            </div>
+                    </li>
+            </ul>
+</div>
+	 </div>
+	 </div>
+
+		 	</div>
+     </div>
+</div>
+
+	
+
+	
+<!-- add by zhaohongbo -->
+<!-- 活动页面参数向下传递 -->
+<script>
+    (function() {
+        var jHref = $("a[href^='http'], area[href^='http']"), search = location.search;
+        jHref.each(function() {
+            var _this = $(this);
+            var href = _this.attr("href"),arrUrl = href.split("?");
+            if(arrUrl.length === 1) {
+                _this.attr("href", href + search);
+            } else {
+                _this.attr("href", href + "&" + search.substring(1));
+            }
+        });
+    })()
+</script>					<div align="center">
+				
+			</div>
+									<div style="text-align:center;" class="d-pad">
+        		<a target="_blank" title="" href="http://c-nfa.jd.com/adclick?keyStr=z5AXFoIimt1jiDK32+w4mYhm0X76xynWc1dOV2nYzUVWK/th/uWWA2XSXhck8cTXiYO1izhl4VIYVFjZo0vru4urrglXtSZpBlRu2pQv+QVa4eG9P+LQ+i7XDdn0nvJz1oEwRbUsC6tQMin70asoRwhXNaR5nYqrHmsT+VZjKgXO/EWIcFSikSrifu6zqpZdQBm0Myq73ZmTaMYtfetTW8ZG+bOJzueASAX30AkC+BJM7KhKAzacsw4AdWt8CpsTWGOQzs6c6SvsrASo0uZP0+sMmgEhkY9EeMVx6X1nDXuTWk+LdBAe6AGHS3ze5vGalrw0VRUczI/aZKUbzeydkA==&cv=2.0&url=http://sale.jd.com/act/FChGjnY5byzqZI.html"><img width="990" height="74" alt="" data-lazyload="http://img11.360buyimg.com/da/jfs/t1840/2/1105119595/26279/e199c251/56441353Ncd09d3b0.jpg"></a>
+
+            </div>
+							<div id="jshop-mobile-advertise" style="position:fixed;bottom:10px;">
+	
+</div>
+<script type="text/javascript">
+	if(jQuery.browser.msie&&jQuery.browser.version.match(/6\.0/g)){
+		var __original_top = $(window).height() - 90;
+		$('#jshop-mobile-advertise').css({
+			position : 'absolute',
+			top : __original_top + 'px'
+		});
+		$(window).bind('scroll resize',function(){
+			$('#jshop-mobile-advertise').css('top',$(this).scrollTop() + __original_top + 'px');
+		});
+	}			
+	$('#jshop-mobile-advertise').css({
+		right : '50%',
+		marginRight : '505px'
+	});
+</script>			 </div>
+	 
+	<div class="d-pad">
+		<div id="service-2014">
+	<div class="w">
+		<dl class="fore1">
+			<dt>购物指南</dt>
+			<dd>
+				<div><a rel="nofollow" target="_blank" href="http://help.jd.com/user/issue/list-29.html">购物流程</a></div>
+				<div><a rel="nofollow" target="_blank" href="http://help.jd.com/user/issue/list-151.html">会员介绍</a></div>
+				<div><a rel="nofollow" target="_blank" href="http://help.jd.com/user/issue/list-297.html">生活旅行/团购</a></div>
+				<div><a rel="nofollow" target="_blank" href="http://help.jd.com/user/issue.html">常见问题</a></div>
+				<div><a rel="nofollow" target="_blank" href="http://help.jd.com/user/issue/list-136.html">大家电</a></div>
+				<div><a rel="nofollow" target="_blank" href="http://help.jd.com/user/index.html">联系客服</a></div>
+			</dd>
+		</dl>
+		<dl class="fore2">		
+			<dt>配送方式</dt>
+			<dd>
+				<div><a rel="nofollow" target="_blank" href="http://help.jd.com/user/issue/list-81-100.html">上门自提</a></div>
+				<div><a rel="nofollow" target="_blank" href="http://help.jd.com/user/issue/list-81.html">211限时达</a></div>
+				<div><a rel="nofollow" target="_blank" href="http://help.jd.com/user/issue/103-983.html">配送服务查询</a></div>
+				<div><a rel="nofollow" target="_blank" href="http://help.jd.com/user/issue/109-188.html">配送费收取标准</a></div>				
+				<div><a target="_blank" href="http://en.jd.com/chinese.html">海外配送</a></div>
+			</dd>
+		</dl>
+		<dl class="fore3">
+			<dt>支付方式</dt>
+			<dd>
+				<div><a rel="nofollow" target="_blank" href="http://help.jd.com/user/issue/list-172.html">货到付款</a></div>
+				<div><a rel="nofollow" target="_blank" href="http://help.jd.com/user/issue/list-173.html">在线支付</a></div>
+				<div><a rel="nofollow" target="_blank" href="http://help.jd.com/user/issue/list-176.html">分期付款</a></div>
+				<div><a rel="nofollow" target="_blank" href="http://help.jd.com/user/issue/list-174.html">邮局汇款</a></div>
+				<div><a rel="nofollow" target="_blank" href="http://help.jd.com/user/issue/list-175.html">公司转账</a></div>
+			</dd>
+		</dl>
+		<dl class="fore4">		
+			<dt>售后服务</dt>
+			<dd>
+				<div><a rel="nofollow" target="_blank" href="http://help.jd.com/user/issue/321-981.html">售后政策</a></div>
+				<div><a rel="nofollow" target="_blank" href="http://help.jd.com/user/issue/list-132.html">价格保护</a></div>
+				<div><a rel="nofollow" target="_blank" href="http://help.jd.com/user/issue/130-978.html">退款说明</a></div>
+				<div><a rel="nofollow" target="_blank" href="http://myjd.jd.com/repair/repairs.action">返修/退换货</a></div>
+				<div><a rel="nofollow" target="_blank" href="http://help.jd.com/user/issue/list-50.html">取消订单</a></div>
+			</dd>
+		</dl>
+		<dl class="fore5">
+			<dt>特色服务</dt>
+			<dd>		
+				<div><a target="_blank" href="http://help.jd.com/user/issue/list-133.html">夺宝岛</a></div>
+				<div><a target="_blank" href="http://help.jd.com/user/issue/list-134.html">DIY装机</a></div>
+				<div><a rel="nofollow" target="_blank" href="http://fuwu.jd.com/">延保服务</a></div>
+				<div><a rel="nofollow" target="_blank" href="http://giftcard.jd.com/market/index.action">京东E卡</a></div>				
+				<div><a rel="nofollow" target="_blank" href="http://mobile.jd.com/">京东通信</a></div>
+			</dd>
+		</dl>
+		<span class="clr"></span>
+	</div>
+</div>
+		<div class="w">
+	<div id="footer-2014">
+		<div class="links">
+			<a rel="nofollow" target="_blank" href="http://www.jd.com/intro/about.aspx">关于我们</a>|<a rel="nofollow" target="_blank" href="http://www.jd.com/contact/">联系我们</a>|<a rel="nofollow" target="_blank" href="http://www.jd.com/contact/joinin.aspx">商家入驻</a>|<a rel="nofollow" target="_blank" href="http://jzt.jd.com">营销中心</a>|<a rel="nofollow" target="_blank" href="http://app.jd.com/">手机京东</a>|<a target="_blank" href="http://club.jd.com/links.aspx">友情链接</a>|<a target="_blank" href="http://media.jd.com/">销售联盟</a>|<a href="http://club.jd.com/" target="_blank">京东社区</a>|<a href="http://gongyi.jd.com" target="_blank">京东公益</a>|<a href="http://en.jd.com/" target="_blank">English Site</a>|<a href="http://help.en.jd.com/help/question-46.html" target="_blank">Contact Us</a>
+		</div>
+		<div class="copyright">
+			北京市公安局朝阳分局备案编号110105014669  |  京ICP证070359号  |  <a target="_blank" href="//img14.360buyimg.com/da/jfs/t256/349/769670066/270505/3b03e0bb/53f16c24N7c04d9e9.jpg">互联网药品信息服务资格证编号(京)-经营性-2014-0008</a>  |  新出发京零 字第大120007号<br><a rel="nofollow" href="//misc.360buyimg.com/skin/df/i/com/f_music.jpg" target="_blank">音像制品经营许可证苏宿批005号</a>  |  出版物经营许可证编号新出发(苏)批字第N-012号  |  互联网出版许可证编号新出网证(京)字150号<br><a href="//misc.360buyimg.com/wz/wlwhjyxkz.jpg" target="_blank">网络文化经营许可证京网文[2014]2148-348号</a>  违法和不良信息举报电话：4006561155  Copyright © 2004-2015  京东JD.com 版权所有<br>京东旗下网站：<a target="_blank" href="http://www.360top.com/">360TOP</a>  <a href="http://www.paipai.com/" target="_blank">拍拍网</a>  <a href="http://www.wangyin.com/" target="_blank">网银在线</a>
+		</div>
+		
+		<div class="authentication">
+			<a rel="nofollow" target="_blank" href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202007080200026">
+				<img width="103" height="32" alt="经营性网站备案中心" src="http://img12.360buyimg.com/da/jfs/t535/349/1185317137/2350/7fc5b9e4/54b8871eNa9a7067e.png" class="err-product" />
+			</a>
+			<script type="text/JavaScript">function CNNIC_change(eleId){var str= document.getElementById(eleId).href;var str1 =str.substring(0,(str.length-6));str1+=CNNIC_RndNum(6); document.getElementById(eleId).href=str1;}function CNNIC_RndNum(k){var rnd=""; for (var i=0;i < k;i++) rnd+=Math.floor(Math.random()*10); return rnd;}</script>
+			<a rel="nofollow" target="_blank" id="urlknet" tabindex="-1" href="http://ss.knet.cn/verifyseal.dll?sn=2008070300100000031&ct=df&pa=294005">
+				<img border="true" width="103" height="32" onclick="CNNIC_change('urlknet')" oncontextmenu="return false;" name="CNNIC_seal" alt="可信网站" src="http://img11.360buyimg.com/da/jfs/t643/61/1174624553/2576/4037eb5f/54b8872dNe37a9860.png" class="err-product" />
+			</a>
+			<a rel="nofollow" target="_blank" href="http://www.bj.cyberpolice.cn/index.do">
+				<img width="103" height="32" alt="朝阳网络警察" src="http://img11.360buyimg.com/da/jfs/t559/186/1172042286/2795/7d90b036/54b8874bN694454a5.png" class="err-product" />
+			</a>
+			<a rel="nofollow" target="_blank" href="http://search.szfw.org/cert/l/CX20120111001803001836">
+				<img width="103" height="32" src="http://img11.360buyimg.com/da/jfs/t451/173/1189513923/1992/ec69b14a/54b8875fNad1e0c4c.png" class="err-product" />
+			</a>
+			<a target="_blank" href="http://jubao.china.cn:13225/reportform.do">
+				<img width="185" height="32" src="http://img10.360buyimg.com/da/jfs/t520/303/1151687373/1180/2f8340fc/54b8863dN8d2c61ec.png" class="err-product" />
+			</a>
+		</div>
+	</div>
+</div>
+	</div>
+	
+	<!--201509 by cdwanchuan-->
+	<script type="text/javascript" src="http://static.360buyimg.com/jshop/sale-p/view/20150708113635/script/??module/utils.js,module/Module.js?t=201510261400"></script>
+	<script type="text/javascript" src="http://static.360buyimg.com/jshop/sale-p/view/20150708113635/script/??CookieUtil.js,lib-v1.js?t=201510261400"></script>
+	<script src="http://static.360buyimg.com/jshop/sale-p/view/20150708113635/script/view/entrance.js?t=201510261400"></script>
+	<script src="http://static.360buyimg.com/jshop/sale-p/view/20150708113635/script/??jshop.lib-v1.js?t=201510261400"></script>
+		<script language="javascript" src="http://static.360buyimg.com/jshop/sale-p/view/20150708113635/script/??advertise.js?t=201510261400"></script>
+					<script id="jshopSidebar" src=" http://static.360buyimg.com/jshop/common/utility/sidebar/sidebar.js?type=0&id=383400" type="text/javascript" charset="UTF-8"></script>
+<img src="http://jcm.jd.com/pre" width="1" height="1" style="display:none;"/>			<script type="text/javascript" src="http://wl.jd.com/wl.js"></script>
+
+
+	<!--京东主站相关-->
+      </body>
+</html>

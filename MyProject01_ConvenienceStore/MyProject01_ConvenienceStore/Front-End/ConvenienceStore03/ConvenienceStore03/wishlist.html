@@ -1,0 +1,323 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>我的收藏</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="便利商店"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" href="css/jquery.countdown.css"/>
+    <!--webfont-->
+    <!-- Import google fonts -->
+    <link href='http://fonts.useso.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+    <link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="css/changge.css" rel="stylesheet">
+</head>
+<body>
+<div class="header_top">
+    <div class="container">
+        <div class="header_top-box">
+            <div class="header-top-left">
+                <div class="hd-login label box ">
+                    <span class="hd_hi">Hi,</span>
+                    请
+                    <a id="global-hd-loginlink" rel="nofollow" href="login.html">登录</a>
+                    /
+                    <a rel="nofollow" href="register.ht ml">注册</a>
+                </div>
+                <div class=" label box haslogin" style="display: none;">
+                    <span class="hd_hi">Hi,</span>
+                    <a id="usename"></a>
+                </div>
+                <div class="box1 ">
+                    <span class="hd_hi">收货地：</span>
+                    <input readonly id="cityname" type="text" class="" data-positon="" data-cityname="" style="width: 200px;" placeholder="选择送货地址">
+                    <!-- 地址选择-->
+                    <div class=" hd-prochg" style="display: none;">
+                        <ul class="nav nav-tabs">
+                            <li class="active" id="toppro" ><a href="#pro" data-toggle="tab">福建省</a></li>
+                            <li class="_none" id="topcit"> <a href="#cit"data-toggle="tab">福州市</a></li>
+                            <li class="_none"id="topear" ><a href="#ear" data-toggle="tab">鼓楼区</a></li>
+                            <li class="_none" id="topvil" ><a href="#vil" data-toggle="tab">阳光小区</a></li>
+                        </ul>
+                        <div class="pro-wrap">
+                            <div class="tab-pane fade in active" id="pro" data-name="">
+
+                                <a href="#">福建省</a>
+
+                            </div>
+                            <div class="tab-pane fade in" id="cit" data-name="">
+
+
+                            </div>
+                            <div class="tab-pane fade in" id="ear" data-name="">
+
+
+
+                            </div>
+                            <div class="tab-pane fade in" id="vil" data-name="">
+
+
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="cssmenu">
+                <ul>
+                    <li class="active"><a href="usercenter.html">我的便利店</a></li>
+                    <li><a href="wishlist.html">收藏夹</a></li>
+                    <li><a href="login.html">掌上便利店</a></li>
+                    <li><a href="register.html">客户服务</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+
+<div class="header_bottom">
+    <div class="container">
+        <div class="header_bottom-box">
+            <div class="header_bottom_left">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" alt=""/></a>
+                </div>
+                <ul class="clock">
+                    <i class="clock_icon"> </i>
+                    <li class="clock_desc">24小时服务</li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="header_bottom_right">
+                <div class="search">
+                    <input id="mysearch" type="text" value="新品上架" onFocus="this.value = '';"
+                           onBlur="if (this.value == '') {this.value = '爆款返现，换购1元起';}">
+                    <input type="submit" value="" id="searchitem">
+                    <div class="findlist" style="display: none;">
+                        <ul >
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="shoppingcart">
+                    <a href="cart.html" class="btn ">
+                        <span class="glyphicon glyphicon-shopping-cart"></span> 购物车
+                        <span id="cartnum" class="badge" style="color: #FFFFFF; background-color: #f54D56 ;border:2px solid #FFFFFF; ">2</span>
+                    </a>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<div class="menu">
+    <div class="container">
+        <div class="menu_box">
+            <ul class="megamenu skyblue">
+                <li><a class="color10">全部商品</a></li>
+                <li class="active grid"><a class="color2" href="index.html">首页</a></li>
+                <li><a class="color7" href="cat.html">便利超市</a>
+                </li>
+                <li><a class="color3" href="#">今日优惠</a></li>
+                <li><a class="color8" href="voucher.html">便利钱包</a></li>
+                <div class="clearfix"></div>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="hd-mycollect">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">我的收藏</a>
+        </div>
+
+            <ul class="nav nav-tabs " id="liketab">
+                <li class="active"><a href="#like" data-toggle="tab">喜欢的商品</a></li>
+                <li><span>|</span></li>
+                <li><a href="#history" data-toggle="tab">浏览记录</a></li>
+            </ul>
+    </div>
+</div>
+<div id="collection" class="my_like_wrap container">
+    <div class="tab-pane fade in active" id="like">
+        <!-- -->
+        <!--id="like" 喜欢的商品-->
+        <!--<div class="col-md-2 product">-->
+        <!--<a href="#"><img src="images/niunai.jpg"></a>-->
+        <!--<div class="product-bottom">-->
+        <!--<p><a>伊利金典纯牛奶250ml*24盒</a></p>-->
+        <!--<span class="price">￥133.40 </span>-->
+        <!--<button type="button" class="btn">取消收藏</button>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="col-md-2 product">-->
+        <!--<a href="#"><img src="images/niunai.jpg"></a>-->
+        <!--<div class="product-bottom">-->
+        <!--<p><a>伊利金典纯牛奶250ml*24盒</a></p>-->
+        <!--<span class="price">￥133.40 </span>-->
+        <!--<button type="button" class="btn" >取消收藏</button>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="col-md-2 product">-->
+        <!--<a href="#"><img src="images/niunai.jpg"></a>-->
+        <!--<div class="product-bottom">-->
+        <!--<p><a>伊利金典纯牛奶250ml*24盒</a></p>-->
+        <!--<span class="price">￥133.40 </span>-->
+        <!--<button type="button" class="btn" >取消收藏</button>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="col-md-2 product">-->
+        <!--<a href="#"><img src="images/niunai.jpg"></a>-->
+        <!--<div class="product-bottom">-->
+        <!--<p><a>伊利金典纯牛奶250ml*24盒</a></p>-->
+        <!--<span class="price">￥133.40 </span>-->
+        <!--<button type="button" class="btn">取消收藏</button>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="col-md-2 product">-->
+        <!--<a href="#"><img src="images/niunai.jpg"></a>-->
+        <!--<div class="product-bottom">-->
+        <!--<p><a>伊利金典纯牛奶250ml*24盒</a></p>-->
+        <!--<span class="price">￥133.40 </span>-->
+        <!--<button type="button" class="btn">取消收藏</button>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!-- -->
+    </div>
+
+
+
+    <div class="tab-pane fade" id="history">
+
+        <!-- id="history"  浏览记录-->
+        <div class="col-md-2 span_6">
+            <div class="box_inner">
+                <a href="#">
+                    <img src="images/photo2.jpg" class="img-responsive" alt=""/>
+
+                    <div class="desc">
+                        <h4 class="proprice"><span class="price">￥</span>43.80</h4>
+
+                        <p><a>张裕 红酒 海岸风情干红葡萄酒 750ML</a></p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-2 span_6">
+            <div class="box_inner">
+                <a href="#">
+                    <img src="images/photo2.jpg" class="img-responsive" alt=""/>
+
+                    <div class="desc">
+                        <h4 class="proprice"><span class="price">￥</span>43.80</h4>
+
+                        <p><a>张裕 红酒 海岸风情干红葡萄酒 750ML</a></p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-2 span_6">
+            <div class="box_inner">
+                <a href="#">
+                    <img src="images/photo2.jpg" class="img-responsive" alt=""/>
+
+                    <div class="desc">
+                        <h4 class="proprice"><span class="price">￥</span>43.80</h4>
+
+                        <p><a>张裕 红酒 海岸风情干红葡萄酒 750ML</a></p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-2 span_6">
+            <div class="box_inner">
+                <a href="#">
+                    <img src="images/photo2.jpg" class="img-responsive" alt=""/>
+
+                    <div class="desc">
+                        <h4 class="proprice"><span class="price">￥</span>43.80</h4>
+
+                        <p><a>张裕 红酒 海岸风情干红葡萄酒 750ML</a></p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-2 span_6">
+            <div class="box_inner">
+                <a href="#">
+                    <img src="images/photo2.jpg" class="img-responsive" alt=""/>
+
+                    <div class="desc">
+                        <h4 class="proprice"><span class="price">￥</span>43.80</h4>
+
+                        <p><a>张裕 红酒 海岸风情干红葡萄酒 750ML</a></p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-2 span_6">
+            <div class="box_inner">
+                <a href="#">
+                    <img src="images/photo2.jpg" class="img-responsive" alt=""/>
+
+                    <div class="desc">
+                        <h4 class="proprice"><span class="price">￥</span>43.80</h4>
+
+                        <p><a>张裕 红酒 海岸风情干红葡萄酒 750ML</a></p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-2 span_6">
+            <div class="box_inner">
+                <a href="#">
+                    <img src="images/photo2.jpg" class="img-responsive" alt=""/>
+
+                    <div class="desc">
+                        <h4 class="proprice"><span class="price">￥</span>43.80</h4>
+
+                        <p><a>张裕 红酒 海岸风情干红葡萄酒 750ML</a></p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- -->
+
+    </div>
+
+
+
+</div>
+
+<div class="clearfix"></div>
+
+<div class="footer">
+    <div class="container">
+        <img src="images/pay.png" class="img-responsive" alt=""/>
+        <ul class="footer_nav">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">新手帮助</a></li>
+            <li><a href="#">权益保障</a></li>
+            <li><a href="#">商家服务</a></li>
+            <li><a href="#">客服中心</a></li>
+            <li><a href="#">投诉建议</a></li>
+            <li><a href="addlist.html">联系我们</a></li>
+        </ul>
+        <p class="copy">Copyright &copy; 2015.便利店 </p>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easydropdown.js"></script>
+<script src="js/jquery.cookie.js"></script>
+<script type="text/javascript" src="js/megamenu.js"></script>
+<script src="js/topjs.js"></script>
+<script src="js/wishlist.js"></script>
+</body>
+
+</html>		

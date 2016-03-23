@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>网上便利店—查看购物车</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/cart.css" rel="stylesheet">
+    <link href="css/jquery.spinner.css" rel="stylesheet">
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.spinner.js"></script>
+    <script src="js/cart.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+    <h3 align="center"><a class="btn-danger">1.查看购物车</a> >>> 2.确认订单信息 >>> 3.订单支付 >> 4.支付成功 </h3>
+    <hr size="1" color="#F54D56">
+<h4>我的购物车</h4>
+<br>
+
+<div class="table-responsive" >
+
+    <table class="table  table-hover ">
+        <thead>
+        <tr>
+            <th data-checkedbox="true"><p align="center" >商品编号</p></th>
+            <th><p align="center" >商品</p></th>
+            <th><p align="center" >店铺</p></th>
+            <th><p align="center" >单价（元）</p></th>
+            <th><p align="center" >数量</p></th>
+            <th><p align="center" >小计（元）</p></th>
+            <th><p align="center" >操作</p></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr align="center">
+            <td ><p align="left"><input type="checkbox">10000001</td>
+            <td><p align="left"><img src="image/jiangyou.jpg"><a href="#">宜赤必 刺身酱油（酿造酱油）200ml 日本进口</a></td>
+            <td>1、2、3号店铺</td>
+            <td>40.00</td>
+            <td >
+                <div class="prod-buychoose">
+                    <dl class="pProps" id="choosenum1">
+                        <dd id="choose-num1">
+                            <input type="text" class="spinnerExample"/>
+                        </dd>
+                    </dl>
+                </div>
+            </td>
+            <td>200.00</td>
+            <td><a href="#">移入收藏夹</a>/<a href="#">删除</a></td>
+        </tr>
+        <tr align="center">
+            <td ><p align="left"> <input type="checkbox">10000002</td>
+            <td><p align="left"><img src="image/shuihu.jpg"><a href="#">tiger 虎牌 电热水壶 800ml PFY-A08C</a></td>
+            <td>1、3号店铺</td>
+            <td>200.00</td>
+            <td >
+                <div class="prod-buychoose">
+                    <dl class="pProps" id="choosenum2">
+                        <dd id="choose-num2">
+                            <input type="text" class="spinnerExample"/>
+                        </dd>
+                    </dl>
+                </div>
+            </td>
+            <td>200.00</td>
+            <td><a href="#">移入收藏夹</a>/<a href="#">删除</a></td>
+        </tr>
+        <tr align="center">
+            <td><p align="left"><input type="checkbox">10000003</td>
+            <td><p align="left"><img src="image/zhijin.jpg"><a href="#">清风 抽纸巾原生木浆纯品2提16包180抽</a></td>
+            <td>1、2、3号店铺</td>
+            <td>50.00</td>
+            <td >
+                <div class="prod-buychoose">
+                    <dl class="pProps" id="choosenum3">
+                        <dd id="choose-num3">
+                            <input type="text" class="spinnerExample"/>
+                        </dd>
+                    </dl>
+                </div>
+            </td>
+            <td>200.00</td>
+            <td><a href="#">移入收藏夹</a>/<a href="#">删除</a></td>
+        </tr>
+        </tbody>
+    </table>
+    <br>
+    <table class="table2 table-hover  ">
+        <tbody>
+        <tr align="center">
+            <td ><input type="checkbox"> 全选</td>
+            <td><a href="#">删除选中的商品</a> </td>
+            <td><a href="#">移到我的关注</a></td>
+            <td>总价（不含运费）：¥0.00</td>
+            <td class="btn-danger"><a href="con_order.html">去结算</a></td>
+        </tr>
+        </tbody>
+    </table>
+    <br><br><br><br>
+
+    <ul id="myTab" class="nav nav-tabs">
+        <li class="active">
+            <a href="#home" data-toggle="tab">
+              猜你喜欢
+            </a>
+        </li>
+        <li><a href="#myguanzhu" data-toggle="tab">我的关注</a></li>
+        <li class="dropdown">
+            <a href="#recent" id="myTabDrop1" class="dropdown-toggle"
+               data-toggle="dropdown">最近浏览的 </a>
+        </li>
+    </ul>
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade in active" id="home">
+            <p>网上便利店——猜你喜欢
+                网上便利店——猜你喜欢
+                网上便利店——猜你喜欢
+                网上便利店——猜你喜欢
+            </p>
+            <br>
+            <img src="images/zhijin.jpg">
+        </div>
+
+        <div class="tab-pane fade" id="myguanzhu">
+            <p>网上便利店——我的关注
+                网上便利店——我的关注
+                <h3 align="center">暂无关注！</h3>
+            </p>
+        </div>
+        <div class="tab-pane fade" id="recent">
+            <p>网上便利店——最近浏览的</p>
+        </div>
+    </div>
+</div>
+    <div >
+        <h2 align="center">————————————底部————————————</h2>
+    </div>
+</div>
+
+
+
+</body>
+</html>

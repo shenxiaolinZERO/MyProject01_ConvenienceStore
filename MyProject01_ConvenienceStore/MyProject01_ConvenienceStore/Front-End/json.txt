@@ -1,0 +1,218 @@
+﻿{
+    "bigclass": [
+        {
+            "name": "电器"
+        },
+        {
+            "name": "服装"
+        }
+    ],
+    "listhot": [
+        {
+            "itemNo": "10002",
+            "itemName": "冬季外套",
+            "barcode": null,
+            "itemBynum1": "6500人",
+            "itemSalePrice": "￥135.60",
+            "brandName": null,
+            "itemArea": null,
+            "itemFactory": null,
+            "eshopIntegral": null,
+            "images": null,//包装方式
+            "itemPack": null,
+            "itemSize": null,
+            "stockQty": null,//库存
+            "url": "http://192.168.199.242:8080/BSMD/Android/image/index_img_i2.png"
+        },
+        {
+            "itemNo": "10001",
+            "itemName": "机械键盘",
+            "barcode": null,
+            "itemBynum1": "1650人",
+            "itemSalePrice": "￥56.50",
+            "brandName": null,
+            "itemArea": null,
+            "itemFactory": null,
+            "eshopIntegral": null,
+            "images": null,
+            "itemPack": null,
+            "itemSize": null,
+            "stockQty": null,
+            "url": "http://192.168.199.242:8080/BSMD/Android/image/index_img_i4.png"
+        },
+        {
+            "itemNo": "10004",
+            "itemName": "无敌鼠标",
+            "barcode": null,
+            "itemBynum1": "635人",
+            "itemSalePrice": "￥23.00",
+            "brandName": null,
+            "itemArea": null,
+            "itemFactory": null,
+            "eshopIntegral": null,
+            "images": null,
+            "itemPack": null,
+            "itemSize": null,
+            "stockQty": null,
+            "url": "http://192.168.199.242:8080/BSMD/Android/image/index_img_i1.png"
+        },
+        {
+            "itemNo": "10003",
+            "itemName": "男士夹克",
+            "barcode": null,
+            "itemBynum1": "451人",
+            "itemSalePrice": "￥146.00",
+            "brandName": null,
+            "itemArea": null,
+            "itemFactory": null,
+            "eshopIntegral": null,
+            "images": null,
+            "itemPack": null,
+            "itemSize": null,
+            "stockQty": null,
+            "url": "http://192.168.199.242:8080/BSMD/Android/image/index_img_i3.png"
+        }
+    ],
+    "listclass": [
+        {
+            "class": [
+                {
+                    "itemNo": "10001",
+                    "itemName": "机械键盘",
+                    "barcode": null,
+                    "itemBynum1": "1650人",
+                    "itemSalePrice": "￥56.50",
+                    "brandName": null,
+                    "itemArea": null,
+                    "itemFactory": null,
+                    "eshopIntegral": null,
+                    "images": null,
+                    "itemPack": null,
+                    "itemSize": null,
+                    "stockQty": null,
+                    "url": "http://192.168.199.242:8080/BSMD/Android/image/index_img_i4.png"
+                },
+                {
+                    "itemNo": "10004",
+                    "itemName": "无敌鼠标",
+                    "barcode": null,
+                    "itemBynum1": "635人",
+                    "itemSalePrice": "￥23.00",
+                    "brandName": null,
+                    "itemArea": null,
+                    "itemFactory": null,
+                    "eshopIntegral": null,
+                    "images": null,
+                    "itemPack": null,
+                    "itemSize": null,
+                    "stockQty": null,
+                    "url": "http://192.168.199.242:8080/BSMD/Android/image/index_img_i1.png"
+                }
+            ]
+        },
+        {
+            "class": [
+                {
+                    "itemNo": "10002",
+                    "itemName": "冬季外套",
+                    "barcode": null,
+                    "itemBynum1": "6500人",
+                    "itemSalePrice": "￥135.60",
+                    "brandName": null,
+                    "itemArea": null,
+                    "itemFactory": null,
+                    "eshopIntegral": null,
+                    "images": null,
+                    "itemPack": null,
+                    "itemSize": null,
+                    "stockQty": null,
+                    "url": "http://192.168.199.242:8080/BSMD/Android/image/index_img_i2.png"
+                },
+                {
+                    "itemNo": "10003",
+                    "itemName": "男士夹克",
+                    "barcode": null,
+                    "itemBynum1": "451人",
+                    "itemSalePrice": "￥146.00",
+                    "brandName": null,
+                    "itemArea": null,
+                    "itemFactory": null,
+                    "eshopIntegral": null,
+                    "images": null,
+                    "itemPack": null,
+                    "itemSize": null,
+                    "stockQty": null,
+                    "url": "http://192.168.199.242:8080/BSMD/Android/image/index_img_i3.png"
+                }
+            ]
+        }
+    ],
+    "listcommend": [
+        {
+            "itemNo": "10001",
+            "itemName": "机械键盘",
+            "barcode": null,
+            "itemBynum1": "1650人",
+            "itemSalePrice": "￥56.50",
+            "brandName": null,
+            "itemArea": null,
+            "itemFactory": null,
+            "eshopIntegral": null,
+            "images": null,
+            "itemPack": null,
+            "itemSize": null,
+            "stockQty": null,
+            "url": "http://192.168.199.242:8080/BSMD/Android/image/index_img_i4.png"
+        },
+        {
+            "itemNo": "10003",
+            "itemName": "男士夹克",
+            "barcode": null,
+            "itemBynum1": "451人",
+            "itemSalePrice": "￥146.00",
+            "brandName": null,
+            "itemArea": null,
+            "itemFactory": null,
+            "eshopIntegral": null,
+            "images": null,
+            "itemPack": null,
+            "itemSize": null,
+            "stockQty": null,
+            "url": "http://192.168.199.242:8080/BSMD/Android/image/index_img_i3.png"
+        }
+    ],
+    "listcx": [
+        {
+            "itemNo": "10001",
+            "itemName": "机械键盘",
+            "barcode": null,
+            "itemBynum1": "1650人",
+            "itemSalePrice": "￥56.50",
+            "brandName": null,
+            "itemArea": null,
+            "itemFactory": null,
+            "eshopIntegral": null,
+            "images": null,
+            "itemPack": null,
+            "itemSize": null,
+            "stockQty": null,
+            "url": "http://192.168.199.242:8080/BSMD/Android/image/index_img_i4.png"
+        },
+        {
+            "itemNo": "10003",
+            "itemName": "男士夹克",
+            "barcode": null,
+            "itemBynum1": "451人",
+            "itemSalePrice": "￥146.00",
+            "brandName": null,
+            "itemArea": null,
+            "itemFactory": null,
+            "eshopIntegral": null,
+            "images": null,
+            "itemPack": null,
+            "itemSize": null,
+            "stockQty": null,
+            "url": "http://192.168.199.242:8080/BSMD/Android/image/index_img_i3.png"
+        }
+    ]
+}

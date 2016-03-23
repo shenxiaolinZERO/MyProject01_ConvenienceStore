@@ -1,0 +1,14 @@
+
+.table {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+hr{
+    color:#F54D56;
+}
+/*------------------金额结算部分----------------------*/
+.left{
+    float: right;
+}

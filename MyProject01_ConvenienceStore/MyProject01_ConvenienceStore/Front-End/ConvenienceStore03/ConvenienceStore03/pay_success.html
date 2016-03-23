@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网上便利店—支付成功</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/changge.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/addlist.css">
+    <link rel="stylesheet" href="css/pay_success.css">
+</head>
+<body>
+<div class="header_top">
+    <div class="container">
+        <div class="header_top-box">
+            <div class="header-top-left">
+                <div class="hd-login label box ">
+                    <span class="hd_hi">Hi,</span>
+                    请
+                    <a id="global-hd-loginlink" rel="nofollow" href="login.html">登录</a>
+                    /
+                    <a rel="nofollow" href="register.ht ml">注册</a>
+                </div>
+                <div class=" label box haslogin" style="display: none;">
+                    <span class="hd_hi">Hi,</span>
+                    <a id="usename"></a>
+                </div>
+                <div class="box1 ">
+                    <span class="hd_hi">收货地：</span>
+                    <input id="cityname" type="text" class="" data-positon="" data-cityname="" style="width: 200px;"
+                           placeholder="选择送货地址">
+                    <!-- 地址选择-->
+                    <div class=" hd-prochg" style="display: none;">
+                        <ul class="nav nav-tabs">
+                            <li class="active" id="toppro"><a href="#pro" data-toggle="tab">福建省</a></li>
+                            <li class="_none" id="topcit"><a href="#cit" data-toggle="tab">福州市</a></li>
+                            <li class="_none" id="topear"><a href="#ear" data-toggle="tab">鼓楼区</a></li>
+                            <li class="_none" id="topvil"><a href="#vil" data-toggle="tab">阳光小区</a></li>
+                        </ul>
+                        <div class="pro-wrap">
+                            <div class="tab-pane fade in active" id="pro" data-name="">
+
+                                <a href="#">福建省</a>
+
+                            </div>
+                            <div class="tab-pane fade in" id="cit" data-name="">
+
+
+                            </div>
+                            <div class="tab-pane fade in" id="ear" data-name="">
+
+
+                            </div>
+                            <div class="tab-pane fade in" id="vil" data-name="">
+
+
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="cssmenu">
+                <ul>
+                    <li class="active"><a href="usercenter.html">我的便利店</a></li>
+                    <li><a href="wishlist.html">收藏夹</a></li>
+                    <li><a href="login.html">掌上便利店</a></li>
+                    <li><a href="register.html">客户服务</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<div class="head-step">
+    <div class="container">
+        <div class="cart-head-step">
+            <div class="col-lg-6" style="font-size: 16px;font-weight:bold;font-family: Consolas;color:#666666">
+                网上便利店 <span style="font-size: 14px;color:#dddddd">订单支付</span>
+            </div>
+            <div class="col-lg-6">
+                <ul class="cart-step">
+                    <li class="process-step">1</li>
+                    <li>
+                        <hr class="stephr" style="width:100px;" noshade>
+                    </li>
+                    <li class="process-step">2</li>
+                    <li>
+                        <hr class="stephr" style="width:100px;" noshade>
+                    </li>
+                    <li class="process-step">3</li>
+                    <li>
+                        <hr class="stephr" style="width:100px;" noshade>
+                    </li>
+                    <li class="process-step">4</li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="container ">
+        <div class="col-lg-6"></div>
+        <div class="col-lg-6">
+            <div>
+                <ul class="cart-step">
+                    <li class="process-stepb">购物车</li>
+                    <li class="process-stepbn">确认订单</li>
+                    <li class="process-stepbn">支付</li>
+                    <li class="process-stepbn">完成</li>
+                </ul>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+</div>
+<div class="container">
+    <br>
+
+    <br>
+    <br>
+    <br>
+    <hr size="1" color="#F54D56">
+
+    <h1 align="center">恭喜您！订单已成功提交</h1>
+
+    <form  class="form-horizontal" role="form">
+        <h2>您的订单：订单号为：XXXXXXXXXXX   成功付款：XXX元</h2>
+        <h4>温馨提示：请保持手机畅通，以便快递公司的联系，确保收件的顺利</h4>
+        <h4>我们将在第一时间给您安排发货，注册用户可以在用户中心的订单管理页面中查询快递单号和快递公司名称</h4>
+        <h4>如有疑问可向客服咨询，我们将竭诚为您服务。</h4>
+        <h4>客服热线：XXXX-XXXX-XXXX   （服务时间：XX-XX-XX）     &nbsp;&nbsp;&nbsp;<a href="con_order.html">我的订单</a></h4>
+
+    </form>
+</div>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!--<script src="js/jquery.spinner.js"></script>-->
+<!--<script src="js/provinceselect.js"></script>-->
+<script src="js/jquery.cookie.js"></script>
+</body>
+</html>

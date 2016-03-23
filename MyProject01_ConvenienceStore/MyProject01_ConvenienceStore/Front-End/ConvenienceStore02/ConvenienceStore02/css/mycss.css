@@ -1,0 +1,31 @@
+
+.prod-buychoose{
+    margin: 15px 5px;
+}
+
+#choose-num1,#choose-num2,#choose-num3 a{
+   font-size:16px;
+}
+
+.reduce,.add{
+    padding:6px;
+    font-size: 14px;
+    border-radius: 0px;
+    border:1px solid #968F88;
+}
+.reduce{
+    border-right: transparent;
+}
+.add{
+    border-left: transparent;
+    margin-left: -4px;
+}
+
+#buycount1 ,#buycount2,#buycount3 {
+    height: 30px;
+    width: 60px;
+    text-align: center;
+    margin-left: -4px;
+    margin-top: 1px;
+}
+

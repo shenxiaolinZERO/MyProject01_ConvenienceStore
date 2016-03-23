@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="便利商店"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel='stylesheet' type='text/css'/>
+    <!-- Import google fonts -->
+    <link href='http://fonts.useso.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+    <link href="css/changge.css" rel="stylesheet">
+</head>
+<body>
+<div class="header_top" style="margin:0px 0px;padding: 10px">
+    <div class="container">
+        <div class="header_top-box">
+            <div class="header-top-left">
+                <a class="logo" href="index.html">
+                    <img src="images/logo.png">
+                </a>
+
+                <div class="clearfix"></div>
+            </div>
+            <div class="cssmenu">
+                <span>您好，欢迎光临网上便利店！
+                <a class="bule_link" href="login.html">请登录</a></span>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<div class="loginbody">
+    <div class="container">
+        <div class="">
+            <div class="col-md-6 login-left">
+
+                <h3>欢迎新用户</h3>
+
+                <p>创建新账户，足不出户逛超市！</p>
+                <a class="acount-btn" href="register.html">创建新账户</a>
+            </div>
+            <div class="col-md-6 login-right">
+                <h3>登录</h3>
+
+                <p>如有账号，请登录</p>
+
+                <form class="login-form">
+                        <div class="">
+                            <input id="username" type="text" placeholder="手机号/邮箱/用户名" data-toggle="popover-phnum"
+                                   data-placement="right"
+                                   data-content="请输入正确的用户名">
+                            <div class="fr" style="margin-right: 10%"><span class=" usermsg msg"></span></div>
+
+                        </div>
+
+
+                        <div class="">
+                            <!--<span>Password<label>*</label></span>-->
+                            <input id="psw" type="password" placeholder="密码" data-toggle="popover-psw"
+                                   data-placement="right"
+                                   data-content="密码不能为空">
+                            <div class="fr"style="margin-right: 10%"><span class=" pswmsg msg"></span></div>
+                        </div>
+
+
+
+
+                    <a class="forgot" href="#">忘记密码?</a>
+                    <input id="login_btn" type="button" value="登录" onclick="login_submit();">
+                </form>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="container">
+        <img src="images/pay.png" class="img-responsive" alt=""/>
+        <ul class="footer_nav">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">新手帮助</a></li>
+            <li><a href="#">权益保障</a></li>
+            <li><a href="#">商家服务</a></li>
+            <li><a href="#">客服中心</a></li>
+            <li><a href="#">投诉建议</a></li>
+            <li><a href="addlist.html">联系我们</a></li>
+        </ul>
+        <p class="copy">Copyright &copy; 2015.便利店 </p>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/login.js"></script>
+<script src="js/des.js"></script>
+</body>
+</html>		

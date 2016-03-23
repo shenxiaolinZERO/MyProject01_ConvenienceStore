@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type"/>
+    <meta name="keywords" content="便利商店"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel='stylesheet' type='text/css'/>
+    <!--webfont-->
+    <!-- Import google fonts -->
+    <link href='http://fonts.useso.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+    <link href="css/changge.css" rel="stylesheet">
+</head>
+<body>
+<div class="header_top">
+    <div class="container">
+        <div class="header_top-box">
+            <div class="header-top-left">
+                <div class="hd-login label box ">
+                    <span class="hd_hi">Hi,</span>
+                    请
+                    <a id="global-hd-loginlink" rel="nofollow" href="login.html">登录</a>
+                    /
+                    <a rel="nofollow" href="register.html">注册</a>
+                </div>
+                <div class="box1">
+                    省份：<select  id="province" onchange="showcity()">
+                    <option value="0">-请选择-</option>
+                </select>&nbsp;&nbsp;
+                    城市：<select id="city" onchange="showarea()">
+                    <option value="0">-请选择-</option>
+                </select>&nbsp;&nbsp;
+                    地区：<select id="area">
+                    <option value="0">-请选择-</option>
+                </select>&nbsp;&nbsp;
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="cssmenu">
+                <ul>
+                    <li class="active"><a href="login.html">我的便利店</a></li>
+                    <li><a href="wishlist.html">收藏夹</a></li>
+                    <li><a href="login.html">掌上便利店</a></li>
+                    <li><a href="register.html">客户服务</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/province.js"></script>
+</body>
+
+</html>

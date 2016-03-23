@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网上便利店—确认订单信息</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/con_order.css" >
+</head>
+<body>
+<div class="container">
+    <br>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr>
+        <h3 align="center">1.查看购物车 >>> <a class="btn-danger">2.确认订单信息</a> >>> 3.订单支付 >> 4.支付成功 </h3>
+        <hr size="1" color="#F54D56">
+
+
+            <form class="form-horizontal" role="form">
+                <legend class="title">收货信息</legend>
+                <div class="form-group">
+                    <label for="name" class="col-sm-2 control-label">收货人姓名：</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="name"
+                               placeholder="请输入名字">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label  class="col-sm-2 control-label">所在地址：</label>
+                    <div class="col-sm-5">
+                        <select id="format1">
+                            <option value="fuzhoushi">福建省</option>
+                        </select>
+                        <select id="format2">
+                            <option value="fuzhoushi">福州市</option>
+                            <option value="fuzhoushi">漳州市</option>
+                            <option value="fuzhoushi">宁德市</option>
+                        </select>
+
+                        <select id="format3">
+                            <option value="county">请选择县/区</option>
+                            <option value="minhouxian">闽侯县</option>
+                            <option value="cangshanqu">仓山区</option>
+                            <option value="jinanqu">晋安区</option>
+                            <option value="gulouqu">鼓楼区</option>
+                        </select>
+                        <select id="format4">
+                            <option value="fuzhoushi">XX小区</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="detailaddress" class="col-sm-2 control-label">详细地址：</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="detailaddress"
+                               placeholder="请输入楼栋以及单元号">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="phonenumber" class="col-sm-2 control-label">手机号码：</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="phonenumber"
+                               placeholder="请输入手机号码">
+                    </div>
+                    <div class="col-sm-5">
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> 设为默认地址
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-success">保存收货信息</button>
+                        <button type="submit" class="btn btn-warning">取消</button>
+                    </div>
+                </div>
+             </form>
+
+        <br>
+        <br>
+        <br>
+
+            <form class="form-horizontal" role="form">
+                <legend class="title" >支付及配送方式</legend>
+                <div class="form-group">
+                    <label for="name" class="col-sm-2 control-label">支付方式：</label>
+                    <div class="col-sm-10">
+                        <div class="radio">
+                            <label>
+                                <input type="radio">在线支付    （为了保证及时处理订单，下单后请及时付款，及时到账，支持多种信用卡）
+                            </label>
+                        </div>
+                        <br>
+                        <div class="radio">
+                            <label>
+                                <input type="radio">货到付款    （为了保证及时处理订单，下单后请及时付款，及时到账，支持多种信用卡）
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label  class="col-sm-2 control-label">配送信息：</label>
+                    <div class="col-sm-8">
+                    <table class=" table  table-hover table-bordered ">
+                        <thead>
+                        <tr>
+                            <th data-checkedbox="true"><p align="center" >包裹</p></th>
+                            <th><p align="center" >配送方式</p></th>
+                            <th><p align="center" >运费</p></th>
+                            <th><p align="center" >备注</p></th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr align="center">
+                            <td ><p align="left">包裹1</td>
+                            <td><p align="left">该商品由便利店提供并配送</td>
+                            <td>免运费</td>
+                            <td > （备注） </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                  </div>
+                </div>
+            </form>
+
+        <br>
+        <br>
+        <br>
+
+            <form class="form-horizontal" role="form">
+                <legend class="title" >发票信息</legend>
+                <div class="form-group">
+                    <label for="name" class="col-sm-2 control-label">是否需要发票：</label>
+                    <div class="col-sm-10">
+                        <div class="radio">
+                            <label>
+                                <input type="radio">不需要发票
+                            </label>
+                        </div>
+                        <br>
+                        <div  class="radio">
+                            <label>
+                                <input type="radio">需要发票
+                            </label>
+                                  发票抬头：
+                            <select id="format5">
+                                <option value="county">个人</option>
+                                <option value="minhouxian">公司</option>
+                            </select>
+                                <input type="text" >
+
+                                    <label>
+                                        <input type="checkbox" >保存为常用发票抬头
+                                    </label>
+
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+    <br>
+    <br>
+    <br>
+            <form class="form-horizontal" role="form">
+                <legend class="title" >商品信息</legend>
+                <label  class="col-sm-2 control-label">商品信息：</label>
+                <div class="col-sm-8">
+                    <table class=" table  table-hover table-bordered ">
+                        <thead>
+                        <tr>
+                            <th data-checkedbox="true"><p align="center" >包裹</p></th>
+                            <th><p align="center" >商品名称</p></th>
+                            <th><p align="center" >单价</p></th>
+                            <th><p align="center" >数量</p></th>
+                            <th><p align="center" >小计</p></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr align="center">
+                            <td ><p align="left">包裹1</td>
+                            <td><p align="left"><img src="image/zhijin.jpg"><a href="#">清风 抽纸巾原生木浆纯品2提16包180抽</a></td>
+                            <td>20.0</td>
+                            <td >5</td>
+                            <td >100.0</td>
+                        </tr>
+                        <tr align="center">
+                            <td ><p align="left">包裹1</td>
+                            <td><p align="left"><img src="image/shuihu.jpg"><a href="#">tiger 虎牌 电热水壶 800ml PFY-A08C</a></td>
+                            <td>20.0</td>
+                            <td >5</td>
+                            <td >100.0</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </form>
+
+    </div>
+<div>
+    <hr size="1" color="#F54D56">
+    <br>
+<div class="left">
+商品合计（含运费）：¥200</div>
+    <br>
+    <hr size="1" color="#F54D56">
+    <div class="left">
+    <label>
+        <input type="checkbox">使用优惠券
+    </label>
+    <br>
+
+    <label>
+        <input type="checkbox">使用积分余额<input type="text"> (您当前有XX积分可用)
+    </label>
+
+
+    <div>
+        <hr size="1" color="#F54D56">
+        应付金额：¥ 120.00<br>
+        寄送至：ＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸ<br>
+        收货人：ＸＸＸ　18025631258<br>
+    </div>
+        <div class="left">
+            <button type="submit" class="btn btn-danger" ><a href="http://localhost:63342/pay_order/pay_order.html" >提交订单</a></button>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

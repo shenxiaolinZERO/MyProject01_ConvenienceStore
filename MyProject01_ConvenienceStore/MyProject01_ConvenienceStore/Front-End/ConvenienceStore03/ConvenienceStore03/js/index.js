@@ -1,0 +1,628 @@
+/**
+ * Created by lenovo on 2015/11/18.
+ */
+/** 点击首页分类，*/
+/**地址选择模态框与 顶部*/
+//选择省，显示市
+$.fn.proclick=function(){
+    $("#province").on("click","a",function(){
+        $("#curSelect").attr("data-position","");
+        var e=$(this).text();
+        $("#province").attr("data-name",e);
+        $("#tabpro").removeClass("active");
+        $("#tabcity").addClass("active");
+        $("#province").removeClass("active in");
+        $("#city").addClass("active in");
+    })
+    //t顶部
+    $("#pro").on("click","a", function () {
+        e=$(this).text();
+        $("#pro").attr("data-name",e);
+        $("#toppro").removeClass("active");
+        $("#topcit").removeClass("_none");
+        $("#topcit").addClass("active");
+        $("#pro").removeClass("active in");
+        $("#cit").addClass("active in");
+    })
+}
+//选择市，显示县区
+$.fn.cityclick= function() {
+    $("#city").on("click","a",function () {
+        var  e=$(this).text();
+        $("#tabcity>a").text(e);
+        //分别存入各个对于的标签
+        $("#city").attr("data-name",e);
+        $("#tabcity").removeClass("active");
+        $("#tabcounty").addClass("active");
+        $("#city").removeClass("active in");
+        $("#eare").addClass("active in");
+        //删除旧的县区子元素
+        $("#eare").children("a").remove();
+        //改变 ul的显示
+        showcounty(e);
+    });
+    //t顶部
+    $("#cit").on("click","a",function(){
+        var  e=$(this).text();
+        $("#topcit>a").text(e);
+        //var pos=$("#cityname").attr("data-position");
+        //pos=pos+e;
+        //$("#cityname").attr("data-position",pos);
+        $("#cit").attr("data-name",e);
+        $("#topcit").removeClass("active");
+        $("#topear").removeClass("_none");
+        $("#topear").addClass("active");
+        $("#cit").removeClass("active in");
+        $("#ear").addClass("active in");
+        //改变ul的显示
+        showear(e);
+    })
+}
+//选择县区，显示小区
+$.fn.countyclick=function(){
+    $("#eare").on("click","a",function () {
+        var e=$("#city").attr("data-name");
+        var b=$(this).text();
+        $("#tabcounty>a").text(b);
+        $("#eare").attr("data-name",b);
+        $("#tabcounty").removeClass("active");
+        $("#tabvillage").addClass("active");
+        $("#village").addClass("active in");
+        $("#eare").removeClass("active in");
+        //删除旧的小区元素
+        $("#village").children("a").remove();
+        showShop(e,b);
+    });
+    //t顶部
+    $("#ear").on("click","a",function () {
+        var e=$("#cit").attr("data-name");
+        var b=$(this).text();
+        $("#topear>a").text(b);
+        $("#ear").attr("data-name",b);
+        $("#topear").removeClass("active");
+        $("#topvil").removeClass("_none");
+        $("#topvil").addClass("active");
+        $("#vil").addClass("active in");
+        $("#ear").removeClass("active in");
+        //删除旧的小区元素
+        showvil(e,b);
+    });
+}
+//选择小区完成
+$.fn.villclick= function () {
+    $("#village").on("click","a",function(){
+        //取得选择的小区
+        var e=$(this).text();
+        $("#tabvillage>a").text(e);
+        $("#village").attr("data-name",e);
+        var pos=$("#city").attr("data-name")+$("#eare").attr("data-name")+$("#village").attr("data-name");
+        $("#curSelect").val(pos);
+        $(".selectpro").hide();
+    })
+//t顶部
+    $("#vil").on("click","a",function(){
+        //取得选择的小区
+        var e=$(this).text();
+        $("#topvil>a").text(e);
+        $("#vil").attr("data-name",e);
+        $(".hd-prochg").hide();
+        //拼装写入cookie
+        var pos=$("#cit").attr("data-name")+$("#ear").attr("data-name")+$("#vil").attr("data-name");
+        var post=$("#cit").attr("data-name")+"-"+$("#ear").attr("data-name")+"-"+$("#vil").attr("data-name");
+        $("#cityname").attr("data-positon",pos);
+        $("#cityname").attr("data-cityname",post);
+        $("#cityname").val(pos);
+        //将修改的地址存入cookie
+        x=[$("#cit").attr("data-name"),$("#ear").attr("data-name"),$("#vil").attr("data-name")];
+        $.cookie("proeare",x,{expires:7});
+        //$("#cityname").trigger('input propertychange');
+        //if(!($.browser.msie)){
+        //    $("#cityname").get(0).addEventListener("input",poschange,false);
+        //
+        //}
+       //更新页面首页
+       onmenu();
+    })
+}
+
+//显示城市列表//t顶部
+function showcit(){
+    var getcity={"city":"Null","county":"Null"};
+    $.ajax({
+        type:"post",
+        url:"http://192.168.199.242:8080/BSMD/locate/city.do",
+        data:JSON.stringify(getcity),
+        dataType:"json",
+        header:{"Content-Type":"application/json",
+            "Accept":"application/json"},
+        success:function(data){
+            var json=data;
+            console.log(json);
+            var html='';
+            for(var i=0;i<json.citys.length;i++){
+                html+='<a href="#" class="county">'+json.citys[i]+'</a>';
+            }
+            $("#cit").children().remove();
+            $("#cit").append(html);
+            $("#cit").cityclick();
+
+
+        }
+    })
+}
+//显示县区//t顶部
+function showear(citys){
+    var getcounty={"city":citys,"county":"Null"};
+    $.ajax({
+        type:"post",
+        url:"http://192.168.199.242:8080/BSMD/locate/city.do",
+        dataType:"json",
+        data:JSON.stringify(getcounty),
+        header:{"Content-Type":"application/json",
+            "Accept":"application/json"},
+        success:function(data){
+
+            var json=data;
+            console.log(json);
+            var html='';
+            for(var i=0;i<json.countys.length;i++){
+                html+='<a href="#"  class="county">'+json.countys[i]+'</a>';
+            }
+            $("#ear").children().remove();
+            $("#ear").append(html).show();
+            $("#ear").countyclick();
+
+        }
+    })
+}
+//显示小区//t顶部
+function showvil(citys,countys){
+    var getShow={"city":citys,"county":countys};
+    $.ajax({
+        type:"post",
+        url:"http://192.168.199.242:8080/BSMD/locate/city.do",
+        dataType:"json",
+        data:JSON.stringify(getShow),
+        header:{"Content-Type":"application/json",
+            "Accept":"application/json"},
+        success:function(data){
+            var json=data;
+            console.log(json);
+            var html='';
+            for(var i=0;i<json.shops.length;i++){
+                html+='<a href="#"  class="county">'+json.shops[i]+'</a>';
+            }
+            $("#vil").children("a").remove();
+            $("#vil").append(html).show();
+            $("#vil").villclick();
+        }
+    })
+}
+
+//显示城市列表
+function showCity(){
+    var getcity={"city":"Null","county":"Null"};
+    $.ajax({
+        type:"post",
+        url:"http://192.168.199.242:8080/BSMD/locate/city.do",
+        data:JSON.stringify(getcity),
+        dataType:"json",
+        header:{"Content-Type":"application/json",
+            "Accept":"application/json"},
+        success:function(data){
+            var json=data;
+            console.log(json);
+            var html='';
+            for(var i=0;i<json.citys.length;i++){
+                html+='<a href="#" class="county">'+json.citys[i]+'</a>';
+            }
+            $("#city").append(html);
+        }
+    })
+}
+//显示县区
+function showcounty(citys){
+    var getcounty={"city":citys,"county":"Null"};
+    $.ajax({
+        type:"post",
+        url:"http://192.168.199.242:8080/BSMD/locate/city.do",
+        dataType:"json",
+        data:JSON.stringify(getcounty),
+        header:{"Content-Type":"application/json",
+            "Accept":"application/json"},
+        success:function(data){
+
+            var json=data;
+            console.log(json);
+            var html='';
+            for(var i=0;i<json.countys.length;i++){
+                html+='<a href="#"  class="county">'+json.countys[i]+'</a>';
+            }
+            $("#eare").append(html).show();
+        }
+    })
+}
+//显示小区
+function showShop(citys,countys){
+    var getShow={"city":citys,"county":countys};
+    $.ajax({
+        type:"post",
+        url:"http://192.168.199.242:8080/BSMD/locate/city.do",
+        dataType:"json",
+        data:JSON.stringify(getShow),
+        header:{"Content-Type":"application/json",
+            "Accept":"application/json"},
+        success:function(data){
+            var json=data;
+            console.log(json);
+            var html='';
+            for(var i=0;i<json.shops.length;i++){
+                html+='<a href="#"  class="county">'+json.shops[i]+'</a>';
+            }
+            $("#village").append(html).show();
+
+        }
+    })
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**-----------end 地址选择*/
+
+/** 搜索提醒时点击将内容替换为点击的*/
+$.fn.findlist= function () {
+    $(".findlist").on("click","a",function(){
+        var x=$(this).text();
+        console.log(x);
+        $("#mysearch").val(x);
+
+    })
+    $(".findlist").on("mouseleave", function () {
+        $(".findlist").hide();
+    })
+}
+//进入首页先检查cookie有无地址
+function checkCookie(){
+
+    var proeare=$.cookie("proeare");
+    if(proeare!=null && proeare!=""){
+        proeare=proeare.split(',');
+        var pos=proeare[0]+proeare[1]+proeare[2];
+        var x=proeare[0]+"-"+proeare[1]+"-"+proeare[2];
+        $("#cityname").attr("value",pos);
+        $("#cityname").attr("data-cityname",x);
+        //顶部地址改变
+        $("#cityname").poschange();
+        //用cookie请求页面
+        onmenu();
+        return;
+    }
+    else{
+        //无地址记录显示模态框
+        $("#myModal").modal('show');
+        //地址选择的隐藏显示
+        $("#curSelect").click(function () {
+            $(".selectpro").slideToggle();
+            $("#tabvillage").removeClass("active");
+            $("#tabpro").addClass("active");
+            $("#village").removeClass("active in");
+            $("#province").addClass("active in");
+        });
+        showCity();
+        $().proclick();
+        $().cityclick();
+        $().countyclick();
+        $().villclick();
+        //确定后顶部地址显示
+        $("#subpos").position();
+        //顶部地址改变
+        $("#cityname").poschange();
+        return;
+    }
+
+}
+//录后从cookie中读取用户名
+function loadname(){
+    var username=$.cookie("username");
+    if(username!=null&&username!=""){
+        $("#usename").html(username);
+        //用户名
+        var href="usercenter.html?username="+username;
+        $("#usename").attr("href",href);
+        $(".hd-login").hide();
+        $(".haslogin").show();
+
+
+
+    }
+}
+//地址选择完成后，点击确定页面加载
+$.fn.position= function () {
+    $("#subpos").on("click", function () {
+        //首页获取地址显示在顶部
+        var pos=[$("#city").attr("data-name"),$("#eare").attr("data-name"),$("#village").attr("data-name")];
+        if(pos!=null && pos!=""){
+            $.cookie("proeare",pos,{expires:7});
+            var  x=pos[0]+"-"+pos[1]+"-"+pos[2];
+            $("#cityname").attr("data-cityname",x);
+        }
+        if(pos==""){
+
+        }
+       var x= $.cookie("proeare");
+        x= x.split(',');
+        var y=x[0]+x[1]+x[2];
+        $("#cityname").attr("value",y);
+        //确定后重新加载页面
+       onmenu();
+    })
+}
+//垂直导航菜单动画
+$.fn.mainmenu = function (e) {
+    $(".mainmenu").on("mouseenter",".odd",function(){
+        // onmenu();
+        $(".submenu1").children().hide();
+        $(this).addClass("oddhover");
+        $(this).siblings().removeClass("oddhover");
+        var index=$(this).index(".mainmenu > .odd");
+        $(".submenu1").css('width','500px');
+        $(".submenu1").fadeIn(0,0.8);
+        $(".submenu1 .col-md-2[data-order="+index+"]").show();
+        $(".submenu1 .col-md-2[data-order=index]").siblings().hide();
+    }).on("mouseleave",function(){
+        // $(".mainmenu > .odd").stop();
+
+    })
+    $("#nav").on("mouseleave",function(){
+        $(".mainmenu > .odd").removeClass("oddhover");
+        $(".submenu1").fadeOut();
+        $(".submenu1").children().hide();
+    })
+
+}
+//搜索商品
+$.fn.mysearch=function(){
+    //点击搜索商品
+    $("#searchitem").on("click",function(){
+
+        var x=$("#mysearch").val();
+        var pos=$("#cityname").attr("data-cityname");
+        if(x==""|pos==""){
+            return;
+        }
+        location.href='goodsList.html?key='+x+'&pos='+pos;
+    })
+    //搜索提示
+    $("#mysearch").on("input propertychange", function () {
+        var pos = $("#cityname").attr("data-cityname");
+        var x=$("#mysearch").val();
+       // y={"name":x,"address":"福州-鼓楼区-胜利小区"}
+        y={"name":x,"address":pos}
+        $.ajax({
+            type:"post",
+            data:JSON.stringify(y),
+            dataType:"json",
+            url:"http://192.168.199.242:8080/BSMD/item/findlist.do",
+            header:{"Content-Type":"application/json",
+                "Accept":"application/json"},
+            success:function(data){
+                if (data.name.length <= 0) {
+                    return;
+                }
+                else {
+                    var html = '';
+                    console.log(data)
+                    $(".findlist>ul").children("li").remove();
+                    for (i = 0; i < data.name.length; i++) {
+                        html += '<li class="cont"><a href="#">' + data.name[i] + '</a></li>';
+                    }
+                    $(".findlist>ul").append(html);
+                    $(".findlist").show();
+                    $(".findlist").findlist();
+                }
+            }
+        })
+    })
+
+
+}
+//点击商品类别
+
+
+
+//菜单
+function onmenu() {
+    var proeare = $.cookie("proeare");
+    //console.log(proeare);
+    if (proeare != null && proeare != "") {
+        proeare = proeare.split(',');
+        //var pos = {"city": "福州", "county": "鼓楼区", "areaName": "胜利小区"}
+        var pos = {"city": proeare[0], "county": proeare[1], "areaName": proeare[2]}
+        var p= proeare[0]+"-"+ proeare[1]+"-"+ proeare[2]
+        $.ajax({
+            type: "post",
+            url: "http://192.168.199.242:8080/BSMD/item/index.do",
+            data: JSON.stringify(pos),
+            dataType: "json",
+            header: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            success: function (data) {
+
+                var json = data;
+                console.log(data);
+
+                //商品列表连接
+                var html = '';
+                var html0 = '';
+                $("#topnav1").html('');
+                $(".submenu1").html('');
+                $(".col-md-2.mainmenu").html('');
+                for (var i = 0; i <json.bigclass.length; i++) {
+                    var html1 = '';
+                    var hr1='goodsList.html?bigclass='+json.bigclass[i].name+'&pos='+p;
+                    html1 = '<div class="col-md-2" data-order="' + i + '"style="height: 521px; display:none;"><div>';
+                    html += '<div class="odd" data-order="0" data-id="1">';
+                    html += '<p><a href="'+hr1+'"target="_blank"><span class="glyphiconn glyphicon-cutlery"></span>' + json.bigclass[i].name + '</a></p><span> ';
+                    for (var j = 0; j < json.bigclass[i].property.length; j++) {
+                        var hr2='goodsList.html?bigclass='+json.bigclass[i].name+'&propertyName='+json.bigclass[i].property[j].propertyName
+                            +'&pos='+p;
+                        html += '<a href="'+hr2+'" target="_blank">' + json.bigclass[i].property[j].propertyName + '</a>';
+                        html1 += '<a href="'+hr2+'" target="_blank">' + json.bigclass[i].property[j].propertyName + '</a>';
+                    }
+                    html1 += '</div></div>';
+                    html0 += html1;
+                    html += '</span></div>';
+                }
+                $(".submenu1").append(html0);
+
+                $(".col-md-2.mainmenu").append(html);
+                //热门商品
+                var html2 = "";
+                for (var i = 0; i < json.listhot.length; i++) {
+                    var  id=data.listhot[i].itemNo;
+                    hr3="goods.html?id="+id+"&pos="+p;
+                    html2 += '<div class="col-md-2 span_6"><div class="box_inner"><a href="'+hr3+'">';
+                    html2 += '<img src="' + json.listhot[i].url + '"class="img-responsive" alt=""/><div class="desc">'
+                    html2 += '<h4 class="proprice"><span class="price"></span>' + json.listhot[i].itemSalePrice + '</h4>';
+                    html2 += '<p><a href="'+hr3+'">' + json.listhot[i].itemName + '</a></p></div> </a> </div> </div>';
+                }
+                $("#topnav1").append(html2);
+                //特价商品
+                var html3="";
+                for (var i = 0; i < json.listcx.length; i++) {
+                    var  id=data.listcx[i].itemNo;
+                    hr3="goods.html?id="+id+"&pos="+p;
+                    html3 += '<div class="col-md-2 span_6"><div class="box_inner"><a href="'+hr3+'">';
+                    html3 += '<img src="' + json.listcx[i].url + '"class="img-responsive" alt=""/><div class="desc">'
+                    html3 += '<h4 class="proprice"><span class="price"></span>' + json.listcx[i].itemSalePrice + '</h4>';
+                    html3 += '<p><a href="'+hr3+'">' + json.listcx[i].itemName + '</a></p></div> </a> </div> </div>';
+                }
+                $("#topnav2").html(html3);
+/*
+                var html4='';
+                for(var i=0;i<json.bigclass.length;i++){
+                    var hr1='goodsList.html?bigclass='+json.bigclass[i].name+'&pos='+p;
+                    html4+='<div class="container"><div class="tabarrow0" style="padding: 0;margin: 0;"><div class="midtitle">';
+                    html4+='<a href="'+hr1+'">'+json.bigclass[i].name +'</a> <em class="point">·</em> <a href="'+hr1+'">'+json.bigclass[i].name +'</a></div>';
+                    html4+=' <div class="row "> <div class="col-md-2"> <ul class="categorylist"><li>';
+                    for (var j = 0; j < json.bigclass[i].property.length; j++) {
+                        var hr2='goodsList.html?bigclass='+json.bigclass[i].name+'&propertyName='+json.bigclass[i].property[j].propertyName
+                            +'&pos='+p;
+                        html4 += '<a href="'+hr2+'" target="_blank">' + json.bigclass[i].property[j].propertyName + '</a>';
+                        html4 += '<a href="'+hr2+'" target="_blank">' + json.bigclass[i].property[j].propertyName + '</a>';
+                    }
+                    html4+=' </li> </ul> </div> <div class="col-md-8 "><div class="row">';
+                    for (var j = 0; j < 4; j++) {
+                        var  id=json.listclass[i].theclass[j].itemNo;
+                        hr3="goods.html?id="+id+"&pos="+p;
+                        html4 += '<div class="col-md-2 span_6"><div class="box_inner"><a href="'+hr3+'">';
+                        html4 += '<img src="' + json.listclass[i].theclass[j].url + '"class="img-responsive" alt=""/><div class="desc">'
+                        html4 += '<h4 class="proprice"><span class="price"></span>' +json.listclass[i].theclass[j].itemSalePrice + '</h4>';
+                        html4 += '<p><a href="'+hr3+'">' + json.listclass[i].theclass[j].itemName + '</a></p></div> </a> </div> </div>';
+                    }
+                    html4+='</div><div class="row">';
+                    for (var j=4; j < 8; j++) {
+                        var  id=json.listclass[i].theclass[j].itemNo;
+                        hr3="goods.html?id="+id+"&pos="+p;
+                        html4 += '<div class="col-md-2 span_6"><div class="box_inner"><a href="'+hr3+'">';
+                        html4 += '<img src="' + json.listclass[i].theclass[j].url + '"class="img-responsive" alt=""/><div class="desc">'
+                        html4 += '<h4 class="proprice"><span class="price"></span>' +json.listclass[i].theclass[j].itemSalePrice + '</h4>';
+                        html4 += '<p><a href="'+hr3+'">' + json.listclass[i].theclass[j].itemName + '</a></p></div> </a> </div> </div>';
+                    }
+                    html4+='   </div> </div> </div> </div> </div>';
+                }
+                $(".content_middle").html(html4);
+
+
+*/
+
+                $(".mainmenu").mainmenu();
+
+                //商品搜索
+                $("#searchitem").mysearch();
+            }
+        })
+    }
+}
+//顶部地址重新选择
+$.fn.poschange=function(){
+    $("#cityname").on("focus", function () {
+        $(".hd-prochg").show();
+        $("#pro").proclick();
+        showcit();
+    })
+    $(".hd-prochg").on("mouseleaver", function () {
+        $(".hd-prochg").hide();
+    })
+    $("#cityname").on("propertychange input ",function(){
+         onmenu();
+    })
+
+}
+
+//购物车数量
+function cartnum() {
+    var x = {"cust": "cust01"};
+    $.ajax({
+        type: "post",
+        data: JSON.stringify(x),
+        dataType: "json",
+        url: "http://192.168.199.241:8080/BSMD/car/countItemNum.do",
+        header: {"Content-Type": "application/json", "Accept": "appliction/json"},
+        success: function (data) {
+            console.log(data);
+            $("#cartnum").text(data.number);
+        }
+    })
+}
+//首页加载
+$(document).ready(function () {
+
+
+    loadname();
+    //页面加载地址检查和选择
+    checkCookie();
+    ////顶部地址改变
+    //$("#cityname").poschange();
+    //首页中部滑动
+    $(".midslide").each(function () {
+        $(this).luara({width: "330", height: "360", interval: 5000, selected: "selected", deriction: "left"})
+    });
+    //隐藏显示横导航
+    $(".megamenu").megamenu();
+    //顶部滑动
+    $("#slider").responsiveSlides({
+        auto: true,
+        nav: false,
+        speed: 500,
+        namespace: "callbacks",
+        pager: true,
+    });
+   // cartnum();
+})
+//登

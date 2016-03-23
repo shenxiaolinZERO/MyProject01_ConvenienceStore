@@ -1,0 +1,261 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="便利商店"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" href="css/jquery.countdown.css"/>
+    <!--webfont-->
+    <!-- Import google fonts -->
+    <link href='http://fonts.useso.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+    <link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="css/changge.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="header_top">
+    <div class="container">
+        <div class="header_top-box">
+            <div class="header-top-left">
+                <div class="hd-login label box ">
+                    <span class="hd_hi">Hi,</span>
+                    请
+                    <a id="global-hd-loginlink" rel="nofollow" href="login.html">登录</a>
+                    /
+                    <a rel="nofollow" href="register.html">注册</a>
+                </div>
+                <div class="box1">
+                    省份：<select  id="province" onchange="showcity()">
+                    <option value="0">-请选择-</option>
+                </select>&nbsp;&nbsp;
+                    城市：<select id="city" onchange="showarea()">
+                    <option value="0">-请选择-</option>
+                </select>&nbsp;&nbsp;
+                    地区：<select id="area">
+                    <option value="0">-请选择-</option>
+                </select>&nbsp;&nbsp;
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="cssmenu">
+                <ul>
+                    <li class="active"><a href="login.html">我的便利店</a></li>
+                    <li><a href="wishlist.html">收藏夹</a></li>
+                    <li><a href="login.html">掌上便利店</a></li>
+                    <li><a href="register.html">客户服务</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<div class="header_bottom">
+    <div class="container">
+        <div class="header_bottom-box">
+            <div class="header_bottom_left">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" alt=""/></a>
+                </div>
+                <ul class="clock">
+                    <i class="clock_icon"> </i>
+                    <li class="clock_desc">24小时服务</li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="header_bottom_right">
+                <div class="search">
+                    <input type="text" value="新品上架" onFocus="this.value = '';"
+                           onBlur="if (this.value == '') {this.value = '爆款返现，换购1元起';}">
+                    <input type="submit" value="">
+                </div>
+                <div class="shoppingcart">
+                    <a href="#" class="btn ">
+                        <span class="glyphicon glyphicon-shopping-cart"></span> 购物车</a>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+    <div class="menu">
+    <div class="container">
+        <div class="menu_box">
+            <ul class="megamenu skyblue">
+                <li><a class="color10" href="#">全部商品</a></li>
+                <li class="active grid"><a class="color2" href="index.html">首页</a></li>
+                <li><a class="color7" href="cat.html">便利超市</a>
+                </li>
+                <li><a class="color3" href="404.html">今日优惠</a></li>
+                <li><a class="color8" href="blog.html">便利钱包</a></li>
+                <div class="clearfix"></div>
+            </ul>
+        </div>
+    </div>
+</div>
+    <div class="men">
+        <div class="container">
+            <div class="blog-top">
+                <div class="col-md-6 grid_3">
+                    <h3><a href="blog_single.html">Lorem Ipsum is simply</a></h3>
+                    <a href="blog_single.html"><img src="images/slider1.jpg" class="img-responsive" alt=""/></a>
+
+                    <div class="blog-poast-admin">
+                        <a href="#"><img src="images/b_small.jpg" class="img-responsive" title="admin" alt=""/></a>
+                    </div>
+                    <div class="blog-poast-info">
+                        <ul>
+                            <li><i class="admin"> </i><a class="admin" href="#"><span> </span> Admin </a></li>
+                            <li><i class="date"> </i><span> </span>12-04-2015</li>
+                            <li><i class="comment"> </i><a class="p-blog" href="#"><span> </span>No Comments</a></li>
+                        </ul>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                    <div class="button"><a href="#">Read More</a></div>
+                </div>
+                <div class="col-md-6 grid_3">
+                    <h3><a href="blog_single.html">Lorem Ipsum is simply</a></h3>
+                    <a href="blog_single.html"><img src="images/3.jpg" class="img-responsive" alt=""/></a>
+
+                    <div class="blog-poast-admin">
+                        <a href="#"><img src="images/b_small.jpg" class="img-responsive" title="admin" alt=""/></a>
+                    </div>
+                    <div class="blog-poast-info">
+                        <ul>
+                            <li><i class="admin"> </i><a class="admin" href="#"><span> </span> Admin </a></li>
+                            <li><i class="date"> </i><span> </span>12-04-2015</li>
+                            <li><i class="comment"> </i><a class="p-blog" href="#"><span> </span>No Comments</a></li>
+                        </ul>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                    <div class="button"><a href="#">Read More</a></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="blog-top">
+                <div class="col-md-6 grid_3">
+                    <h3><a href="blog_single.html">Lorem Ipsum is simply</a></h3>
+                    <a href="blog_single.html"><img src="images/2.jpg" class="img-responsive" alt=""/></a>
+
+                    <div class="blog-poast-admin">
+                        <a href="#"><img src="images/b_small.jpg" class="img-responsive" title="admin" alt=""/></a>
+                    </div>
+                    <div class="blog-poast-info">
+                        <ul>
+                            <li><i class="admin"> </i><a class="admin" href="#"><span> </span> Admin </a></li>
+                            <li><i class="date"> </i><span> </span>12-04-2015</li>
+                            <li><i class="comment"> </i><a class="p-blog" href="#"><span> </span>No Comments</a></li>
+                        </ul>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                    <div class="button"><a href="#">Read More</a></div>
+                </div>
+                <div class="col-md-6 grid_3">
+                    <h3><a href="blog_single.html">Lorem Ipsum is simply</a></h3>
+                    <a href="blog_single.html"><img src="images/slider2.jpg" class="img-responsive" alt=""/></a>
+
+                    <div class="blog-poast-admin">
+                        <a href="#"><img src="images/b_small.jpg" class="img-responsive" title="admin" alt=""/></a>
+                    </div>
+                    <div class="blog-poast-info">
+                        <ul>
+                            <li><i class="admin"> </i><a class="admin" href="#"><span> </span> Admin </a></li>
+                            <li><i class="date"> </i><span> </span>12-04-2015</li>
+                            <li><i class="comment"> </i><a class="p-blog" href="#"><span> </span>No Comments</a></li>
+                        </ul>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                    <div class="button"><a href="#">Read More</a></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="blog-bottom">
+                <div class="col-md-6 grid_3">
+                    <h3><a href="blog_single.html">Lorem Ipsum is simply</a></h3>
+                    <a href="blog_single.html"><img src="images/slider3.jpg" class="img-responsive" alt=""/></a>
+
+                    <div class="blog-poast-admin">
+                        <a href="#"><img src="images/b_small.jpg" class="img-responsive" title="admin" alt=""/></a>
+                    </div>
+                    <div class="blog-poast-info">
+                        <ul>
+                            <li><i class="admin"> </i><a class="admin" href="#"><span> </span> Admin </a></li>
+                            <li><i class="date"> </i><span> </span>12-04-2015</li>
+                            <li><i class="comment"> </i><a class="p-blog" href="#"><span> </span>No Comments</a></li>
+                        </ul>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                    <div class="button"><a href="#">Read More</a></div>
+                </div>
+                <div class="col-md-6 grid_3">
+                    <h3><a href="blog_single.html">Lorem Ipsum is simply</a></h3>
+                    <a href="blog_single.html"><img src="images/slider1.jpg" class="img-responsive" alt=""/></a>
+
+                    <div class="blog-poast-admin">
+                        <a href="#"><img src="images/b_small.jpg" class="img-responsive" title="admin" alt=""/></a>
+                    </div>
+                    <div class="blog-poast-info">
+                        <ul>
+                            <li><i class="admin"> </i><a class="admin" href="#"><span> </span> Admin </a></li>
+                            <li><i class="date"> </i><span> </span>12-04-2015</li>
+                            <li><i class="comment"> </i><a class="p-blog" href="#"><span> </span>No Comments</a></li>
+                        </ul>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                    <div class="button"><a href="#">Read More</a></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <img src="images/pay.png" class="img-responsive" alt=""/>
+            <ul class="footer_nav">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">新手帮助</a></li>
+                <li><a href="#">权益保障</a></li>
+                <li><a href="#">商家服务</a></li>
+                <li><a href="#">客服中心</a></li>
+                <li><a href="#">投诉建议</a></li>
+                <li><a href="contact.html">联系我们</a></li>
+            </ul>
+            <p class="copy">Copyright &copy; 2015.便利店 </p>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- dropdown -->
+<script src="js/jquery.easydropdown.js"></script>
+<!-- start menu -->
+<script type="text/javascript" src="js/megamenu.js"></script>
+<script src="js/responsiveslides.min.js"></script>
+<script src="js/jquery.countdown.js"></script>
+<script src="js/script.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/province.js"></script>
+<script src="js/menuslider.js"></script>
+<script src="js/jquery.luara.0.0.1.min.js"></script>
+</body>
+</html>

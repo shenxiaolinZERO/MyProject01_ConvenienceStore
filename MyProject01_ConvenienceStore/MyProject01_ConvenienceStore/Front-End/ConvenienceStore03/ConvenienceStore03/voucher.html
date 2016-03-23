@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>优惠特权</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="便利商店"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" href="css/jquery.countdown.css"/>
+    <!--webfont-->
+    <!-- Import google fonts -->
+    <!--<link href='http://fonts.useso.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>-->
+    <link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="css/changge.css" rel="stylesheet">
+    <link href="css/addlist.css"rel="stylesheet">
+</head>
+
+<body>
+<!--<div class="row">-->
+<div  style="margin: 0px;padding: 0px;width: 100%;">
+
+    <div class=" coupon">
+        <div class="themes_title">
+            <h3>优惠特权</h3>
+        </div>
+        <ul class="nav nav-tabs " id="couponnav">
+            <li class="active c-4"><a href="#coupon-1" data-toggle="tab">我的优惠券</a></li>
+            <li class="c-4"><a href="#coupon-2" data-toggle="tab">我的积分</a></li>
+            <li class="c-4"><a href="#coupon-3" data-toggle="tab">账户信息</a></li>
+        </ul>
+        <div class="tab-pane fade in active coupon-list" id="coupon-1">
+            <ul class="couponnav">
+                <li class="th-01 c-2">优惠券类型</li>
+                <li class="th-02 c-2">编号</li>
+                <li class="th-03 c-4">使用说明</li>
+                <li class="th-04 c-3">有效时间</li>
+                <li class="th-04 c-1">状态</li>
+            </ul>
+            <div  id="myVoucher">
+                <!-----------------以下已封装至.js  loadVoucher()-------------------->
+                <!--<ul class="couponinf">-->
+                <!--<li class="th-01 c-2">my优惠</li>-->
+                <!--<li class="th-02 c-2">my名称</li>-->
+                <!--<li class="th-03 c-4">my使用说明</li>-->
+                <!--<li class="th-04 c-3">my时间</li>-->
+                <!--<li class="th-04 c-1">my状态</li>-->
+                <!--</ul>-->
+            </div>
+        </div>
+        <div class="tab-pane fade coupon-list" id="coupon-2">
+
+            <div id="customerInfo">
+                <!--html2 -->
+                <div class="c-4 fl">
+                    <div class="vip_img">
+                        <img  src="images/photo2.jpg" height="100px" width="100px">
+                        <h3 class="fr">username</h3>
+                    </div>
+                </div>
+                <div class="c-4 fl">
+                    <p class="jifen"><span></span></p>
+                </div>
+                <div class="c-4 fl">
+                    <a href="index.html" class="jifen" target="_blank">马上使用</a>
+                </div>
+                <div class="clearfix"></div>
+                <!-- -->
+            </div>
+
+            <div>
+                <ul class="jifenlist">
+                    <li class="th-01 c-2">积分</li>
+                    <li class="th-02 c-6">详情</li>
+                    <li class="th-04 c-2">时间</li>
+                    <li class="th-04 c-2">备注</li>
+                </ul>
+                <div id="jifenDetail">
+                    <!-- -->
+                    <!--<ul class="jf-list">-->
+                    <!--<li class="th-01 c-2">20</li>-->
+                    <!--<li class="th-02 c-6">购买XXXXX</li>-->
+                    <!--<li class="th-04 c-2">2015.2.23</li>-->
+                    <!--<li class="th-04 c-2">？</li>-->
+                    <!--</ul>-->
+                    <!-- -->
+                </div>
+                <!--<ul class="jf-list">-->
+                <!--<li class="th-01 c-2">20</li>-->
+                <!--<li class="th-02 c-6">购买XXXXX</li>-->
+                <!--<li class="th-04 c-2">2015.2.23</li>-->
+                <!--<li class="th-04 c-2">？</li>-->
+                <!--</ul>-->
+
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/voucher.js" charset="utf-8"></script>
+
+
+</body>
+</html>

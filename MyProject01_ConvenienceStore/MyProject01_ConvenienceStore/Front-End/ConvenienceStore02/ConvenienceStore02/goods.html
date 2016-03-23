@@ -1,0 +1,431 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Single</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="便利商店"/>
+
+    <!--webfont-->
+    <!-- Import google fonts -->
+    <link href='http://fonts.useso.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel='stylesheet' type='text/css'/>
+    <link href="css/jquery.countdown.css" rel="stylesheet"/>
+    <link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="css/etalage.css" rel="stylesheet"/>
+    <link href="css/changge.css" rel="stylesheet"/>
+    <link href="css/ofsingle.css" rel="stylesheet"/>
+    <link href="css/flexslider.css" rel='stylesheet' type='text/css'/>
+    <link href="css/jquery.spinner.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="header_top">
+    <div class="container">
+        <div class="header_top-box">
+            <div class="header-top-left">
+                <div class="hd-login label box ">
+                    <span class="hd_hi">Hi,</span>
+                    请
+                    <a id="global-hd-loginlink" rel="nofollow" href="login.html">登录</a>
+                    /
+                    <a rel="nofollow" href="register.ht ml">注册</a>
+                </div>
+                <div class=" label box haslogin" style="display: none;">
+                    <span class="hd_hi">Hi,</span>
+                    <a id="usename"></a>
+                </div>
+                <div class="box1 ">
+                    <span class="hd_hi">收货地：</span>
+                    <input id="cityname" type="text" class="" data-positon="" data-cityname="" style="width: 200px;" placeholder="选择送货地址">
+                    <!-- 地址选择-->
+                    <div class=" hd-prochg" style="display: none;">
+                        <ul class="nav nav-tabs">
+                            <li class="active" id="toppro" ><a href="#pro" data-toggle="tab">福建省</a></li>
+                            <li class="_none" id="topcit"> <a href="#cit"data-toggle="tab">福州市</a></li>
+                            <li class="_none"id="topear" ><a href="#ear" data-toggle="tab">鼓楼区</a></li>
+                            <li class="_none" id="topvil" ><a href="#vil" data-toggle="tab">阳光小区</a></li>
+                        </ul>
+                        <div class="pro-wrap">
+                            <div class="tab-pane fade in active" id="pro" data-name="">
+
+                                <a href="#">福建省</a>
+
+                            </div>
+                            <div class="tab-pane fade in" id="cit" data-name="">
+
+
+                            </div>
+                            <div class="tab-pane fade in" id="ear" data-name="">
+
+
+
+                            </div>
+                            <div class="tab-pane fade in" id="vil" data-name="">
+
+
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="cssmenu">
+                <ul>
+                    <li class="active"><a href="usercenter.html">我的便利店</a></li>
+                    <li><a href="wishlist.html">收藏夹</a></li>
+                    <li><a href="login.html">掌上便利店</a></li>
+                    <li><a href="register.html">客户服务</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+
+<div class="header_bottom">
+    <div class="container">
+        <div class="header_bottom-box">
+            <div class="header_bottom_left">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" alt=""/></a>
+                </div>
+                <ul class="clock">
+                    <i class="clock_icon"> </i>
+                    <li class="clock_desc">24小时服务</li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="header_bottom_right">
+                <div class="search">
+                    <input id="mysearch" type="text" value="新品上架" onFocus="this.value = '';"
+                           onBlur="if (this.value == '') {this.value = '爆款返现，换购1元起';}">
+                    <input type="submit" value="" id="searchitem">
+                    <div class="findlist" style="display: none;">
+                        <ul >
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="shoppingcart">
+                    <a href="cart.html" class="btn ">
+                        <span class="glyphicon glyphicon-shopping-cart"></span> 购物车
+                        <span id="cartnum" class="badge" style="color: #FFFFFF; background-color: #f54D56 ;border:2px solid #FFFFFF; ">2</span>
+                    </a>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<div class="menu">
+    <div class="container">
+        <div class="menu_box">
+            <ul class="megamenu skyblue">
+                <li><a class="color10">全部商品</a></li>
+                <li class="active grid"><a class="color2" href="index.html">首页</a></li>
+                <li><a class="color7" href="cat.html">便利超市</a>
+                </li>
+                <li><a class="color3" href="#">今日优惠</a></li>
+                <li><a class="color8" href="voucher.html">便利钱包</a></li>
+                <div class="clearfix"></div>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="men">
+    <div class="container">
+        <div class="single_top">
+
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <ul id="serviceTab" class="nav nav-tabs serv">
+        <li class="active"><a href="#introduct" data-toggle="tab">商品介绍</a></li>
+        <li><a href="#b" data-toggle="tab">规格及包装</a></li>
+        <li><a href="#c" data-toggle="tab">售后服务</a></li>
+        <li><a href="#d" data-toggle="tab">评价</a></li>
+    </ul>
+    <div id="serviceTabContent" class="tab-content">
+        <div class="tab-pane fade in active" id="introduct">
+            <table class="tb1">
+                <thead>规格参数</thead>
+                <tbody>
+                <tr>
+                    <td>净含量(ml):200ml*6/组</td>
+                    <td>单件规格：200ml</td>
+                    <td>是否含糖：含糖</td>
+                </tr>
+                <tr>
+                    <td>脂肪含量：全脂</td>
+                    <td>含钙量：普通</td>
+                    <td>蛋白质含量：&&ge;3.3%</td>
+                </tr>
+                <tr>
+                    <td>口味：香蕉味</td>
+                    <td>种类：风味奶</td>
+                    <td>产地：韩国</td>
+                </tr>
+                <tr>
+                    <td>包装：盒装</td>
+                    <td>生产产商：进口产商</td>
+                    <td>保质期(天)：180</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane fade in" id="b">
+            <table class="tb2">
+                <tbody>
+                <tr>
+                    <td colspan="2" class="t1">规格</td>
+                </tr>
+                <tr>
+                    <td>净含量(ml)</td>
+                    <td>200ml*6/组</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="t1">基本信息</td>
+                </tr>
+                <tr>
+                    <td>*****</td>
+                    <td>*****</td>
+                </tr>
+                <tr>
+                    <td>*****</td>
+                    <td>*****</td>
+                </tr>
+                <tr>
+                    <td>*****</td>
+                    <td>*****</td>
+                </tr>
+                <tr>
+                    <td>*****</td>
+                    <td>*****</td>
+                </tr>
+                <tr>
+                    <td>*****</td>
+                    <td>*****</td>
+                </tr>
+                <tr>
+                    <td>*****</td>
+                    <td>*****</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="t1">产地</td>
+                </tr>
+                <tr>
+                    <td>*****</td>
+                    <td>*****</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="t1">包装</td>
+                </tr>
+                <tr>
+                    <td>*****</td>
+                    <td>*****</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="t1">食品安全信息</td>
+                </tr>
+                <tr>
+                    <td>*****</td>
+                    <td>*****</td>
+                </tr>
+                <tr>
+                    <td>*****</td>
+                    <td>*****</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane fade in" id="c">
+            <div class="serv1">
+                <p>本产品不支持7天无理由退货</p>
+
+                <p>此类商品属于特殊商品，收货时请仔细验货，*****************</p>
+            </div>
+            <div class="serv1">
+                <p>如有发现商品介绍有误，您可以点击【<a href="#" class="error">信息纠错</a>】*****</p>
+            </div>
+            <div class="serv1">
+                <strong>服务承诺</strong><br/>
+
+                <p>************************************************************
+                    *****************************************************</p>
+                <strong>温馨提示</strong>
+
+                <p>*****************************************************************
+                    **********</p>
+            </div>
+
+        </div>
+        <div class="tab-pane fade in" id="d">
+            <div class="rate_s">
+                <div class="pScore">好评率<strong>%</strong></div>
+                <div class="rate_s-d">
+                    <div class="rate_s-b">
+                        <p>包装：</p>
+                        <span>*****</span>
+                    </div>
+                    <div class="rate_s-k">
+                        <p>口感：</p>
+                        <span>*****</span>
+                    </div>
+                    <div class="rate_c">
+                        <span>味浓香纯(4963)</span>
+                        <span>适合早餐(1403)</span>
+                        <span>闻着香(1300)</span>
+                        <span>营养丰富(1089)</span>
+                        <span>包装完好(968)</span>
+                    </div>
+                </div>
+                <div class="cscore">
+                    <strong>评论获积分</strong>
+                    <ul>
+                        <li>前30条评论，可获得<span class="red">15倍</span>积分</li>
+                        <li><span class="blue">微信</span>和<span class="blue">移动端</span>评论，可获<span
+                                class="red">双倍</span>积分
+                        </li>
+                    </ul>
+                    <p class="blue"><a href="#">积分规则 </a> | <a href="#"> 发表评论</a></p>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="container">
+                <ul class="nav nav-tabs com">
+                    <li class="active"><a href="#total" data-toggle="tab">全部评论(1789)</a></li>
+                    <li><a href="#good" data-toggle="tab">好评(3789)</a></li>
+                    <li><a href="#mid" data-toggle="tab">中评(645)</a></li>
+                    <li><a href="#bad" data-toggle="tab">差评(178)</a></li>
+                    <li><a href="#sha" data-toggle="tab">有晒单(311)</a></li>
+                </ul>
+                <div id="comTab" class="tab-content">
+                    <div class="tab-pane fade in active" id="total">
+                        <div class="media">
+                            <a class="media-left" href="#">
+                                <img src="images/b_small.jpg" alt="">
+                            </a>
+
+                            <div class="media-body">
+                                <p>评分：<img src=""></p>
+
+                                <p>
+                                    ************************************************************************************************************************</p>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <a class="media-left" href="#">
+                                <img src="images/b_small.jpg" alt="">
+                            </a>
+
+                            <div class="media-body">
+                                <p>评分：<img src=""></p>
+
+                                <p>
+                                    ************************************************************************************************************************</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade in" id="good">
+                        <div class="media">
+                            <a class="media-left" href="#">
+                                <img src="images/b_small.jpg" alt="">
+                            </a>
+
+                            <div class="media-body">
+                                <p>评分：<img src=""></p>
+
+                                <p>
+                                    ************************************************************************************************************************</p>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <a class="media-left" href="#">
+                                <img src="images/b_small.jpg" alt="">
+                            </a>
+
+                            <div class="media-body">
+                                <p>评分：<img src=""></p>
+
+                                <p>
+                                    ************************************************************************************************************************</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade in" id="mid">
+                        <div class="media">
+                            <a class="media-left" href="#">
+                                <img src="images/b_small.jpg" alt="">
+                            </a>
+
+                            <div class="media-body">
+                                <p>评分：<img src=""></p>
+
+                                <p>
+                                    ************************************************************************************************************************</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade in" id="bad">
+                    </div>
+                    <div class="tab-pane fade in" id="sha">
+                    </div>
+                </div>
+            </div>
+            <div>
+
+            </div>
+        </div>
+    </div>
+    <div>
+    </div>
+</div>
+</div>
+<div class="footer">
+    <div class="container">
+        <img src="images/pay.png" class="img-responsive" alt=""/>
+        <ul class="footer_nav">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">新手帮助</a></li>
+            <li><a href="#">权益保障</a></li>
+            <li><a href="#">商家服务</a></li>
+            <li><a href="#">客服中心</a></li>
+            <li><a href="#">投诉建议</a></li>
+            <li><a href="addlist.html">联系我们</a></li>
+        </ul>
+        <p class="copy">Copyright &copy; 2015.便利店 </p>
+    </div>
+</div>
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script defer src="js/jquery.flexslider.js"></script>
+<!-- dropdown -->
+<script src="js/jquery.easydropdown.js"></script>
+<!-- start menu -->
+<script type="text/javascript" src="js/megamenu.js"></script>
+<script src="js/responsiveslides.min.js"></script>
+<script src="js/jquery.countdown.js"></script>
+<script src="js/jquery.etalage.min.js"></script>
+<script src="js/province.js"></script>
+<script src="js/jquery.spinner.js"></script>
+<script src="js/single.js"></script>
+<script src="js/provinceselect.js"></script>
+<script src="js/topjs.js"></script>
+<script type="application/x-javascript">
+    addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    }
+</script>
+
+</body>
+</html>		

@@ -1,0 +1,931 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>便利商店</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8"/>
+    <meta name="keywords" content="便利商店"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" href="css/jquery.countdown.css"/>
+    <link rel="stylesheet" href="css/flexslider.css"/>
+    <!--webfont-->
+    <!-- Import google fonts -->
+    <!--<link href='http://fonts.useso.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>-->
+    <link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="css/changge.css" rel="stylesheet">
+    <!--<link rel="stylesheet" type="text/css" href="css/hzw-city-picker.css">-->
+
+</head>
+<body>
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-hidden="true">×
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                   欢迎来到便利商城
+                </h4>
+                <h5>请选择送货地址</h5>
+                <div class="clearfix"></div>
+            </div>
+            <div class="modal-body modalpro">
+                <div id="selectlist" class="selectedProarea">
+                    <span>送货至：</span><input id="curSelect" data-positon="" class="text curAdd" placeholder="送货地址" value="">
+                </div>
+                <div class="selectpro">
+                    <ul class="nav nav-tabs">
+                        <li class="active" id="tabpro"><a href="#province" data-toggle="tab">福建省</a></li>
+                        <li class="" id="tabcity"> <a href="#city"data-toggle="tab">福州市</a></li>
+                        <li class="" id="tabcounty"><a href="#eare" data-toggle="tab">鼓楼区</a></li>
+                        <li class="" id="tabvillage"><a href="#village" data-toggle="tab">阳光小区</a></li>
+                    </ul>
+                    <div class="province-wrap">
+                        <div class="tab-pane fade in active" id="province" data-name="">
+
+                                <a href="#">福建省</a>
+
+                        </div>
+                        <div class="tab-pane fade in" id="city" data-name="">
+
+
+                        </div>
+                        <div class="tab-pane fade in" id="eare" data-name="">
+
+
+
+                        </div>
+                        <div class="tab-pane fade in" id="village" data-name="">
+
+
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="subpos" type="button" class="btn btn-primary" data-dismiss="modal">
+                    开始购物
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+<div class="header_top">
+    <div class="container">
+        <div class="header_top-box">
+            <div class="header-top-left">
+                <div class="hd-login label box ">
+                    <span class="hd_hi">Hi,</span>
+                    请
+                    <a id="global-hd-loginlink" rel="nofollow" href="login.html">登录</a>
+                    /
+                    <a rel="nofollow" href="register.ht ml">注册</a>
+                </div>
+                <div class=" label box haslogin" style="display: none;">
+                    <span class="hd_hi">Hi,</span>
+                    <a id="usename"></a>
+                </div>
+                <div class="box1 ">
+                    <span class="hd_hi">收货地：</span>
+                    <input id="cityname" type="text" class="" data-positon="" data-cityname="" style="width: 200px;" placeholder="选择送货地址">
+                    <!-- 地址选择-->
+                    <div class=" hd-prochg" style="display: none;">
+                        <ul class="nav nav-tabs">
+                            <li class="active" id="toppro" ><a href="#pro" data-toggle="tab">福建省</a></li>
+                            <li class="_none" id="topcit"> <a href="#cit"data-toggle="tab">福州市</a></li>
+                            <li class="_none"id="topear" ><a href="#ear" data-toggle="tab">鼓楼区</a></li>
+                            <li class="_none" id="topvil" ><a href="#vil" data-toggle="tab">阳光小区</a></li>
+                        </ul>
+                        <div class="pro-wrap">
+                            <div class="tab-pane fade in active" id="pro" data-name="">
+
+                                <a href="#">福建省</a>
+
+                            </div>
+                            <div class="tab-pane fade in" id="cit" data-name="">
+
+
+                            </div>
+                            <div class="tab-pane fade in" id="ear" data-name="">
+
+
+
+                            </div>
+                            <div class="tab-pane fade in" id="vil" data-name="">
+
+
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="cssmenu">
+                <ul>
+                    <li class="active"><a href="usercenter.html">我的便利店</a></li>
+                    <li><a href="wishlist.html">收藏夹</a></li>
+                    <li><a href="login.html">掌上便利店</a></li>
+                    <li><a href="register.html">客户服务</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+
+<div class="header_bottom">
+    <div class="container">
+        <div class="header_bottom-box">
+            <div class="header_bottom_left">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" alt=""/></a>
+                </div>
+                <ul class="clock">
+                    <i class="clock_icon"> </i>
+                    <li class="clock_desc">24小时服务</li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="header_bottom_right">
+                <div class="search">
+                    <input id="mysearch" type="text" value="新品上架" onFocus="this.value = '';"
+                           onBlur="if (this.value == '') {this.value = '爆款返现，换购1元起';}">
+                    <input type="submit" value="" id="searchitem">
+                    <div class="findlist" style="display: none;">
+                        <ul >
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="shoppingcart">
+                    <a href="cart.html" class="btn ">
+                        <span class="glyphicon glyphicon-shopping-cart"></span> 购物车
+                        <span id="cartnum" class="badge" style="color: #FFFFFF; background-color: #f54D56 ;border:2px solid #FFFFFF; ">2</span>
+                    </a>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<div class="menu">
+    <div class="container">
+        <div class="menu_box">
+            <ul class="megamenu skyblue">
+                <li><a class="color10">全部商品</a></li>
+                <li class="active grid"><a class="color2" href="index.html">首页</a></li>
+                <li><a class="color7" href="cat.html">便利超市</a>
+                </li>
+                <li><a class="color3" href="#">今日优惠</a></li>
+                <li><a class="color8" href="voucher.html">便利钱包</a></li>
+                <div class="clearfix"></div>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="wrap-container">
+    <div class="container body-container">
+        <div id="headrRow" class="row" style="padding: 0;margin: 0;">
+            <div id="nav">
+                <div class="col-md-2 mainmenu">
+                    <div class="odd" data-order="0" data-id="1">
+                        <p><a href="goodsList.html"><span class="glyphicon glyphicon-cutlery"></span> 休闲零食/饮料</a></p>
+                        <span>
+                            <a href="#" target="">坚果类</a>
+                            <a href="#">糖果</a>
+                            <a href="#">饼干糕点</a>
+                            <a href="#">肉脯肉干</a>
+                        </span>
+                    </div>
+
+                    <div class="odd" data-order="1" data-id="2">
+                        <p><a href="goodsList.html">休闲零食/饮料</a></p>
+                        <span>
+                            <a href="#">坚果类</a>
+                            <a href="#">糖果</a>
+                            <a href="#">饼干糕点</a>
+                            <a href="#">肉脯肉干</a>
+                        </span>
+                    </div>
+
+                    <div class="odd" data-order="40" data-id="3">
+                        <p><a href="goodsList.html">休闲零食/饮料</a></p>
+                        <span>
+                            <a href="#">坚果类</a>
+                            <a href="#">糖果</a>
+                            <a href="#">饼干糕点</a>
+                            <a href="#">肉脯肉干</a>
+                        </span>
+                    </div>
+
+                    <div class="odd" data-order="60" data-id="4">
+                        <p><a href="#">休闲零食/饮料</a></p>
+                        <span>
+                            <a href="#">坚果类</a>
+                            <a href="#">糖果</a>
+                            <a href="#">饼干糕点</a>
+                            <a href="#">肉脯肉干</a>
+                        </span>
+                    </div>
+
+                    <div class="odd" data-order="80" data-id="5">
+                        <p><a href="#">休闲零食/饮料</a></p>
+                        <span>
+                            <a href="#">坚果类</a>
+                            <a href="#">糖果</a>
+                            <a href="#">饼干糕点</a>
+                            <a href="#">肉脯肉干</a>
+                        </span>
+                    </div>
+
+                    <!--<div class="odd" data-order="100" data-id="6">-->
+                        <!--<p><a href="#">休闲零食/饮料</a></p>-->
+                        <!--<span>-->
+                            <!--<a href="#">坚果类</a>-->
+                            <!--<a href="#">糖果</a>-->
+                            <!--<a href="#">饼干糕点</a>-->
+                            <!--<a href="#">肉脯肉干</a>-->
+                        <!--</span>-->
+                    <!--</div>-->
+
+                    <!--<div class="odd" data-order="120" data-id="7">-->
+                        <!--<p><a href="#">休闲零食/饮料</a></p>-->
+                            <!--<span>-->
+                            <!--<a href="#">坚果类</a>-->
+                            <!--<a href="#">糖果</a>-->
+                            <!--<a href="#">饼干糕点</a>-->
+                            <!--<a href="#">肉脯肉干</a>-->
+                        <!--</span>-->
+                    <!--</div>-->
+
+
+                </div>
+                <div class="submenu1" style="display: none;">
+                    <!--<div class="col-md-2" style="height: 512px;">-->
+                        <!--<div class="subblock">-->
+                            <!--<div class="subleft">-->
+                                <!--<h3><a>坚果类1</a></h3>-->
+                            <!--</div>-->
+                            <!--<div class="subright">-->
+                                <!--<ul>-->
+                                    <!--<li><a>坚果</a></li>-->
+                                    <!--<li><a>坚果</a></li>-->
+                                    <!--<li><a>坚果</a></li>-->
+                                    <!--<li><a>坚果</a></li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <div class="col-md-2" data-order="3" style="height: 521px; display: none;">
+                        <div>
+                            <a href="#" target="">坚果3</a>
+                            <a href="#" target="">坚果3</a>
+                        </div>
+                    </div>
+                    <div class="col-md-2" data-order="4" style="height: 521px; display: none;">
+                        <div>
+                            <a href="#" target="">坚果4</a>
+                            <a href="#" target="">坚果4</a>
+                        </div>
+                    </div>
+                    <div class="col-md-2" data-order="5" style="height: 521px; display: none;">
+                        <div>
+                            <a href="#" target="">坚果5</a>
+                            <a href="#" target="">坚果5</a>
+                        </div>
+                    </div>
+                    <div class="col-md-2" data-order="6" style="height: 521px; display: none;">
+                        <div>
+                            <a href="#" target="">坚果6</a>
+                            <a href="#" target="">坚果6</a>
+                        </div>
+                    </div>
+                    <div class="col-md-2" data-order="2" style="height: 521px; display: none;">
+                        <div>
+                            <a href="#" target="">坚果2</a>
+                            <a href="#" target="">坚果2</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-8 index_slider" style="padding: 10px; border:solid 1px #EEEEEE;">
+
+                <ul class="rslides" id="slider">
+                    <li><img src="images/56445d28N640ee315.jpg" class="img-responsive" alt=""/></li>
+                    <li><img src="images/5642ca74Na46edb67.jpg" class="img-responsive" alt=""/></li>
+                    <li><img src="images/5641ab2fN1dc1ed12.jpg" class="img-responsive" alt=""/></li>
+                </ul>
+
+            </div>
+            <div class="col-md-2 index-right">
+                <div class="righttop">
+                    <ul class="three_link">
+                        <li><a href="#"><img src="images/rigthtop1.png">
+                            <span>我的订单</span>
+                        </a></li>
+                        <li><a href="#"><img src="images/rigthtop2.png">
+                            <span>曾经购买</span>
+                        </a></li>
+                        <li><a href="#"><img src="images/rigthtop3.png">
+                            <span>我的收藏</span>
+                        </a></li>
+                    </ul>
+                </div>
+                <div class="md-notice">
+                    <ul>
+                        <li><a href="#">预防诈骗小贴士</a></li>
+                        <li><a href="#">网上便利店，轻松购买</a></li>
+                        <li><a href="#">积分发布“惠”</a></li>
+                    </ul>
+                </div>
+                <div id="" class="bottomAd">
+                    <img src="images/photo2.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="content_top">
+    <div class="container">
+        <div class="row">
+            <div class="sellers_grid">
+                <ul class="nav nav-tabs topnav">
+                    <li><a class="active" href="#topnav1" data-toggle="tab">热卖商品</a></li>
+                    <li><a class="" href="#topnav2" data-toggle="tab">今日特价</a></li>
+                    <div class="clearfix"></div>
+                </ul>
+            </div>
+            <div class="grid_2 ">
+                <div class="tab-pane in active" id="topnav1">
+                    <div class="col-md-2 span_6">
+                        <div class="box_inner">
+                            <a href="goods.html">
+                                <img src="images/photo2.jpg" class="img-responsive" alt=""/>
+
+                                <div class="desc">
+                                    <h4 class="proprice"><span class="price">￥</span>43.80</h4>
+
+                                    <p><a href="goods.html">张裕 红酒 海岸风情干红葡萄酒 750ML</a></p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-2 span_6">
+                        <div class="box_inner">
+                            <a href="#">
+                                <img src="images/photo2.jpg" class="img-responsive" alt=""/>
+
+                                <div class="desc">
+                                    <h4 class="proprice"><span class="price">￥</span>43.80</h4>
+
+                                    <p><a>张裕 红酒 海岸风情干红葡萄酒 750ML</a></p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!--<div class="col-md-2 span_6">-->
+                        <!--<div class="box_inner">-->
+                            <!--<a href="#">-->
+                                <!--<img src="images/photo2.jpg" class="img-responsive" alt=""/>-->
+
+                                <!--<div class="desc">-->
+                                    <!--<h4 class="proprice"><span class="price">￥</span>43.80</h4>-->
+
+                                    <!--<p><a>张裕 红酒 海岸风情干红葡萄酒 750ML</a></p>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="col-md-2 span_6">-->
+                        <!--<div class="box_inner">-->
+                            <!--<a href="#">-->
+                                <!--<img src="images/photo2.jpg" class="img-responsive" alt=""/>-->
+
+                                <!--<div class="desc">-->
+                                    <!--<h4 class="proprice"><span class="price">￥</span>43.80</h4>-->
+
+                                    <!--<p><a>张裕 红酒 海岸风情干红葡萄酒 750ML</a></p>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="col-md-2 span_6">-->
+                        <!--<div class="box_inner">-->
+                            <!--<a href="#">-->
+                                <!--<img src="images/photo2.jpg" class="img-responsive" alt=""/>-->
+
+                                <!--<div class="desc">-->
+                                    <!--<h4 class="proprice"><span class="price">￥</span>43.80</h4>-->
+
+                                    <!--<p><a>张裕 红酒 海岸风情干红葡萄酒 750ML</a></p>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="col-md-2 span_6">-->
+                        <!--<div class="box_inner">-->
+                            <!--<a href="#">-->
+                                <!--<img src="images/photo2.jpg" class="img-responsive" alt=""/>-->
+
+                                <!--<div class="desc">-->
+                                    <!--<h4 class="proprice"><span class="price">￥</span>43.80</h4>-->
+
+                                    <!--<p><a>张裕 红酒 海岸风情干红葡萄酒 750ML</a></p>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                </div>
+                <div class="tab-pane" id="topnav2">
+                    <div class="col-md-2 span_6">
+                        <div class="box_inner">
+                            <a href="#">
+                                <img src="images/photo10.jpg" class="img-responsive" alt=""/>
+
+                                <div class="desc">
+                                    <h4 class="proprice"><span class="price">￥</span>43.80</h4>
+
+                                    <p><a>张裕 红酒 海岸风情干红葡萄酒 750ML</a></p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-2 span_6">
+                        <div class="box_inner">
+                            <a href="#">
+                                <img src="images/photo10.jpg" class="img-responsive" alt=""/>
+
+                                <div class="desc">
+                                    <h4 class="proprice"><span class="price">￥</span>43.80</h4>
+
+                                    <p><a>张裕 红酒 海岸风情干红葡萄酒 750ML</a></p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-2 span_6">
+                        <div class="box_inner">
+                            <a href="#">
+                                <img src="images/photo10.jpg" class="img-responsive" alt=""/>
+
+                                <div class="desc">
+                                    <h4 class="proprice"><span class="price">￥</span>43.80</h4>
+
+                                    <p><a>张裕 红酒 海岸风情干红葡萄酒 750ML</a></p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-2 span_6">
+                        <div class="box_inner">
+                            <a href="#">
+                                <img src="images/photo10.jpg" class="img-responsive" alt=""/>
+
+                                <div class="desc">
+                                    <h4 class="proprice"><span class="price">￥</span>43.80</h4>
+
+                                    <p><a>张裕 红酒 海岸风情干红葡萄酒 750ML</a></p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-2 span_6">
+                        <div class="box_inner">
+                            <a href="#">
+                                <img src="images/photo10.jpg" class="img-responsive" alt=""/>
+
+                                <div class="desc">
+                                    <h4 class="proprice"><span class="price">￥</span>43.80</h4>
+
+                                    <p><a>张裕 红酒 海岸风情干红葡萄酒 750ML</a></p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-2 span_6">
+                        <div class="box_inner">
+                            <a href="#">
+                                <img src="images/photo10.jpg" class="img-responsive" alt=""/>
+
+                                <div class="desc">
+                                    <h4 class="proprice"><span class="price">￥</span>43.80</h4>
+
+                                    <p><a>张裕 红酒 海岸风情干红葡萄酒 750ML</a></p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content_middle">
+    <div class="container">
+        <div class="tabarrow0" style="padding: 0;margin: 0;">
+            <div class="midtitle">
+                <a href="#">食品</a>
+                <em class="point">·</em>
+                <a href="#">饮料</a>
+            </div>
+            <div class="row ">
+                <div class="col-md-2">
+                    <ul class="categorylist">
+                        <li>
+                            <a href="#">糖果</a>
+                            <a href="#">巧克力</a>
+                            <a href="#">口香糖</a>
+                            <a href="#">面包</a>
+                            <a href="#">曲奇</a>
+                            <a href="#">米饼</a>
+                            <a href="#">薯片</a>
+                            <a href="#">威化</a>
+                            <a href="#">饼干</a>
+                        </li>
+                        <li>
+                            <a href="#">蜜饯</a>
+                            <a href="#">肉干</a>
+                            <a href="#">坚果</a>
+                            <a href="#">豆干</a>
+                            <a href="#">进口坚果</a>
+                            <a href="#">进口糕点</a>
+                            <a href="#">阿胶</a>
+                            <a href="#">进口冲饮</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 midslide" style="width: 330px;height: 360px;">
+                    <ul>
+                        <li><img src="images/midslider1.jpg" alt="1"/></li>
+                        <li><img src="images/midslider2.jpg" alt="2"/></li>
+                        <li><img src="images/midslider3.jpg" alt="3"/></li>
+                    </ul>
+                    <ol>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-2"><img src="images/orange.jpg"></div>
+                        <div class="col-md-2"><img src="images/orange.jpg"></div>
+                        <div class="col-md-2"><img src="images/orange.jpg"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2"><img src="images/orange.jpg"></div>
+                        <div class="col-md-2"><img src="images/orange.jpg"></div>
+                        <div class="col-md-2"><img src="images/orange.jpg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="tabarrow0" style="padding: 0;margin: 0;">
+            <div class="midtitle">
+                <a href="#">食品</a>
+                <em class="point">·</em>
+                <a href="#">饮料</a>
+            </div>
+            <div class="row ">
+                <div class="col-md-2">
+                    <ul class="categorylist">
+                        <li>
+                            <a href="#">糖果</a>
+                            <a href="#">巧克力</a>
+                            <a href="#">口香糖</a>
+                            <a href="#">面包</a>
+                            <a href="#">曲奇</a>
+                            <a href="#">米饼</a>
+                            <a href="#">薯片</a>
+                            <a href="#">威化</a>
+                            <a href="#">饼干</a>
+                        </li>
+                        <li>
+                            <a href="#">蜜饯</a>
+                            <a href="#">肉干</a>
+                            <a href="#">坚果</a>
+                            <a href="#">豆干</a>
+                            <a href="#">进口坚果</a>
+                            <a href="#">进口糕点</a>
+                            <a href="#">阿胶</a>
+                            <a href="#">进口冲饮</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 midslide" style="width: 330px;height: 360px;">
+                    <ul>
+                        <li><img src="images/midslider1.jpg" alt="1"/></li>
+                        <li><img src="images/midslider2.jpg" alt="2"/></li>
+                        <li><img src="images/midslider3.jpg" alt="3"/></li>
+                    </ul>
+                    <ol>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-2"><img src="images/orange.jpg"></div>
+                        <div class="col-md-2"><img src="images/orange.jpg"></div>
+                        <div class="col-md-2"><img src="images/orange.jpg"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2"><img src="images/orange.jpg"></div>
+                        <div class="col-md-2"><img src="images/orange.jpg"></div>
+                        <div class="col-md-2"><img src="images/orange.jpg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="tabarrow0" style="padding: 0;margin: 0;">
+            <div class="midtitle">
+                <a href="#">食品</a>
+                <em class="point">·</em>
+                <a href="#">饮料</a>
+            </div>
+            <div class="row ">
+                <div class="col-md-2">
+                    <ul class="categorylist">
+                        <li>
+                            <a href="#">糖果</a>
+                            <a href="#">巧克力</a>
+                            <a href="#">口香糖</a>
+                            <a href="#">面包</a>
+                            <a href="#">曲奇</a>
+                            <a href="#">米饼</a>
+                            <a href="#">薯片</a>
+                            <a href="#">威化</a>
+                            <a href="#">饼干</a>
+                        </li>
+                        <li>
+                            <a href="#">蜜饯</a>
+                            <a href="#">肉干</a>
+                            <a href="#">坚果</a>
+                            <a href="#">豆干</a>
+                            <a href="#">进口坚果</a>
+                            <a href="#">进口糕点</a>
+                            <a href="#">阿胶</a>
+                            <a href="#">进口冲饮</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 midslide" style="width: 330px;height: 360px;">
+                    <ul>
+                        <li><img src="images/midslider1.jpg" alt="1"/></li>
+                        <li><img src="images/midslider2.jpg" alt="2"/></li>
+                        <li><img src="images/midslider3.jpg" alt="3"/></li>
+                    </ul>
+                    <ol>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-2"><img src="images/orange.jpg"></div>
+                        <div class="col-md-2"><img src="images/orange.jpg"></div>
+                        <div class="col-md-2"><img src="images/orange.jpg"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2"><img src="images/orange.jpg"></div>
+                        <div class="col-md-2"><img src="images/orange.jpg"></div>
+                        <div class="col-md-2"><img src="images/orange.jpg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="tabarrow0" style="padding: 0;margin: 0;">
+            <div class="midtitle">
+                <a href="#">食品</a>
+                <em class="point">·</em>
+                <a href="#">饮料</a>
+            </div>
+            <div class="row ">
+                <div class="col-md-2">
+                    <ul class="categorylist">
+                        <li>
+                            <a href="#">糖果</a>
+                            <a href="#">巧克力</a>
+                            <a href="#">口香糖</a>
+                            <a href="#">面包</a>
+                            <a href="#">曲奇</a>
+                            <a href="#">米饼</a>
+                            <a href="#">薯片</a>
+                            <a href="#">威化</a>
+                            <a href="#">饼干</a>
+                        </li>
+                        <li>
+                            <a href="#">蜜饯</a>
+                            <a href="#">肉干</a>
+                            <a href="#">坚果</a>
+                            <a href="#">豆干</a>
+                            <a href="#">进口坚果</a>
+                            <a href="#">进口糕点</a>
+                            <a href="#">阿胶</a>
+                            <a href="#">进口冲饮</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 midslide" style="width: 330px;height: 360px;">
+                    <ul>
+                        <li><img src="images/midslider1.jpg" alt="1"/></li>
+                        <li><img src="images/midslider2.jpg" alt="2"/></li>
+                        <li><img src="images/midslider3.jpg" alt="3"/></li>
+                    </ul>
+                    <ol>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-2"><img src="images/orange.jpg"></div>
+                        <div class="col-md-2"><img src="images/orange.jpg"></div>
+                        <div class="col-md-2"><img src="images/orange.jpg"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2"><img src="images/orange.jpg"></div>
+                        <div class="col-md-2"><img src="images/orange.jpg"></div>
+                        <div class="col-md-2"><img src="images/orange.jpg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="tabarrow0" style="padding: 0;margin: 0;">
+            <div class="midtitle">
+                <a href="#">食品</a>
+                <em class="point">·</em>
+                <a href="#">饮料</a>
+            </div>
+            <div class="row ">
+                <div class="col-md-2">
+                    <ul class="categorylist">
+                        <li>
+                            <a href="#">糖果</a>
+                            <a href="#">巧克力</a>
+                            <a href="#">口香糖</a>
+                            <a href="#">面包</a>
+                            <a href="#">曲奇</a>
+                            <a href="#">米饼</a>
+                            <a href="#">薯片</a>
+                            <a href="#">威化</a>
+                            <a href="#">饼干</a>
+                        </li>
+                        <li>
+                            <a href="#">蜜饯</a>
+                            <a href="#">肉干</a>
+                            <a href="#">坚果</a>
+                            <a href="#">豆干</a>
+                            <a href="#">进口坚果</a>
+                            <a href="#">进口糕点</a>
+                            <a href="#">阿胶</a>
+                            <a href="#">进口冲饮</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 midslide" style="width: 330px;height: 360px;">
+                    <ul>
+                        <li><img src="images/midslider1.jpg" alt="1"/></li>
+                        <li><img src="images/midslider2.jpg" alt="2"/></li>
+                        <li><img src="images/midslider3.jpg" alt="3"/></li>
+                    </ul>
+                    <ol>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                </div>
+                <div class="col-md-6">
+                    <div class="row midlefttop">
+                        <div class="col-md-2"><img src="images/orange.jpg"></div>
+                        <div class="col-md-2"><img src="images/orange.jpg"></div>
+                        <div class="col-md-2"><img src="images/orange.jpg"></div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-md-2"><img src="images/orange.jpg"></div>
+                        <div class="col-md-2"><img src="images/orange.jpg"></div>
+                        <div class="col-md-2"><img src="images/orange.jpg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="tabarrow0" style="padding: 0;margin: 0;">
+            <div class="midtitle">
+                <a href="#">食品</a>
+                <em class="point">·</em>
+                <a href="#">饮料</a>
+            </div>
+            <div class="row ">
+                <div class="col-md-2">
+                    <ul class="categorylist">
+                        <li>
+                            <a href="#">糖果</a>
+                            <a href="#">巧克力</a>
+                            <a href="#">口香糖</a>
+                            <a href="#">面包</a>
+                            <a href="#">曲奇</a>
+                            <a href="#">米饼</a>
+                            <a href="#">薯片</a>
+                            <a href="#">威化</a>
+                            <a href="#">饼干</a>
+                        </li>
+                        <li>
+                            <a href="#">蜜饯</a>
+                            <a href="#">肉干</a>
+                            <a href="#">坚果</a>
+                            <a href="#">豆干</a>
+                            <a href="#">进口坚果</a>
+                            <a href="#">进口糕点</a>
+                            <a href="#">阿胶</a>
+                            <a href="#">进口冲饮</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 midslide" style="width: 330px;height: 360px;">
+                    <ul>
+                        <li><img src="images/midslider1.jpg" alt="1"/></li>
+                        <li><img src="images/midslider2.jpg" alt="2"/></li>
+                        <li><img src="images/midslider3.jpg" alt="3"/></li>
+                    </ul>
+                    <ol>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-2"><img src="images/orange.jpg"></div>
+                        <div class="col-md-2"><img src="images/orange.jpg"></div>
+                        <div class="col-md-2"><img src="images/orange.jpg"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2"><img src="images/orange.jpg"></div>
+                        <div class="col-md-2"><img src="images/orange.jpg"></div>
+                        <div class="col-md-2"><img src="images/orange.jpg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="container">
+        <img src="images/pay.png" class="img-responsive" alt=""/>
+        <ul class="footer_nav">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">新手帮助</a></li>
+            <li><a href="#">权益保障</a></li>
+            <li><a href="#">商家服务</a></li>
+            <li><a href="#">客服中心</a></li>
+            <li><a href="#">投诉建议</a></li>
+            <li><a href="addlist.html">联系我们</a></li>
+        </ul>
+        <p class="copy">Copyright &copy; 2015.便利店 </p>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easydropdown.js"></script>
+<script type="text/javascript" src="js/megamenu.js"></script>
+<script src="js/responsiveslides.min.js"></script>
+<script src="js/jquery.countdown.js"></script>
+
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/jquery.flexisel.js"></script>
+<script src="js/jquery.luara.0.0.1.min.js"></script>
+<!--<script type="text/javascript" src="js/city-data.js"></script>-->
+<!--<script type="text/javascript" src="js/hzw-city-picker.min.js"></script>-->
+<script src="js/index.js"></script>
+<!--<script src="js/modal.js"></script>-->
+<script src="js/provinceselect.js"></script>
+
+
+</body>
+</html>		

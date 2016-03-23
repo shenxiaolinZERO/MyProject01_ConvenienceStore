@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/usercenter.css">
+    <link href="css/style.css" rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" href="css/jquery.countdown.css"/>
+    <link rel="stylesheet" href="css/flexslider.css"/>
+    <!--webfont-->
+    <!-- Import google fonts -->
+    <!--<link href='http://fonts.useso.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>-->
+    <link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="css/changge.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/hzw-city-picker.css">
+</head>
+<body>
+<div class="header_top">
+    <div class="container">
+        <div class="header_top-box">
+            <div class="header-top-left">
+                <div class="hd-login label box ">
+                    <span class="hd_hi">Hi,</span>
+                    请
+                    <a id="global-hd-loginlink" rel="nofollow" href="login.html">登录</a>
+                    /
+                    <a rel="nofollow" href="register.html">注册</a>
+                </div>
+                <div class="box1 ">
+                    <div class="input-group">
+                        <input id="cityname" type="text" class="dropdown-text" cityname="fuzhou" readonly>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="cssmenu">
+                <ul>
+                    <li class="active"><a href="login.html">我的便利店</a></li>
+                    <li><a href="wishlist.html">收藏夹</a></li>
+                    <li><a href="login.html">掌上便利店</a></li>
+                    <li><a href="register.html">客户服务</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+
+<div class="header_bottom">
+    <div class="container">
+        <div class="header_bottom-box">
+            <div class="header_bottom_left">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" alt=""/></a>
+                </div>
+                <ul class="clock">
+                    <i class="clock_icon"> </i>
+                    <li class="clock_desc">24小时服务</li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="header_bottom_right">
+                <div class="search">
+                    <input type="text" value="新品上架" onFocus="this.value = '';"
+                           onBlur="if (this.value == '') {this.value = '爆款返现，换购1元起';}">
+                    <input type="submit" value="">
+                </div>
+                <div class="shoppingcart">
+                    <a href="cart.html" class="btn ">
+                        <span class="glyphicon glyphicon-shopping-cart"></span> 购物车</a>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<div class="menu">
+    <div class="container">
+        <div class="menu_box">
+            <ul class="megamenu skyblue">
+                <li><a class="color10" href="cat.html">全部商品</a></li>
+                <li class="active grid"><a class="color2" href="index.html">首页</a></li>
+                <li><a class="color7" href="cat.html">便利超市</a>
+                </li>
+                <li><a class="color3" href="perdata.html">今日优惠</a></li>
+                <li><a class="color8" href="voucher.html">便利钱包</a></li>
+                <div class="clearfix"></div>
+            </ul>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<div class="usermid">
+    <div class="container">
+        <div class="order">
+            <!-- 左侧列表-->
+            <div class="order_select">
+                <div class="bg">
+                    <div class="portrait">
+                        <img src="images/dotted.png">
+
+                        <p>某某某</p>
+                        <span class="glyphicon glyphicon-user" style="color: #f54D56"></span>
+                    </div>
+                    <ul class="nav-tabs nav-stacked navlist" id="order">
+                        <li data-toggle="collapse" data-target="#myOrder">我的订单 <span
+                                class="glyphicon glyphicon-chevron-up"></span></li>
+                        <ul class="collapse in nav-tabs nav-stacked navlist-l" id="myOrder">
+                            <li class="active"><a href="#t_order" data-toggle="tab">全部订单</a></li>
+                            <li><a href="#obli" data-toggle="tab">待付款</a><span></span></li>
+                            <li><a href="#reci" data-toggle="tab">待收货</a><span></span></li>
+                            <li><a href="#eval" data-toggle="tab">待评价</a><span></span></li>
+                        </ul>
+                        <li data-toggle="collapse" data-target="#d2">我的资产 <span
+                                class="glyphicon glyphicon-chevron-down"></span></li>
+                        <ul class="collapse in navlist-l" id="d2">
+                            <li><a href="#voucher" data-toggle="tab">我的积分</a></li>
+                            <li>抵用券</li>
+                            <li>账户余额功能</li>
+                        </ul>
+                        <li data-toggle="collapse" data-target="#d3">在线客服 <span
+                                class="glyphicon glyphicon-chevron-down"></span></li>
+                        <ul class="collapse in navlist-l" id="d3">
+                            <li>在线投诉</li>
+                            <li>在线退换货</li>
+                        </ul>
+                        <li data-toggle="collapse" data-target="#d4">会员资料 <span
+                                class="glyphicon glyphicon-chevron-down"></span></li>
+                        <ul class="collapse in navlist-l" id="d4">
+                            <li><a href="#perdata" data-toggle="tab">个人资料</a></li>
+                            <li><a href="#addlist" data-toggle="tab">地址管理</a></li>
+                            <li><a href="#safeset" data-toggle="tab">安全设置</a></li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+
+            <!--结束 左侧列表 -->
+
+
+            <!-- 右边内容-->
+            <div class="order_content">
+                <div id="myTabContent" class="tab-content">
+                    <div id="t_order" class="tab-pane fade in active">
+                        <div class="order_section">
+                            <div class="order_title">
+                                <ul>
+                                    <li class="goods">商品</li>
+                                    <li class="sprice">单价(元)</li>
+                                    <li class="quantity">数量</li>
+                                    <li class="aftersale">售后</li>
+                                    <li class="rtotal">实付款(元)</li>
+                                    <li class="status">交易状态</li>
+                                    <li class="other">操作</li>
+                                </ul>
+                            </div>
+                            <table class="order_table">
+                                <tbody>
+                                <tr class="order_table_header">
+                                    <td colspan="7">
+                                        <div class="order_info">
+                          <span class="no">
+                              订单编号：XXXXXXXXXXXXXX<span class="deal_time">成交时间：2015-11-11 13:09:20</span>
+                          </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="order_table_item last">
+                                    <td class="goods">
+                                        <a href="" target="_blank"><img src="images/goods.jpg" alt="查看商品详情"></a>
+
+                                        <div class="desc">
+                                            <p>
+                                                <a href="#" target="_blank">XXXXXXXXXXXXXXXXX</a>
+                                                <a>[交易快照]</a>
+                                            </p>
+
+                                            <p>颜色 ：烟灰</p>
+
+                                            <p>尺码 ：【s】XX</p>
+                                        </div>
+                                    </td>
+                                    <td class="sprice">
+                                        <span>￥39.0</span>
+                                    </td>
+                                    <td class="quantity">1</td>
+                                    <td class="aftersale">
+                                        <a href="#" target="_blank">退款</a>
+                                    </td>
+                                    <td class="rtotal">
+                                        <span class="total_price">￥35.0</span>
+
+                                        <p><span>(包邮)</span></p>
+                                    </td>
+                                    <td class="status">
+                                        <p>已付款</p>
+                                        <a href="#" target="_blank">订单详情</a>
+                                    </td>
+                                    <td class="other">
+                                        <p><a href="#">确认收货</a></p>
+                                        <span></span>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <table class="order_table">
+                                <tbody>
+                                <tr class="order_table_header">
+                                    <td colspan="7">
+                                        <div class="order_info">
+                          <span class="no">
+                              订单编号：XXXXXXXXXXXXXX<span class="deal_time">成交时间：2015-11-11 13:09:20</span>
+                          </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="order_table_item last">
+                                    <td class="goods">
+                                        <a href="" target="_blank"><img src="images/goods.jpg" alt="查看商品详情"></a>
+
+                                        <div class="desc">
+                                            <p>
+                                                <a href="#" target="_blank">XXXXXXXXXXXXXXXXX</a>
+                                                <a>[交易快照]</a>
+                                            </p>
+
+                                            <p>颜色 ：烟灰</p>
+
+                                            <p>尺码 ：【s】XX</p>
+                                        </div>
+                                    </td>
+                                    <td class="sprice">
+                                        <span>￥39.0</span>
+                                    </td>
+                                    <td class="quantity">1</td>
+                                    <td class="aftersale">
+                                        <a href="#" target="_blank">退款</a>
+                                    </td>
+                                    <td class="rtotal">
+                                        <span class="total_price">￥35.0</span>
+
+                                        <p><span>(包邮)</span></p>
+                                    </td>
+                                    <td class="status">
+                                        <p>已付款</p>
+                                        <a href="#" target="_blank">订单详情</a>
+                                    </td>
+                                    <td class="other">
+                                        <p><a href="#">确认收货</a></p>
+                                        <span></span>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <table class="order_table">
+                                <tbody>
+                                <tr class="order_table_header">
+                                    <td colspan="7">
+                                        <div class="order_info">
+                          <span class="no">
+                              订单编号：XXXXXXXXXXXXXX<span class="deal_time">成交时间：2015-11-11 13:09:20</span>
+                          </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="order_table_item last">
+                                    <td class="goods">
+                                        <a href="" target="_blank"><img src="images/goods.jpg" alt="查看商品详情"></a>
+
+                                        <div class="desc">
+                                            <p>
+                                                <a href="#" target="_blank">XXXXXXXXXXXXXXXXX</a>
+                                                <a>[交易快照]</a>
+                                            </p>
+
+                                            <p>颜色 ：烟灰</p>
+
+                                            <p>尺码 ：【s】XX</p>
+                                        </div>
+                                    </td>
+                                    <td class="sprice">
+                                        <span>￥39.0</span>
+                                    </td>
+                                    <td class="quantity">1</td>
+                                    <td class="aftersale">
+                                        <a href="#" target="_blank">退款</a>
+                                    </td>
+                                    <td class="rtotal">
+                                        <span class="total_price">￥35.0</span>
+
+                                        <p><span>(包邮)</span></p>
+                                    </td>
+                                    <td class="status">
+                                        <p>已付款</p>
+                                        <a href="#" target="_blank">订单详情</a>
+                                    </td>
+                                    <td class="other">
+                                        <p><a href="#">确认收货</a></p>
+                                        <span></span>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <div class="pagination">
+                                <a href="#" class="c">1</a>
+                                <a href="#">2</a>
+                                <a href="#">下一页></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="obli" class="tab-pane fade in ">
+                        <div class="oblii">
+                            <img src="images/dotted.png">
+                        </div>
+                        <div class="oblic">
+                            <h3>此状态下没有对应的订单~~</h3>
+
+                            <p>去<span class="oblia"><a href="" target="_blank">XX</a></span>看看吧~~</p>
+                        </div>
+                    </div>
+                    <div id="reci" class="tab-pane fade in ">
+                        <div class="order_section">
+                            <div class="order_title">
+                                <ul>
+                                    <li class="goods">商品</li>
+                                    <li class="sprice">单价(元)</li>
+                                    <li class="quantity">数量</li>
+                                    <li class="aftersale">售后</li>
+                                    <li class="rtotal">实付款(元)</li>
+                                    <li class="status">交易状态</li>
+                                    <li class="other">操作</li>
+                                </ul>
+                            </div>
+                            <table class="order_table">
+                                <tbody>
+                                <tr class="order_table_header">
+                                    <td colspan="7">
+                                        <div class="order_info">
+                          <span class="no">
+                              订单编号：XXXXXXXXXXXXXX<span class="deal_time">成交时间：2015-11-11 13:09:20</span>
+                          </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="order_table_item last">
+                                    <td class="goods">
+                                        <a href="" target="_blank"><img src="images/goods.jpg" alt="查看商品详情"></a>
+
+                                        <div class="desc">
+                                            <p>
+                                                <a href="#" target="_blank">XXXXXXXXXXXXXXXXX</a>
+                                                <a>[交易快照]</a>
+                                            </p>
+
+                                            <p>颜色 ：烟灰</p>
+
+                                            <p>尺码 ：【s】XX</p>
+                                        </div>
+                                    </td>
+                                    <td class="sprice">
+                                        <span>￥39.0</span>
+                                    </td>
+                                    <td class="quantity">1</td>
+                                    <td class="aftersale">
+                                        <a href="#" target="_blank">退款</a>
+                                    </td>
+                                    <td class="rtotal">
+                                        <span class="total_price">￥35.0</span>
+
+                                        <p><span>(包邮)</span></p>
+                                    </td>
+                                    <td class="status">
+                                        <p>已付款</p>
+                                        <a href="#" target="_blank">订单详情</a>
+                                    </td>
+                                    <td class="other">
+                                        <p><a href="#">确认收货</a></p>
+                                        <span></span>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="voucher" class="tab-pane fade in ">
+                        <iframe src="voucher.html" width="950px" height="1600px"  frameborder="0"></iframe>
+                    </div>
+                    <div id="addlist" class="tab-pane fade in ">
+                        <iframe src="addlist.html" width="950px" height="1600px" frameborder="0"></iframe>
+                    </div>
+                    <div id="perdata" class="tab-pane fade in ">
+                        <iframe src="perdata.html" width="950px" height="1600px" frameborder="0"></iframe>
+                    </div>
+
+                    <div id="safeset" class="tab-pane fade in">
+                        <div class="safe_set">
+                            <div class="safe_content">
+                                <p class="safe_title">安全设置</p>
+
+                                <div class="safe_range">
+                                    <!--<div class="srange"><span>你的账户安全等级：</span><span class="safe">高</span>-->
+                                    <!--<span class="safe_middle">中</span><span class="unsafe">低</span>-->
+                                </div>
+
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80"
+                                         aria-valuemin="0"
+                                         aria-valuemax="100" id="degree">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info_name">
+                                <span class="glyphicon glyphicon-record r_style"></span>
+
+                                <div class="state">安全</div>
+                                <div
+                                        class="title">登录名：
+                                </div>
+                                <span class="info">某某某</span>
+                            </div>
+                            <div class="info_number">
+                                <span class="glyphicon glyphicon-record r_style"></span><span
+                                    class="state">安全</span>
+
+                                <div
+                                        class="title">绑定手机号：
+                                </div>
+                                <div class="info">123****4567</div>
+                                <div
+                                        class="setting">设置
+                                </div>
+                                <!-- 需判断是否点击的事件-->
+                                <div class="pnumber">
+                                    <p class="confirm">您已成功认证手机号码！</p>
+
+                                    <p>你已认证号码：
+                                        <sapn>123****4567</sapn>
+                                    </p>
+                                    <button type="buttom" class="btn_style">更换号码</button>
+                                </div>
+                                <div class="new_pnumber">
+                                    <p>当前手机号码：<span class="phone_number">123****4567</span>
+
+                                    <p><label>新手机号码：</label><input type="text" size="30"></p>
+                                    <button type="button" class="btn_style">确认</button>
+                                </div>
+                                <div class="new_result">
+                                    <p class="check_new">请登录您的邮箱进行验证</p>
+                                    <button type="button" class="btn_style">确定</button>
+                                </div>
+                            </div>
+                            <div class="info_email">
+                                <span class="glyphicon glyphicon-record r_style"></span>
+
+                                <div
+                                        class="state">不安全
+                                </div>
+                                <div
+                                        class="title">邮箱验证：
+                                </div>
+                                <div class="info">未设置</div>
+                                <div
+                                        class="setting">设置
+                                </div>
+                                <div class="email_confirm">
+                                    <label>邮箱：</label><input name="emial" type="email">
+                                    <button type="submit" class="btn_style">发送认证邮件</button>
+                                </div>
+                            </div>
+                            <div class="info_password">
+                                <span class="glyphicon glyphicon-record r_style"></span>
+
+                                <div
+                                        class="state">安全
+                                </div>
+                                <div
+                                        class="title">登录密码：
+                                </div>
+                                <div class="info">已设置</div>
+                                <div
+                                        class="setting">设置
+                                </div>
+                                <div class="set_password">
+                                    <p class="sp1"><label class="spl">现有密码：</label><input type="password"><span
+                                            class="msg"></span></p>
+
+                                    <p class="sp2"><label class="spl">输入新密码：</label><input type="password"><span
+                                            class="msg"></span></p>
+
+                                    <p class="sp3"><label class="spl">重新输入新密码：</label><input type="password"></p>
+                                    <button type="submit" class="btn_style">修改</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="container">
+        <img src="images/pay.png" class="img-responsive" alt=""/>
+        <ul class="footer_nav">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">新手帮助</a></li>
+            <li><a href="#">权益保障</a></li>
+            <li><a href="#">商家服务</a></li>
+            <li><a href="#">客服中心</a></li>
+            <li><a href="#">投诉建议</a></li>
+            <li><a href="addlist.html">联系我们</a></li>
+        </ul>
+        <p class="copy">Copyright &copy; 2015.便利店 </p>
+    </div>
+</div>
+
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/usercenter.js"></script>
+<script src="js/jquery.easydropdown.js"></script>
+<script type="text/javascript" src="js/megamenu.js"></script>
+<script src="js/responsiveslides.min.js"></script>
+<script src="js/jquery.countdown.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/jquery.flexisel.js"></script>
+<script src="js/jquery.luara.0.0.1.min.js"></script>
+<script type="text/javascript" src="js/city-data.js"></script>
+<script type="text/javascript" src="js/hzw-city-picker.min.js"></script>
+<script src="js/menuslider.js"></script>
+<script src="js/index.js" charset="gbk"></script>
+<script>
+    var cityPicker = new HzwCityPicker({
+        data: data,
+        target: 'cityname',
+        valType: 'k-v',
+        hideCityInput: {
+            name: 'city',
+            id: 'city'
+        },
+        hideProvinceInput: {
+            name: 'province',
+            id: 'province'
+        },
+        callback: function () {
+
+        }
+    });
+
+    cityPicker.init();
+</script>
+</body>
+</html>
