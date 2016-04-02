@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>个人资料</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="便利商店"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel='stylesheet' type='text/css'/>
+    <!--webfont-->
+    <!-- Import google fonts -->
+    <!--<link href='http://fonts.useso.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>-->
+    <link href="css/changge.css" rel="stylesheet">
+    <link href="css/addlist.css" rel="stylesheet">
+
+</head>
+<body>
+<div style="margin: 0px;padding: 0px;width: 100%;">
+
+    <div class=" address_management">
+        <div class="themes_title">
+            <h3>个人资料</h3>
+        </div>
+        <ul id="myTab" class="nav nav-tabs">
+            <li class="active">
+                <a href="#myData" data-toggle="tab">基本资料</a>
+            </li>
+            <li>
+                <a href="#myImage" data-toggle="tab">头像照片</a>
+            </li>
+        </ul>
+        <!-- 标题结束-->
+
+    </div>
+    <div class=" tab-pane fade in active" id="myData">
+        <form class="address-form">
+            <div class=" pre">
+                <label class="c-2 formlable" control-lable>
+                    <i></i>
+                    当前头像：
+                </label>
+                <span class="image_box">
+                         <a class="image_size">
+                             <img src="images/getAvatar.jpg">
+                         </a>
+                </span>
+            </div>
+            <div  class="pre">
+                <label class="c-2 formlable">
+                    <i>*</i>
+                    昵  称：
+                </label>
+                <input id="address-uerName" type="text" maxlength="16" placeholder="昵 称"
+                       onafterpaste="this.value=this.value.replace(/[<|>|\/]/g,'')" style="width: 150px;">
+                <!--<div class="error-name" style="display: none"></div>-->
+                <span class="namemsg"></span>
+
+
+            </div>
+            <div  class="pre">
+                <label class="c-2 formlable">
+                    <i>*</i>
+                    联系方式：
+                </label>
+                <input id="address-phone" type="text" maxlength="16" placeholder=""
+                       onafterpaste="this.value=this.value.replace(/[<|>|\/]/g,'')" style="width: 150px;">
+
+                <span class="telmsg"></span>
+
+            </div>
+            <div  class="pre">
+                <label class="c-2 formlable">
+                    <i>*</i>
+                    电子邮箱：
+                </label>
+                <input id="address-email" type="text" maxlength="16" placeholder=""
+                       onafterpaste="this.value=this.value.replace(/[<|>|\/]/g,'')" style="width: 150px;">
+                <span class="emailmsg"></span>
+            </div>
+            <div id="address-number" class="pre">
+                <label class="c-2 formlable">
+                    <i>*</i>
+                    性别：
+                </label>
+
+                <input class="sex_text" type="radio" name="sex" checked="checked" value="男">
+                <span>男</span>
+                <input class="sex_text" type="radio" name="sex" value="女">
+                <span>女</span>
+            </div>
+            <!--<div class="pre">-->
+            <!--<label class="c-2 formlable">-->
+            <!--<i></i>-->
+            <!--生日：-->
+            <!--</label>-->
+            <!--<select id="P_Year" class="year">-->
+            <!--<option selected="selected" value="0">选择年</option>-->
+            <!--<option value="2015">2015</option>-->
+            <!--<option value="2014">2014</option>-->
+            <!--<option value="2013">2013</option>-->
+            <!--<option value="2012">2012</option>-->
+            <!--<option value="2011">2011</option>-->
+            <!--</select>-->
+            <!--<span>年</span>-->
+            <!--<select id="P_Month" class="mon">-->
+            <!--<option selected="selected" value="0">选择月</option>-->
+            <!--<option value="1">1</option>-->
+            <!--<option value="2">2</option>-->
+            <!--<option value="3">3</option>-->
+            <!--<option value="4">4</option>-->
+            <!--<option value="5">5</option>-->
+            <!--<option value="6">6</option>-->
+            <!--<option value="7">7</option>-->
+            <!--<option value="8">8</option>-->
+            <!--<option value="9">9</option>-->
+            <!--<option value="10">10</option>-->
+            <!--<option value="11">11</option>-->
+            <!--<option value="12">12</option>-->
+            <!--</select>-->
+            <!--<span>月</span>-->
+            <!--<select id="P_Date" class="date">-->
+            <!--<option selected="selected" value="0">选择日</option>-->
+            <!--<option value="1">1</option>-->
+            <!--<option value="2">2</option>-->
+            <!--<option value="3">3</option>-->
+            <!--<option value="4">4</option>-->
+            <!--<option value="5">5</option>-->
+            <!--<option value="6">6</option>-->
+            <!--<option value="7">7</option>-->
+            <!--<option value="8">8</option>-->
+            <!--<option value="9">9</option>-->
+            <!--<option value="10">10</option>-->
+            <!--<option value="11">11</option>-->
+            <!--<option value="12">12</option>-->
+            <!--<option value="13">13</option>-->
+            <!--<option value="14">14</option>-->
+            <!--<option value="15">15</option>-->
+            <!--<option value="16">16</option>-->
+            <!--<option value="17">17</option>-->
+            <!--<option value="18">18</option>-->
+            <!--<option value="19">19</option>-->
+            <!--<option value="20">20</option>-->
+            <!--<option value="21">21</option>-->
+            <!--<option value="22">22</option>-->
+            <!--<option value="23">23</option>-->
+            <!--<option value="24">24</option>-->
+            <!--<option value="25">25</option>-->
+            <!--<option value="26">26</option>-->
+            <!--<option value="27">27</option>-->
+            <!--<option value="28">28</option>-->
+            <!--<option value="29">29</option>-->
+            <!--<option value="30">30</option>-->
+            <!--<option value="31">31</option>-->
+            <!--</select>-->
+            <!--</div>-->
+            <div  class="pre c-5">
+                <input id="address-save" type="button" class="address-btn" value="保存">
+            </div>
+        </form>
+    </div>
+    <div id="myImage" class="tab-pane fade">
+        <input type="file" data-bfi-disabled >
+        <!-- <div class="col-md-6 bl">选择你要上传的照片</div>-->
+        <input id="headImage-save" type="button" class="address-btn" value="保存">
+    </div>
+</div>
+</div>
+
+
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/personaldata.js"></script>
+
+</body>
+</html>

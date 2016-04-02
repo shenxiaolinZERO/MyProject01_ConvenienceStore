@@ -1,0 +1,294 @@
+/*隐藏y方向滚动条*/
+.sidebar {
+    overflow-y: hidden;
+}
+
+/*消除*/
+#ui-datepicker-div {
+    display: none;
+}
+
+.container {
+    width: 75%;
+}
+
+.main {
+    padding-left: 5px;
+}
+
+.stat {
+    width: 101.49%;
+}
+
+/*营业统计----begin----*/
+.nav-tabs li a, .nav-tabs li a:hover, .nav-tabs li.active a, .nav-tabs li.active a:hover {
+    padding: 8px 12px;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    border: 0;
+}
+
+.nav-tabs#statTab {
+    margin: 0;
+}
+
+#statTab li.active {
+    border-bottom: 2px solid #0080FF;
+}
+
+#statTabContent {
+    padding: 0;
+}
+
+.container > ul, .stast_select ul {
+    list-style: none;
+}
+
+.stast_select dt, dd {
+    float: left;
+}
+
+.stast_select dt {
+    margin-right: 10px;
+}
+
+.stast_select dd {
+    margin-left: -2px;
+}
+
+.stast_select input {
+    /*margin-top: -3px;*/
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+.stast_select dd, .type_select dd {
+    padding: 3px 5px;
+    color: #fff;
+    cursor: pointer;
+    background-color: #5e5e5e;
+    /*background-color: #0080FF;*/
+    border: 1px solid #eee;
+}
+
+.stast_select {
+    margin-bottom: 10px;
+}
+
+.stast_select dl {
+    margin-left: 12px;
+    background-color: #fff;
+
+}
+
+.stast_select .active, .type_select .active {
+    background-color: #0080FF;
+}
+
+input[id="date_1"] {
+    margin-left: 10px;
+}
+
+/*日期选择*/
+.ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year {
+    font-weight: normal;
+}
+
+.ui-datepicker {
+    width: 220px !important;
+}
+
+/*营业总览*/
+.stast_total table {
+    background-color: #fff;
+    width:100%;
+
+}
+
+.stast_total table tr:first-child {
+    border-bottom: 1px solid #e9ecf2;
+}
+
+.stast_total td[colspan="3"] {
+    font-weight: bold;
+}
+
+.stast_total .title > td, .stast_total .display > td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.stast_total .title > td {
+    padding-left: 12px;
+}
+
+.stast_total .display > td {
+    padding-left: 50px;
+    padding-right: 50px;
+    border-right: 1px solid #e9ecf2;
+}
+
+.stast_total .display > td > p:first-child {
+    font-weight: bold;
+    font-size: 20px;
+    color: #f9243f;
+}
+
+.stast_total .display > td{ /*p:nth-child(2)*/
+    text-align: center;
+    font-size: 12px;
+}
+
+/*营业趋势图*/
+#staChart {
+    width: 100%;
+    height: 400px;
+}
+
+.stast_analyse {
+    margin-top: 10px;
+}
+
+.panel-heading {
+    font-size: 14px;
+    color: #151515;
+    font-weight: bold;
+}
+
+.type_select {
+    width: 30%;
+    margin: 0 auto;
+}
+
+/*详细数据*/
+.stast_detail {
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.stast_detail table {
+    background-color: #fff;
+    font-size: 12px;
+    color: #151515;
+}
+
+.stast_detail table td {
+    padding: 5px 200px 5px 12px;
+}
+
+.stast_detail table tr:first-child {
+    font-weight: bold;
+    font-size: 14px;
+    color: #5F6468;
+}
+
+.stast_detail table tr td {
+    border: 1px solid #D8D8D8;
+}
+
+.stast_detail table tr:nth-child(2) {
+    font-weight: 600;
+    color: #5f6468;
+}
+
+#output {
+    color: #F47A10;
+    text-align: right;
+    padding-right: 5px;
+    cursor: pointer;
+}
+.sure,.cancel{
+    border:0;
+    padding:3px 10px;
+    font-weight:bold;
+    border-radius:5px;
+}
+.sure{
+    background-color:#0080FF;
+    color:#fff;
+}
+.cancel{
+    background-color: #fff;
+    color:#5e5e5e;
+}
+.modal-dialog{
+    width:400px;
+}
+/*营业统计----end----*/
+
+/*商品统计----begin----*/
+#date_1,#date_3 {
+    margin-left: 20px;
+}
+
+#date_2,#date_4 {
+    margin-right: 20px;
+}
+
+.shop_show {
+    display: inline;
+}
+
+.shop_show select {
+    width: 150px;
+    height: 25px;
+}
+
+.shop_show span, .genre span {
+    font-weight: bold;
+    color: #5f6468;
+}
+
+.genre {
+    display: inline;
+    margin-left: 20px;
+}
+
+.commodity_details{
+    margin-top: 20px;
+}
+.commodity_details table {
+    border: 1px solid #eee;
+    background-color: #fff;
+}
+.commodity_details table thead td{
+    font-weight: bold;
+    border-bottom:2px solid #eee;
+}
+
+.commodity_details table tr td{
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:12px;
+    background-color: #fff;
+    width:200px;
+}
+.commodity_details table tbody tr{
+    font-size: 12px;
+    color: #151515;
+}
+.commodity_details table tr span:first-child{
+    margin-left:75%;
+}
+
+.commodity_details table span a {
+    margin-left: 5px;
+    margin-right:5px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.commodity_details h3,.stast_detail h3,.stast_analyse h3{
+    padding-top: 30px;
+    display: none;
+    text-align: center;
+}
+
+/*商品统计----end----*/
+
+
+
+
+

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/orderdetails.css" rel="stylesheet"/>
+
+    <link href="css/style.css" rel='stylesheet' type='text/css'/>
+    <!--<link href='http://fonts.useso.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>-->
+    <link href="css/changge.css" rel="stylesheet">
+    <link href="css/fakeLoader.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<div id="fakeLoader"></div>
+<div class="header_top">
+    <div class="container">
+        <div class="header_top-box">
+            <div class="header-top-left">
+                <div class="hd-login label box ">
+                    <span class="hd_hi">Hi,</span>
+                    请
+                    <a id="global-hd-loginlink" rel="nofollow" href="login.html">登录</a>
+                    /
+                    <a rel="nofollow" href="register.ht ml">注册</a>
+                </div>
+                <div class=" label box haslogin" style="display: none;">
+                    <span class="hd_hi">Hi,</span>
+                    <a id="username"></a>
+                </div>
+                <div class="box1 ">
+                    <span class="hd_hi">收货地：</span>
+                    <input readonly id="cityname" type="text" class="" data-positon="" data-cityname=""
+                           style="width: 200px;" placeholder="选择送货地址">
+                    <!-- 地址选择-->
+                    <div class=" hd-prochg" style="display: none;">
+                        <ul class="nav nav-tabs">
+                            <li class="active" id="toppro"><a href="#pro" data-toggle="tab">福建省</a></li>
+                            <li class="_none" id="topcit"><a href="#cit" data-toggle="tab">福州市</a></li>
+                            <li class="_none" id="topear"><a href="#ear" data-toggle="tab">鼓楼区</a></li>
+                            <li class="_none" id="topvil"><a href="#vil" data-toggle="tab">阳光小区</a></li>
+                        </ul>
+                        <div class="pro-wrap">
+                            <div class="tab-pane fade in active" id="pro" data-name="">
+
+                                <a href="#">福建省</a>
+
+                            </div>
+                            <div class="tab-pane fade in" id="cit" data-name="">
+
+
+                            </div>
+                            <div class="tab-pane fade in" id="ear" data-name="">
+
+
+                            </div>
+                            <div class="tab-pane fade in" id="vil" data-name="">
+
+
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="cssmenu">
+                <ul>
+                    <li class="active"><a href="usercenter.html">我的便利店</a></li>
+                    <li><a href="wishlist.html">收藏夹</a></li>
+                    <li><a href="login.html">掌上便利店</a></li>
+                    <li><a href="register.html">客户服务</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+
+<div class="header_bottom">
+    <div class="container">
+        <div class="header_bottom-box">
+            <div class="header_bottom_left">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" alt=""/></a>
+                </div>
+                <ul class="clock">
+                    <i class="clock_icon"> </i>
+                    <li class="clock_desc">24小时服务</li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="header_bottom_right">
+                <div class="search">
+                    <input id="mysearch" type="text" value="新品上架" onFocus="this.value = '';"
+                           onBlur="if (this.value == '') {this.value = '爆款返现，换购1元起';}">
+                    <input type="submit" value="" id="searchitem">
+
+                    <div class="findlist" style="display: none;">
+                        <ul>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="shoppingcart">
+                    <a href="cart.html" class="btn">
+                        <span class="glyphicon glyphicon-shopping-cart"></span> 购物车
+                        <span id="cartnum" class="badge"
+                              style="color: #FFFFFF; background-color: #f54D56 ;border:2px solid #FFFFFF; "></span>
+                    </a>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<div class="menu">
+    <div class="container">
+        <div class="menu_box">
+            <ul class="megamenu skyblue">
+                <li><a class="color10">全部商品</a></li>
+                <li class="active grid"><a class="color2" href="index.html">首页</a></li>
+                <li><a class="color7" href="cat.html">便利超市</a>
+                </li>
+                <li><a class="color3" href="#">今日优惠</a></li>
+                <li><a class="color8" href="voucher.html">便利钱包</a></li>
+                <div class="clearfix"></div>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="or_details">
+        <div class="or_content">
+            <div class="or_info">
+                <div class="info_left">
+                    <div class="left_title"><h4>订单信息</h4>
+                    </div>
+                    <table class="info_dis">
+                        <tbody>
+                        <tr>
+                            <td class="info_title" valign="top">收货地址：</td>
+                            <td class="inforamtion">某某某，12345678901，福建省 福州市 闽侯县 上街镇科技路1号福建师范大学，350100
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="info_title" valign="top">买家留言：</td>
+                            <td class="inforamtion">--</td>
+                        </tr>
+                        <tr>
+                            <td class="info_title" valign="top">订单编号：</td>
+                            <td class="inforamtion">-----------</td>
+                        </tr>
+                        <tr>
+                            <td class="info_title" valign="top">店铺：</td>
+                            <td class="inforamtion">某某店铺</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="or_status">
+                <div class="de_status">
+                    <span class="glyphicon glyphicon-ok info_c"></span>
+                    <span class="orfont">订单状态:<span>已评价</span></span>
+                </div>
+            </div>
+
+        </div>
+        <div class="or_this">
+            <div class="or_title">
+                <ul>
+                    <li class="ogoods">商品</li>
+                    <li class="osprice">单价(元)</li>
+                    <li class="oquantity">数量</li>
+                    <li class="ofavour">优惠(元)</li>
+                    <li class="ostatus">状态</li>
+                    <li class="other">运费(元)</li>
+                </ul>
+            </div>
+            <table class="or_table">
+                <tbody>
+                <tr class="order_table_header">
+                    <td colspan="7">
+                        <div class="order_info">
+                            <span class="no">订单编号：1234567<span class="deal_time">成交时间：</span>2015-12-19</span>
+                        </div>
+                    </td>
+                </tr>
+                <!--<tr class="or_item">-->
+                    <!--<td class="ogoods">-->
+                        <!--<a href="itemDetial.html" target="_blank">-->
+                            <!--<img src="images/goods.jpg" alt="商品详情">-->
+                        <!--</a>-->
+
+                        <!--<div class="" style="display: inline">-->
+                              <!--<span>-->
+                                <!--<a href="itemDetial.html" target="_blank">XXXXXXXXXX</a>-->
+                              <!--</span>-->
+                        <!--</div>-->
+                    <!--</td>-->
+                    <!--<td class="osprice"><span>76.00</span></td>-->
+                    <!--<td class="oquantity">1</td>-->
+                    <!--<td class="ofavour">-->
+                        <!--<span class="total_price">5.00</span>-->
+                    <!--</td>-->
+
+                    <!--<td class="ostatus"><p>交易成功</p></td>-->
+
+                    <!--<td class="other" rowspan="2"  ><span>0.00</span>-->
+                    <!--</td>-->
+                <!--</tr>-->
+                <!--<tr class="or_item">-->
+                    <!--<td class="ogoods">-->
+                        <!--<a href="itemDetial.html" target="_blank"><img-->
+                                <!--src="images/goods.jpg" alt="商品详情"></a>-->
+
+
+                        <!--<div class="" style="display: inline">-->
+                              <!--<span>-->
+                            <!--<a href="itemDetial.html" target="_blank">XXXXXXXXXX</a>-->
+                            <!--</span>-->
+                        <!--</div>-->
+
+                    <!--</td>-->
+                    <!--<td class="osprice"><span>76.00</span></td>-->
+                    <!--<td class="oquantity">1</td>-->
+                    <!--<td class="ofavour"><span-->
+                            <!--class="total_price">5.00</span>-->
+                    <!--</td>-->
+
+                    <!--<td class="ostatus"><p>交易成功</p></td>-->
+
+                    <!--&lt;!&ndash;<td class="other" rowspan="2"><span>0.00</span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</td>&ndash;&gt;-->
+                <!--</tr>-->
+                </tbody>
+            </table>
+        </div>
+        <div class="or_total"><p>实付款：<span class="tfont">￥152.00</span></p></div>
+    </div>
+</div>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.cookie.js"></script>
+<script src="js/topjs.js"></script>
+<script src="js/fakeLoader.js"></script>
+<script src="js/orderdetial.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+.megamenu {
+    margin-bottom: 0px;
+    padding: 0;
+    width: 100%;
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    font-size: 15px;
+
+}
+
+.megamenu li {
+    margin-bottom: 0px;
+    display: inline
+}
+
+.megamenu > li > a {
+    float: left;
+    padding: 0px 20px;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 0.87em;
+    -webkit-transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    color: #100802;
+    font-weight: 700;
+}
+
+.megamenu > li.active > a {
+    color: #e05b5b;
+    background: #fff;
+}
+
+.megamenu > li.right {
+    float: right
+}
+
+

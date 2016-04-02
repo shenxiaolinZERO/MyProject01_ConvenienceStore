@@ -1,0 +1,270 @@
+.c-4{width:33.33333333% ;    position: relative;}
+.c-2{width: 16.66666667%;    position: relative;}
+.c-1{width: 8.33333333%;    position: relative;}
+.c-3{width: 25%;    position: relative;}
+.c-6{width: 50%;    position: relative;}
+.c-5{width: 41.66666667%;    position: relative;}
+/*地址管理*/
+.address_management{
+    color: #3c3c3c;
+
+}
+.themes_title{
+    border-bottom: 2px solid #EEEEEE;
+    height: 20px;
+    line-height: 20px;
+    padding: 0px 10px 7px 5px;
+    margin-bottom: 20px;
+    position: relative;
+
+}
+.themes_title h3{
+    color: #6c6c6c;
+    font-size: 14px;
+    font-weight: bold;
+}
+.address_management .address-form{
+    position: relative;
+    z-index: 1;
+    padding: 12px 0px 20px;
+    margin-bottom: 10px;
+}
+.address-form h4{
+    margin-left: 20px;
+    margin-bottom: 18px;
+    color: #6c6c6c;
+    font-weight: bold;
+    font-size: 14px;
+}
+.address-form span{
+    font-size: 12px;
+}
+.form-group{
+    /*display: table;*/
+    position: relative;
+    margin-bottom: 12px;
+    height: 25px;
+}
+.address_management .address-form .formlable{
+    width: 104px;
+    margin-right: 2px;
+}
+.formlable{
+    float: left;
+    padding-top: 3px;
+    text-align: right;
+    color: #3f3f3f;
+    font-size: 12px;
+    font-weight:normal;
+}
+.formlable i{
+    color: #f54d56;
+    font-style:normal;
+}
+.form-mile{
+    float: left;
+}
+.form-mile input{
+    padding: 2px 6px;
+    border: 1px solid #CCCCCC;
+    outline: medium none;
+    vertical-align: middle;
+}
+.address-select{
+    font-size: 12px;
+}
+.address-btn{
+    width: 130px;
+    height: 31px;
+    font-size: 16px;
+    font-family: Arial;
+    background-color: #FF3333;
+    color: #FFFFFF;
+    border: none;
+    margin-left: 100px;
+}
+.addresslist,.jifenlist{
+    height: 40px;
+    margin-bottom: 10px;
+    line-height: 40px;
+    background-color: #f3f3f3;
+    border: 1px solid #EEEEEE;
+}
+.addresslist li,.aa-list li,.jifenlist li,.jf-list li{
+    float: left;
+    text-align: center;
+    font-size: 12px;
+}
+.aa-list a{
+    color: #0180d1;
+}
+/*地址管理补充1.26*/
+.addr_list{
+    padding: 18px 17px;
+    /*background: #FAFAFA none repeat scroll 0% 0%;*/
+    border:1px solid #DEDCBA;
+    margin-top: 10px;
+}
+
+
+/*voucher页面  优惠券*/
+#couponnav{
+    border-bottom: 1px solid #EEEEEE;
+    padding: 0px;
+}
+#couponnav>li{
+    margin-bottom: -2px;
+    text-align: center;
+    float: left;
+
+}
+#couponnav>li>a{
+    border-radius: 0;
+}
+#couponnav>li.active>a{
+    background-color:#f54d56 ;
+    color: #FFFFFF;
+}
+#couponnav>li>a:focus,#couponnav>li>a:hover {
+    background-color: #f54d56;
+    color: #FFFFFF;
+}
+.coupon-list{
+    margin-top: 10px;
+    font-size: 12px;
+    color: #444444;
+    text-align: center;
+}
+.couponnav{
+    font-weight: bold;
+}
+.couponnav li{
+    float: left;
+}
+.coupon-list .couponnav>li,.couponinf>li{
+    border-bottom: 1px solid #EEEEEE;
+    padding-bottom: 15px;
+    margin-top: 15px;
+    float: left;
+}
+/*jifen*/
+.vip_img h3,.jifen{
+    text-align: center;
+    height: 100px;
+    line-height: 100px;
+}
+.jifen span{
+    color: #f54d56;
+    font-weight: bold;
+}
+
+/*个人资料*/
+.pre{
+    /*display: table;*/
+    position: relative;
+    margin-bottom: 12px;
+}
+
+
+
+
+
+
+.tabscroll .tabliterWrap{
+    width: 796px;
+    height: 26px;
+    border-bottom: 2px solid #F54D56;
+    margin-bottom: 32px;
+}
+.tabscroll .tabliter a.now{
+    background-position: right -360px;
+}
+.tabscroll .tabliter a{
+    float: left;
+    width: auto;
+    height: 26px;
+    padding: 0px 15px 0px 0px;
+    line-height: 26px;
+    display: inline-block;
+    background: #F54D56;
+    margin-right: 4px;
+    cursor: pointer;
+
+}
+.tabscroll .tabliter a.now span{
+    background-position: left -360px;
+    color: #fff;
+    font-weight: 700;
+}
+.setting_basic{
+    margin-top: 32px;
+    position: relative;
+}
+.f_text{
+    padding: 5px;
+    border: 1px solid #cccccc;
+    width: 320px;
+    margin-left: 48px ;
+    margin-top: 30px;
+
+}
+.name_text{
+    padding: 5px;
+    border: 1px solid #cccccc;
+    width:136px;
+    margin-left: 23px ;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+
+.unick_warn{
+    color:#666;
+    margin-left: 105px;
+    margin-top: 5px;
+
+}
+.edit{
+    margin-top: 15px;
+
+}
+.edit .image_box{
+    display: inline-block;
+    position: relative;
+    border: 3px solid #e6e6e6;
+    width: 80px;
+    height: 80px;
+}
+.edit .image_box  .image_size{
+    display: table-cell;
+    width: 80px;
+    height: 80px;
+    vertical-align: middle;
+    text-align: center;
+}
+.edit .sex_text{
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin-left: 48px ;
+
+}
+.edit select{
+    font-size: 13px;
+    color: #080808;
+
+}
+.edit .year{
+    margin-left: 48px;
+    color: #080808;
+
+}
+.sure_save{
+    margin-left: 100px;
+}
+.high{
+    color: #f54D56;
+}
+.formtips{
+    color: #f54D56;
+}

@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网上便利店—确认订单信息</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/changge.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/addlist.css">
+    <link href="css/fakeLoader.css" rel="stylesheet" type="text/css">
+
+</head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网上便利店—确认订单信息</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/changge.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/addlist.css">
+</head>
+<body>
+<div id="fakeLoader"></div>
+<div class="header_top">
+    <div class="container">
+        <div class="header_top-box">
+            <div class="header-top-left">
+                <div class="hd-login label box ">
+                    <span class="hd_hi">Hi,</span>
+                    请
+                    <a id="global-hd-loginlink" rel="nofollow" href="login.html">登录</a>
+                    /
+                    <a rel="nofollow" href="register.ht ml">注册</a>
+                </div>
+                <div class=" label box haslogin" style="display: none;">
+                    <span class="hd_hi">Hi,</span>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-info" id="username"></button>
+                        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="usercenter.html">个人中心</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="http://192.168.113.14:8080/BSMD/logout.do" id="loginout">退出</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="box1 ">
+                    <span class="hd_hi">收货地：</span>
+                    <input readonly id="cityname" type="text" class="" data-positon="" data-cityname="" style="width: 200px;" placeholder="选择送货地址">
+                    <!-- 地址选择-->
+                    <div class=" hd-prochg" style="display: none;">
+                        <ul class="nav nav-tabs">
+                            <li class="active" id="toppro" ><a href="#pro" data-toggle="tab">选择省</a></li>
+                            <li class="_none" id="topcit"> <a href="#cit"data-toggle="tab">选择市</a></li>
+                            <li class="_none"id="topear" ><a href="#ear" data-toggle="tab">选择区</a></li>
+                            <li class="_none" id="topvil" ><a href="#vil" data-toggle="tab">选择小区</a></li>
+                        </ul>
+                        <div class="pro-wrap">
+                            <div class="tab-pane fade in active" id="pro" data-name="">
+                                <a href="#">福建省</a>
+                            </div>
+                            <div class="tab-pane fade in" id="cit" data-name="">
+
+                            </div>
+                            <div class="tab-pane fade in" id="ear" data-name="">
+
+                            </div>
+                            <div class="tab-pane fade in" id="vil" data-name="">
+
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="cssmenu">
+                <ul>
+                    <li class=""><a href="usercenter.html">我的便利店</a></li>
+                    <li><a href="wishlist.html">收藏夹</a></li>
+                    <li><a href="login.html">掌上便利店</a></li>
+                    <li><a href="register.html">客户服务</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<div style=" min-height: 900px; margin-bottom: 50px">
+    <div class="head-step">
+        <div class="container">
+            <div class="cart-head-step">
+                <div class="col-lg-6" style="font-size: 16px;font-weight:bold;font-family: Consolas;color:#666666">
+                    <a href="index.html"><img src="images/logo.png"></a> <span style="font-size: 14px;color:#dddddd">确认订单</span>
+                </div>
+                <div class="col-lg-6">
+                    <ul class="cart-step">
+                        <li class="process-step">1</li>
+                        <li>
+                            <hr class="stephr" style="width:100px;" noshade>
+                        </li>
+                        <li class="process-step">2</li>
+                        <li>
+                            <hr class="stephr">
+                        </li>
+                        <li>
+                            <hr class="stephr-no" style="width: 50px;" noshade>
+                        </li>
+                        <li class="process-step-no">3</li>
+                        <li>
+                            <hr class="stephr-no" style="width:100px;" noshade>
+                        </li>
+                        <li class="process-step-no">4</li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="container ">
+            <div class="col-lg-6"></div>
+            <div class="col-lg-6">
+                <div>
+                    <ul class="cart-step">
+                        <li class="process-stepb">购物车</li>
+                        <li class="process-stepbn">确认订单</li>
+                        <li class="process-stepbn">支付</li>
+                        <li class="process-stepbn">完成</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="cart-wrap">
+
+            <h2>选择收货地址</h2>
+
+            <div id="cartAddress" class="cart-address-wrap">
+                <div class="" style="display: none;color:red">请填写收货地址</div>
+                <ul id="cartaddresslist" class="cart-address-list clearfix">
+                    <!--<li data-aid="" class="cart-address-card-choose">-->
+                    <!--&lt;!&ndash;默认地址&ndash;&gt;-->
+                    <!--<a class="cart-address-card " data-aid="" href="javascript:;">-->
+                    <!--<span class="cart-address-default"> 默认地址</span>-->
+                    <!--<h5 class="cart-address-tit">张三</h5>-->
+                    <!--<hr class="cart-hr" style="width: 160px;  border: 1px solid #eee;" noshade>-->
+                    <!--<p class="cart-address-strert">阳光小区几栋几楼</p>-->
+
+                    <!--<p class="cart-address-zipinf" data-eare="" data-city="" data-province="">福建省福州市鼓楼区</p>-->
+
+                    <!--<p class="cart-address-phone">18120826027</p>-->
+                    <!--<i class="cart-address-edit" style="display: none">编辑</i>-->
+                    <!--</a>-->
+
+                    <!--</li>-->
+                    <!--<li data-aid="">-->
+                    <!--&lt;!&ndash;默认地址&ndash;&gt;-->
+                    <!--<a class="cart-address-card" data-aid="" href="javascript:;">-->
+                    <!--<span class="cart-address-default _none"> 默认地址</span>-->
+                    <!--<h5 class="cart-address-tit">张三</h5>-->
+                    <!--<hr class="cart-hr" style="width: 160px;  border: 1px solid #eee;" noshade>-->
+                    <!--<p class="cart-address-strert">阳光小区几栋几楼</p>-->
+
+                    <!--<p class="cart-address-zipinf" data-eare="" data-city="" data-province="">福建省福州市鼓楼区</p>-->
+
+                    <!--<p class="cart-address-phone">18120826027</p>-->
+                    <!--<i class="cart-address-edit" style="display: none">编辑</i>-->
+                    <!--</a>-->
+
+                    <!--</li>-->
+                    <!--<li data-aid="">-->
+                    <!--&lt;!&ndash;默认地址&ndash;&gt;-->
+                    <!--<a class="cart-address-card" data-aid="" href="javascript:;">-->
+                    <!--<span class="cart-address-default _none"> 默认地址</span>-->
+                    <!--<h5 class="cart-address-tit">张三</h5>-->
+                    <!--<hr class="cart-hr" style="width: 160px;  border: 1px solid #eee;" noshade>-->
+                    <!--<p class="cart-address-strert">阳光小区几栋几楼</p>-->
+
+                    <!--<p class="cart-address-zipinf" data-eare="" data-city="" data-province="">福建省福州市鼓楼区</p>-->
+
+                    <!--<p class="cart-address-phone">18120826027</p>-->
+                    <!--<i class="cart-address-edit" style="display: none">编辑</i>-->
+                    <!--</a>-->
+                    <!--</li>-->
+                </ul>
+                <ul id="addressctr" class="cart-address-crt clearfix">
+                    <li><a href="javascript:;" class="">管理收货地址</a></li>
+                    <li><a class="assotheraddress" href="javascript:;">使用新地址</a></li>
+                </ul>
+                <div class=" address_management" style="">
+                    <!-- 标题结束-->
+                    <form class="address-form">
+                        <h4>新增地址</h4>
+
+                        <div class="form-group">
+                            <label class="col-lg-2 formlable" control-lable>
+                                <i>*</i>
+                                收 货 人：
+                            </label>
+
+                            <div class="form-mile">
+                                <input type="text" id="add_name" placeholder="收货人"
+                                       onafterpaste="this.value=this.value.replace(/[<|>|\/]/g,'')">
+
+                                <div class="error-name" style="display: none;"></div>
+                            </div>
+                        </div>
+                        <div id="address-region" class="form-group">
+                            <label class="col-lg-2 formlable">
+                                <i>*</i>
+                                收货地址：
+                            </label>
+
+                            <div class="form-mile address-select">
+                                <input readonly placeholder="送货区域根据前面所选的地址确定"
+                                       style="width: 300px"><span>送货区域根据前面所选的地址确定</span>
+                            </div>
+                            <div class="error-address" style="display: none"></div>
+                        </div>
+                        <div id="address-address " class="form-group">
+                            <label class="col-lg-2 formlable">
+                                <i>*</i>
+                                详细地址：
+                            </label>
+                            <input id="ueraddr" type="text" maxlength="70" placeholder="请输入详细的楼层单元号"
+                                   onafterpaste="this.value=this.value.replace(/[<|>|\/]/g,'')"
+                                   style="width: 400px;">
+                        </div>
+                        <div id="address-number" class="form-group">
+                            <label class="col-lg-2 formlable">
+                                <i>*</i>
+                                手机号码：
+                            </label>
+
+                            <div class="form-mile">
+                                <input id="usertel" type="tel" placeholder="手机号码"
+                                       onafterpaste="this.value=this.value.replace(/[<|>|\/]/g,'')"
+                                       style="width: 200px;">
+                            </div>
+                            <!--<small>或</small>-->
+                            <!--<label for="">固定电话：</label>-->
+                            <!--<input class="i_text i_text_section" type="text" style="height: 25px;width: 42px;" placeholder="区号">-->
+                            <!--<input type="tel" onafterpaste="this.value=this.value.replace(/[<|>|\/]/g,'')"-->
+                            <!--style="height: 25px; width:75px;" placeholder="电话号码">-->
+                            <!--<input class="i_text i_text_ext" type="text" style="height: 25px;width: 25px;">-->
+                            <!-- -->
+                        </div>
+                        <div class="form-group">
+                            <label class="col-lg-2 formlable"></label>
+                            <input id="address-default" type="checkbox" value="1">
+                            <label for="address-default" class="formlable">设为默认收货地址</label>
+                        </div>
+                        <div id="address-save" class="form-group">
+                            <input type="button" class="address-btn" value="保存">
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+            <h2>确认商品信息</h2>
+
+            <div id="orderfrom" style="overflow: auto;overflow-y: hidden">
+                <div id="store" data-sid="">
+                    <strong>店铺：</strong>
+
+
+                </div>
+                <div style="display: inline-block;  margin-left: 50px;">
+                    <button type="button" class="btn btn-danger" data-toggle="collapse" href="#shopVoucher"
+                            data-terget="#shopVoucher">领取店铺优惠
+                    </button>
+                    <ul class="collapse in" id="shopVoucher">
+                        <li><em>.</em>满100减10
+                            <button type="button" class="">立即领取</button>
+                        </li>
+                        <li><em>.</em>店铺满100减10
+                            <button type="button" class="">立即领取</button>
+                        </li>
+                        <li><em>.</em>店铺满100减10
+                            <button type="button" class="">立即领取</button>
+                        </li>
+                    </ul>
+                </div>
+                <table class="shhowcartinf col-lg-12" cellpadding="2" cellspacing="0" border="0">
+                    <thead>
+                    <tr>
+                        <th class="col-lg-5">商品</th>
+                        <th class="col-lg-2">商品信息</th>
+                        <th class="col-lg-1">单价</th>
+                        <th class="col-lg-2">数量</th>
+                        <th class="col-lg-2">小计</th>
+                    </tr>
+
+                    </thead>
+                    <tbody id="itemlist">
+                    <tr id="" data-itemsize="" data-number="" data-tol="">
+                        <td class="col-lg-5">雀巢 脆脆鲨巧克力味夹心 640g（24*20g+赠8*20g/盒)</td>
+                        <td class="col-lg-2">规格：640g</td>
+                        <td class=col-lg-1"">27.7</td>
+                        <td class=col-lg-2"">3</td>
+                        <td class="col-lg-2">72.1</td>
+                    </tr>
+                    <tr>
+                        <td class="col-lg-5">雀巢 脆脆鲨巧克力味夹心 640g（24*20g+赠8*20g/盒)</td>
+                        <td class="col-lg-2">规格：640g</td>
+                        <td class="col-lg-1">27.7</td>
+                        <td class="col-lg-2">3</td>
+                        <td class="col-lg-2">72.1</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="clearfix"></div>
+                <ul class="cartchecked">
+                    <li class="col-lg-6">备注：<input type="text" id="backinf" placeholder="补充填写其他信息"></li>
+                    <li class="col-lg-6 " style="text-align: right;padding-right: 50px"><strong>合计：</strong><span
+                            class="price">￥</span><span class="cart-paybar-info">72.1</span></li>
+                </ul>
+            </div>
+            <h2>发票信息 <label><a href="javascript:;" id="invoiceModify">[修改]</a></label></h2>
+
+            <div class="showinforder">
+                <ul>
+                    <li id="noinvoice" style="cursor: pointer">不需要发票</li>
+                </ul>
+                <div id="InvoiceEditDiv" class="invoiceForm clearfix " style="display: none">
+                    <div class="invoiceType clearfix">
+                        <div class="fl">
+                            <label>发票类型：</label>
+                            <label for="pt_fp">
+                                <input id="pt_fp" value="2" name="invoiceType" checked="checked" type="radio">普通发票
+                            </label>
+                        </div>
+                    </div>
+                    <div class="warm_prompt_div invoiceCont clearfix ">
+                        <ul class="clearfix">
+                            <li>
+                                <label for="headType">发票抬头：</label>
+                                <select id="headType" class="ticket_tit">
+                                    <option value="0" defaultinfo="chenm">个人</option>
+                                    <option value="1" defaultinfo="单位名称">单位</option>
+                                </select>
+                                <input id="detielcontent" value="" type="text" placeholder="请输入抬头信息"
+                                       style="margin-left: 20px">
+                            </li>
+                            <li id="invoiceContentLi">
+                                <label class="fl">发票内容：</label>
+
+                                <div class="fl">
+                                    <p class="mb15">
+                                        <label for="needDetailContent">
+                                            <input id="needDetailContent" name="invoiceContentType" type="radio">
+                                            需要明细发票
+                                        </label>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                        <input style="margin-left: 20%" id="saveinf" type="button" value="保存发票信息">
+                        <input id="cancle" type="button" value="取消">
+                    </div>
+                </div>
+
+            </div>
+            <h2>支付及抵用券信息</h2>
+
+            <div class="payinfo" id="paymentui">
+
+                <div id="input-payment" class="payment-box" style="display: block">
+                    <div class="radio_select pay_method_item pay_method_item on_click" id="pCod">
+                        <input checked="checked" id="radio_money" name="payment" type="radio" data-type="1">
+                        <label for="radio_money">货到付现金</label>
+                            <span class="text_sorry">
+                                支持货到付款，收货时付款。
+                            </span>
+                    </div>
+                    <div class="radio_select " id="pNet">
+                        <input id="radio_int_bank" disabled="disabled" name="payment" type="radio" data-type="0">
+                        <label for="radio_int_bank">网上支付</label>
+                            <span class="des">
+                            目前尚未开通该服务
+                                <!--为了保证及时处理您的订单，请您下单<em>24小时内</em>付款。-->
+                            </span>
+                    </div>
+
+                </div>
+                <div id="voucher" class="vouchers">
+                    <h6>使用抵用券</h6>
+
+                    <div class="voucher-p" data-id="A3487359841705">
+                        <h5 class="voucher-title"><span style="font-size: 12px">编号：</span>A3487359841705</h5>
+                        <div class="fl">
+                            <span class="price">¥</span>
+                            <i class="money">20</i>
+                            <span>[满100可用]</span>
+                        </div>
+                        <div class="fr" style="margin-left: 30px;font-size: 12px">
+                            使用期限：<br/>
+                            <i>2015.09.26 00:00</i><br/>
+                            -<i>2016.09.26 00:00</i>
+                        </div>
+                    </div>
+                </div>
+                <div class="getIntegral">
+                    <h6>积分</h6>
+                    <span>目前可用积分</span><span style="color: #aa0000">100</span> <label>请输入要使用的积分</label>
+                    <input data-toggle="popover" data-container="body" data-placement="right" data-content type="number"
+                           style="width: 50px;" min="1" max="" step="1">
+                </div>
+
+
+                <!--<div class="voucher-p" data-id="A3487359841705">-->
+                <!--<h5 class="voucher-title"><span style="font-size: 12px">编号：</span>A3487359841705</h5>-->
+                <!--<div class="fl">-->
+                <!--<span class="price">¥</span>-->
+                <!--<i class="money">20</i>-->
+                <!--<span>[满100可用]</span>-->
+                <!--</div>-->
+                <!--<div class="fr" style="margin-left: 30px;font-size: 12px">-->
+                <!--使用期限：<br/>-->
+                <!--<i>2015.09.26 00:00</i><br/>-->
+                <!-- -<i>2016.09.26 00:00</i>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--<div class="voucher-p" data-id="A3487359841705">-->
+                <!--<h5 class="voucher-title"><span style="font-size: 12px">编号：</span>A3487359841705</h5>-->
+                <!--<div class="fl">-->
+                <!--<span class="price">¥</span>-->
+                <!--<i class="money">20</i>-->
+                <!--<span>[满100可用]</span>-->
+                <!--</div>-->
+                <!--<div class="fr" style="margin-left: 30px;font-size: 12px">-->
+                <!--使用期限：<br/>-->
+                <!--<i>2015.09.26 00:00</i><br/>-->
+                <!-- -<i>2016.09.26 00:00</i>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--<div class="voucher-p" data-id="A3487359841705">-->
+                <!--<h5 class="voucher-title"><span style="font-size: 12px">编号：</span>A3487359841705</h5>-->
+                <!--<div class="fl">-->
+                <!--<span class="price">¥</span>-->
+                <!--<i class="money">20</i>-->
+                <!--<span>[满100可用]</span>-->
+                <!--</div>-->
+                <!--<div class="fr" style="margin-left: 30px;font-size: 12px">-->
+                <!--使用期限：<br/>-->
+                <!--<i>2015.09.26 00:00</i><br/>-->
+                <!-- -<i>2016.09.26 00:00</i>-->
+                <!--</div>-->
+                <!--</div>-->
+            </div>
+        </div>
+        <!-- 确认支付-->
+        <div class="cart-surbar" id="cartpaybar">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2"></div>
+            <span class="col-lg-2"> </span>
+
+            <div class="col-lg-4">
+                共有<span class="goondsnum">3</span>件商品，总计：
+                <span class="cart-paybar-info"><i class="price"></i> 0.00</span>
+
+            </div>
+            <div class="col-lg-3 clear">
+                此订单可获<strong style="color: #ff4066">15</strong>积分
+                <a class="clear" id="cartsurbtn" data-toggle="popover" data-container="body" data-placement="top"
+                   data-content="">确认结算</a>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+<div class="footer">
+    <div class="container">
+        <img src="images/pay.png" class="img-responsive" alt=""/>
+        <ul class="footer_nav">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">新手帮助</a></li>
+            <li><a href="#">权益保障</a></li>
+            <li><a href="#">商家服务</a></li>
+            <li><a href="#">客服中心</a></li>
+            <li><a href="#">投诉建议</a></li>
+            <li><a href="addressList.html">联系我们</a></li>
+        </ul>
+        <p class="copy">Copyright &copy; 2015.便利店 </p>
+    </div>
+</div>
+</div>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.spinner.js"></script>
+<script src="js/fakeLoader.js"></script>
+<script src="js/jquery.cookie.js"></script>
+<script src="js/con_order.js"></script>
+<script src="js/topjs.js"></script>
+</body>
+</html>

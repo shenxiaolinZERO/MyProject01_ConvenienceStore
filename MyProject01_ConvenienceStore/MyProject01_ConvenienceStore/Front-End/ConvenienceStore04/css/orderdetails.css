@@ -1,0 +1,149 @@
+.or_details {
+    width: 95%;
+    /*height: 172px;*/
+    margin: 20px 10px;
+    border: 1px solid #eee;
+    overflow: auto;
+}
+.or_content{
+    overflow: auto;
+}
+
+.or_info {
+    width: 400px;
+}
+
+.info_left {
+    border: 1px solid #eee;
+    border-bottom: transparent;
+    flaot: left;
+}
+
+.left_title {
+    background-color: #e5e5e5;
+    padding: 5px 10px;
+}
+
+.left_title > h4 {
+    color: #555555;
+    display: inline;
+    margin: 5px 10px;
+}
+
+.info_dis td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    font-size: 13px;
+}
+
+.info_title {
+    width: 90px;
+    font-size: 13px;
+    color: #A4A4A4;
+}
+
+.inforamtion {
+    word-wrap: break-word;
+    color: #2E2E2E;
+}
+
+.info_left {
+    float: left;
+}
+
+.or_status {
+    hight: 172px;
+}
+
+.de_status {
+    padding-top: 50px;
+    padding-bottom: 80px;
+    padding-left: 420px;
+}
+
+.info_c {
+    font-size: 20px;
+    color: #088A08;
+    margin-right: 10px;
+}
+
+.orfont {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.or_this {
+    /*margin-top: 30px;*/
+}
+.order_info{
+    margin: 15px 15px;
+}
+.or_title {
+    height: 40px;
+    line-height: 30px;
+    border: 1px solid #eee;
+    color: #5e5e5e;
+}
+
+ul li {
+    float: left;
+}
+
+.or_table{
+    margin:10px 0;
+    width:100%;
+    font-size: 14px;
+}
+.or_table tr{
+    border:1px solid #D8D8D8;
+}
+.or_title tr{
+    height: 100px;
+}
+.ogoods{
+    width:20%;
+}
+
+.osprice,.oquantity,.ofavour{
+    text-align: center;
+    width:15%;
+}
+.ostatus,.other{
+    text-align: center;
+    width:14%;
+}
+.goodimg{
+    width: 5%
+}
+.goodimg img{
+    width:60px;
+}
+.ogoods{
+    text-align: center;
+}
+.ogoods img{
+    width:60px;
+}
+.or_total{
+    position: relative;
+   text-align: right;
+    padding-right: 10%;
+}
+.or_table .ostatus,.or_table .other{
+    border-right:1px solid #D8D8D8;
+}
+.or_item{
+    /*margin: 10px;*/
+    /*padding: 10px;*/
+}
+.or_item tr{
+    height: 100px;
+
+}
+
+.tfont{
+    color:#DF0101;
+    font-size: 18px;
+    font-weight: 700;
+}

@@ -1,0 +1,8 @@
+.content{
+    border: 1px solid #30a5ff;
+    width: 400px;
+    margin-top: 10px
+}
+.content div{
+    padding: 10px;
+}

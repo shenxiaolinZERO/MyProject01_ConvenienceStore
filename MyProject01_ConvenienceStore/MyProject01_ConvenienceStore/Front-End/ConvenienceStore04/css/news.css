@@ -1,0 +1,49 @@
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    border: 0;
+}
+#url{
+    margin-left:7px;
+    box-shadow: none;
+    border: 1px solid #e9ecf2;
+    height: 32px;
+    font-size: 14px;
+    color: #555555;
+    line-height: 1.4;
+    border-radius: 4px;
+    width:60%;
+}
+#myTabContent{
+    padding:0;
+}
+#releaseNew table td{
+    padding:5px 10px;
+}
+#releaseNew table{
+    margin-top:10px;
+    table-layout: fixed;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+#releaseNew table tbody tr:nth-child(2n+1){
+    background-color: #fff;
+}
+#releaseNew table td:nth-child(1){
+    width:120px;
+}
+#releaseNew table td:nth-child(2){
+    width:250px;
+}
+#releaseNew table td:nth-child(3),#releaseNew table td:nth-child(4){
+    /*width:20%;*/
+    width:210px;
+}
+
+#releaseNew table td:nth-child(5),#releaseNew table td:nth-child(6),#releaseNew table td:nth-child(7){
+    /*width:10%;*/
+    width:110px;
+}
+.switch{
+    color:#00BFFF;
+    cursor: pointer;
+    margin-left:10px;
+}

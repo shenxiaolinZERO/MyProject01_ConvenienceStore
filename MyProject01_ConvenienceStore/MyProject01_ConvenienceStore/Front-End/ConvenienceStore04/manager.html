@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>后台管理员管理</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/datepicker3.css" rel="stylesheet">
+    <link href="css/bootstrap-table.css" rel="stylesheet">
+    <link href="css/styles_back.css" rel="stylesheet">
+    <link href="css/onsaleItems.css" rel="stylesheet">
+    <link href="css/manager.css" rel="stylesheet">
+</head>
+<body>
+<!--修改管理员信息的模态框-->
+<div class="modal fade" id="UpdateInfo" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true" style="top:25%">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close"
+                        data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    修改管理员信息
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div class="editIt">
+                    <div>
+                        <label>
+                            <i>*</i>
+                            <span>编号：</span>
+                        </label>
+                        <span id="managerNo"></span>
+                        <!--<input class="searchItems" id="managerNo" type="text" maxlength="40"  style="width: 150px;" readonly="true">-->
+                    </div>
+                    <div>
+                        <label>
+                            <i>*</i>
+                            <span>用户名：</span>
+                        </label>
+                        <span id="managerName"></span>
+                        <!--<input class="searchItems" id="managerName" type="text" maxlength="40"  style="width: 150px;" readonly="true">-->
+                    </div>
+
+                    <div>
+                        <label>
+                        <i>*</i>
+                        <span>权限：</span>
+                        </label>
+                        <select class="searchItems"  id="managerKind" onchange="changeRole()">
+                            <option value="1" data-role="1">普通管理员</option>
+                            <option value="2" data-role="2">超级管理员</option>
+
+                        </select>
+                    </div>
+                    <div id="store">
+                        <label>
+                            <i>*</i>
+                            <span>店铺：</span>
+                        </label>
+                        <select class="searchItems"  id="shopList1" onchange="showShop1()">
+                            <option value="0">鼓楼便利店</option>
+                            <option value="1">仓山便利店</option>
+
+                        </select>
+                    </div>
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                        data-dismiss="modal">关闭
+                </button>
+                <button type="button" id="submitInfo" class="btn btn-primary" data-dismiss="modal">
+                    提交更改
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+
+    </div>
+</div>
+<!------修改管理员信息的模态框end------>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#sidebar-collapse">
+                <span class="sr-only">后台管理系统</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><span>星星</span>便利店</a>
+            <ul class="user-menu">
+                <li class="dropdown pull-right">
+                    <a id="user" class="dropdown-toggle" data-toggle="dropdown"><span
+                            class="glyphicon glyphicon-user"></span> User <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> </a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-cog"></span> 设置</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> 退出</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+    <ul class="nav menu">
+        <li class="active"><a href="index_Back.html"><span class="glyphicon glyphicon-dashboard"></span>首页</a></li>
+        <li class="parent ">
+            <a href="#">
+                <span class="glyphicon glyphicon-list"></span> 外卖管理
+                <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right">
+                    <em class="glyphicon glyphicon-s glyphicon-minus"></em></span>
+            </a>
+            <ul class="children collapse in" id="sub-item-1">
+                <li class="">
+                    <a class="" href="widgets.html">
+                        <span class="glyphicon glyphicon-share-alt"></span>订单管理
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="returnItems.html">
+                        <span class="glyphicon glyphicon-share-alt"></span>退换货管理
+                    </a>
+                </li>
+
+            </ul>
+        </li>
+        <li class="parent">
+            <a href=""><span class="glyphicon glyphicon-list-alt"></span>营销管理
+            <span data-toggle="collapse" href="#sub-item-4" class="icon pull-right">
+                <em class="glyphicon glyphicon-s glyphicon-minus"></em></span></a>
+
+            <ul class="children collapse in" id="sub-item-4">
+                <li class="role-2">
+                    <a href="promoManage.html"><span class="glyphicon glyphicon-share-alt"></span>促销管理</a>
+                </li>
+                <li>
+                    <a class="" href="hotManage.html">
+                        <span class="glyphicon glyphicon-share-alt"></span>热门商品管理
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="">
+                        <span class="glyphicon glyphicon-share-alt"></span>优惠券管理
+                    </a>
+                </li>
+
+            </ul>
+        </li>
+        <li class="parent ">
+            <a href="#">
+                <span class="glyphicon glyphicon-list"></span> 信息管理 <span data-toggle="collapse" href="#sub-item-2"
+                                                                          class="icon pull-right"><em
+                    class="glyphicon glyphicon-s glyphicon-minus"></em></span>
+            </a>
+            <ul class="children collapse in" id="sub-item-2">
+                <li class="role-2">
+                    <a class="" href="news.html">
+                        <span class="glyphicon glyphicon-share-alt"></span>公告发布
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="ItemsCatalog.html">
+                        <span class="glyphicon glyphicon-share-alt"></span>商品目录管理
+                    </a>
+                </li>
+
+                <li class="role-2">
+                    <a class="" href="adupload.html">
+                        <span class="glyphicon glyphicon-share-alt"></span>广告图片管理
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li ><a href="SysStatistic.html"><span class="glyphicon glyphicon-pencil"></span> 系统统计</a></li>
+        <li class="parent active"><a href=""><span class="glyphicon glyphicon-info-sign"></span>信息配置
+            <span data-toggle="collapse" href="#sub-item-3" class="icon pull-right">
+                <em class="glyphicon glyphicon-s glyphicon-minus"></em></span></a>
+            <ul class="children collapse in" id="sub-item-3">
+                <li class="role-2 choose">
+                    <a class="" href="manager.html">
+                        <span class="glyphicon glyphicon-share-alt"></span>后台管理员管理
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="registerUser.html">
+                        <span class="glyphicon glyphicon-share-alt"></span>前台注册用户
+                    </a>
+                </li>
+                <li class="role-2">
+                    <a class="" href="Sysconfig.html">
+                        <span class="glyphicon glyphicon-share-alt"></span>系统配置
+                    </a>
+                </li>
+
+            </ul>
+        </li>
+        <li role="presentation" class="divider"></li>
+        <!--<li><a href="login.html"><span class="glyphicon glyphicon-user"></span> Login Page</a></li>-->
+    </ul>
+
+</div>
+
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+
+    <div class="row">
+        <ol class="breadcrumb">
+            <li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
+            <li class="active">后台管理员管理</li>
+        </ol>
+    </div><!--/.row-->
+    <ul id="myTab" class="nav nav-tabs">
+        <li class="active">
+            <a href="#un" data-toggle="tab">
+                设置管理员
+            </a>
+        </li>
+        <li><a href="#have" data-toggle="tab">管理员列表</a></li>
+
+    </ul>
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade in active editIt" id="un">
+            <!--<table class="table " style="margin-top: 20px;width: 70%">-->
+                <!--<thead class="itemlist">-->
+                <!--<tr>-->
+                    <!--<th>编号</th>-->
+                    <!--<th>姓名</th>-->
+                    <!--<th>联系方式</th>-->
+                    <!--<th>角色</th>-->
+                    <!--<th>店铺</th>-->
+                    <!--<th>操作</th>-->
+                <!--</tr>-->
+                <!--</thead>-->
+            <!--<tbody id="unExamine"></tbody></table>-->
+            <div class="">
+                <i>*</i><span>用户名</span>
+                <input class="searchItems" id="mangerName" type="text" maxlength="11"  style="width:200px">
+                <button  id="searchResult" class="btn btn-primary " style="width: 82px; margin-left: 100px">查询</button>
+            </div>
+            <div id="searchManger">
+                <span>查询结果如下,请设置身份和其所属店铺：</span>
+                <div class="content">
+                    <div>编号：<span id="custno">CU011</span></div>
+                    <div>用户名：<span id="username">123355555555</span></div>
+                    <div>身份： <select class="searchItems"  id="managerKind2" onchange="changeRole2()">
+                        <option value="1" data-role="1">普通管理员</option>
+                        <option value="2" data-role="2">超级管理员</option>
+                    </select>
+                    </div>
+                    <div id="store2">店铺：
+                    <select id="shopList2" class="searchItems" onchange="showShop2()" >
+                        <option value="0">全部</option>
+                        <option value="1">仓山</option>
+                        <option value="2">鼓楼</option>
+                    </select>
+                    </div>
+                   <div><button  class="btn btn-primary " id="submitManager" style="width: 82px; margin-left: 100px">提交</button></div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade " id="have">
+           <table class="table " style="margin-top: 20px;width: 70%">
+               <thead class="itemlist">
+                <tr><th><input type="checkbox" id="allSelect" value="" ><label>全选</label><button type="submit" class="btn btn-primary " id="batchDelete" style="width: 82px;">批量删除</button></th>
+                    <th>编号</th>
+                    <th>用户名</th>
+                    <th>身份</th>
+                    <th>店铺</th>
+                    <th>操作</th>
+                </tr>
+               </thead>
+            <tbody id="haveExamine">
+                <!--<tr>-->
+                    <!--<td style="width: 15%">-->
+                        <!--<input type="checkbox" class="cart-checkbox cart-checkbox-checked" checked="yes" value="" ><span style="display: inline">全选</span>-->
+                        <!--<button type="submit" class="btn btn-primary " style="width: 82px;">批量删除</button>-->
+                    <!--</td>-->
+
+                <!--</tr>-->
+
+
+
+                </tbody>
+            </table>
+        </div>
+     </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script src="js/jquery.cookie.js"></script>
+<script src="js/publicjs.js"></script>
+<script src="js/manager.js"></script>
+<script>
+
+    !function ($) {
+        $(document).on("click","ul.nav li.parent > a > span.icon", function(){
+            $(this).find('em:first').toggleClass("glyphicon-minus");
+        });
+        $(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
+    }(window.jQuery);
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="便利商店"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel='stylesheet' type='text/css'/>
+    <!--webfont-->
+    <!-- Import google fonts -->
+    <!--<link href='http://fonts.useso.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>-->
+    <link href="css/changge.css" rel="stylesheet">
+    <link href="css/addlist.css" rel="stylesheet">
+</head>
+<body>
+<div style="margin: 0px;padding: 0px;width: 100%;">
+    <div class=" address_management">
+        <div class="themes_title">
+            <h3>地址管理</h3>
+
+        </div>
+        <div class="form-group">
+            <input type="button" class="address-btn" id="address-add" value="新增地址">
+        </div>
+
+        <!-- 标题结束-->
+        <form class="address-form ">
+            <h4>新增地址</h4>
+
+
+            <div class="form-group">
+                <label class="c-2 formlable" control-lable>
+                    <i>*</i>
+                    收 货 人：
+                </label>
+
+                <div class="form-mile">
+                    <input type="text" id="add_name" placeholder="收货人"
+                           onafterpaste="this.value=this.value.replace(/[<|>|\/]/g,'')">
+                    <span class="namemsg"></span>
+
+                    <div class="error-name" style="display: none;"></div>
+                </div>
+            </div>
+            <div id="address-region" class="form-group">
+                <label class="c-2 formlable">
+                    <i>*</i>
+                    收货地址：
+                </label>
+
+                <div class="form-mile address-select">
+                    <input readonly id="cityname" type="text" class="" data-positon="" data-cityname=""
+                           style="width: 200px;" placeholder="选择送货地址">
+                    <!-- 地址选择-->
+                    <div class=" hd-prochg" style="display: none;">
+                        <ul class="nav nav-tabs">
+                            <li class="active" id="toppro"><a href="#pro" data-toggle="tab">选择省</a></li>
+                            <li class="_none" id="topcit"><a href="#cit" data-toggle="tab">选择市</a></li>
+                            <li class="_none" id="topear"><a href="#ear" data-toggle="tab">选择区</a></li>
+                            <li class="_none" id="topvil"><a href="#vil" data-toggle="tab">选择小区</a></li>
+                        </ul>
+                        <div class="pro-wrap">
+                            <div class="tab-pane fade in active" id="pro" data-name="">
+                                <a href="#">福建省</a>
+                            </div>
+                            <div class="tab-pane fade in" id="cit" data-name="">
+
+                            </div>
+                            <div class="tab-pane fade in" id="ear" data-name="">
+
+                            </div>
+                            <div class="tab-pane fade in" id="vil" data-name="">
+
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <span class="selectAddmsg"></span>
+
+                <div class="error-address" style="display: none"></div>
+            </div>
+
+            <div id="address-address " class="form-group">
+                <label class="c-2 formlable">
+                    <i>*</i>
+                    详细地址：
+                </label>
+                <input id="ueraddr" type="text" maxlength="70" placeholder="请输入详细的楼层单元号"
+                       onafterpaste="this.value=this.value.replace(/[<|>|\/]/g,'')" style="width: 400px;">
+                <span class="addrmsg"></span>
+            </div>
+            <div id="address-number" class="form-group">
+                <label class="c-2 formlable">
+                    <i>*</i>
+                    手机号码：
+                </label>
+
+                <div class="form-mile">
+                    <input id="usertel" type="tel" placeholder="手机号码"
+                           onafterpaste="this.value=this.value.replace(/[<|>|\/]/g,'')" style="width: 200px;">
+                    <span class="telmsg"></span>
+                </div>
+                <!--<small>或</small>-->
+                <!--<label for="">固定电话：</label>-->
+                <!--<input class="i_text i_text_section" type="text" style="height: 25px;width: 42px;" placeholder="区号">-->
+                <!--<input type="tel" onafterpaste="this.value=this.value.replace(/[<|>|\/]/g,'')"-->
+                <!--style="height: 25px; width:75px;" placeholder="电话号码">-->
+                <!--<input class="i_text i_text_ext" type="text" style="height: 25px;width: 25px;">-->
+                <!-- -->
+            </div>
+            <div class="form-group">
+                <label class="c-2 formlable"></label>
+                <input id="address-default" type="checkbox" value="1" onchange="judgeaddress()">
+                <label for="address-default" class="formlable">设为默认收货地址</label>
+            </div>
+            <div class="form-group">
+                <input type="button" class="address-btn" id="address-save" value="保存">
+            </div>
+        </form>
+        <div class="addresslist">
+            <ul>
+                <li class="th-01 c-2">收货人</li>
+                <li class="th-02 c-6">收货地址</li>
+                <li class="th-03 c-2">联系电话</li>
+
+                <li class="th-04 c-2">操作</li>
+            </ul>
+        </div>
+        <div id="aa-list" class="aa-list">
+            <!--<ul>-->
+            <!--<li class="c-2">张三</li>-->
+            <!--<li class="c-6">福建省福州市仓山区阳光小区</li>-->
+            <!--<li class=" c-2"><span>1*********1</span></li>-->
+            <!--<li class="c-2"><a href="#" class="defaultAdd">默认地址 </a><a href="#" class="change">修改 </a><a href="#" class="delete"> 删除</a></li>-->
+            <!--</ul>-->
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.cookie.js"></script>
+<script src="js/address.js"></script>
+<script src="js/topjs.js"></script>
+</body>
+</html>

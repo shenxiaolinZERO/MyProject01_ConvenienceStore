@@ -1,0 +1,115 @@
+
+.searchItems{
+    box-shadow: none;
+    border: 1px solid #e9ecf2;
+    height: 32px;
+    font-size: 14px;
+    color: #555555;
+    line-height: 1.4;
+    border-radius: 4px;
+    width: auto;
+}
+.btnsearch{
+    width: 82px;
+    margin-left: 250px;
+}
+.resetSearch{
+    font-size: 12px;
+    color: #30a5ff;
+    margin-left: 15px;
+
+}
+.navlist{
+    margin-top: 20px;
+    height: 36px;
+    width: 1026px;
+    background-color: #f7f7f8;
+    border: 1px solid #f7f7f8;
+}
+.saleTitle{
+    margin-top: 10px;
+    color: #333;
+}
+/*----列表------*/
+
+
+.itemlist{
+    background-color: #f7f7f8;
+}
+.item_all{
+    width: 18%;
+    vertical-align:middle;
+}
+.goods {
+    width: 15%;
+    text-align: left;
+}
+.goods img {
+    margin: 5px;
+    width: 80px;
+    border: 1px solid #eeeeee;
+    float: left;
+}
+.desc {
+    display: inline;
+    margin-left: 5px;
+    max-height: 72px;
+}
+.desc span{
+
+    color: #3c3c3c;
+
+}
+
+.sprice {
+    width: 12%;
+    /*color: #3c3c3c;*/
+}
+.doitems a{
+    display: block;
+}
+/*编辑商品*/
+.editIt{
+    margin-left: 200px;
+}
+.editIt div{
+    padding-top: 15px;
+
+}
+.editIt label{
+
+    text-align: right;
+
+}
+.editIt i{
+    color: #f54d56;
+    font-style:normal;
+}
+.subPic{
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #e6e6e6;
+    background-color: #ffffff;
+}
+/**/
+.s_hot_num{
+    /*position: absolute;*/
+    left: 0px;
+    top: 0px;
+    width: 15px;
+    height: 15px;
+    background: #F54D56 none repeat scroll 0%;
+    color: #fff;
+    line-height: 15px;
+    text-align: center;
+    font-size: 10px;
+}
+.panel-body span{
+    padding-bottom: 8px;
+}
+thead tr th:first-child{
+    padding-left: 8px
+}
+
+

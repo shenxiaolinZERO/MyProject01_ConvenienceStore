@@ -1,0 +1,490 @@
+
+
+/*热销榜样式*/
+.s_ul{
+    list-style-type:none;
+}
+.s_goods{
+    width: 100%;
+    padding: 10px;
+    float: left;
+
+}
+.s_goods_pic{
+    width: 41%;
+    display: inline-block;
+    float: left;
+    position: relative;
+}
+.s_hot_num{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 15px;
+    height: 15px;
+    background: #F54D56 none repeat scroll 0%;
+    color: #fff;
+    line-height: 15px;
+    text-align: center;
+    font-size: 10px;
+}
+.s_goods_pic img{
+    width: 88px;
+    height: 88px;
+    border: 1px solid #DDDDDD;
+}
+.s_goods_info{
+    width: 58%;
+    display: inline-block;
+    list-style-type:none;
+}
+.s_goods_info a{
+    color: #080808;
+    font-size: 8px;
+
+}
+.s_goods_price{
+    color: #f22222;
+    font-size: 12px;
+    font-weight: 500;
+    width: 100%;
+    display: inline-block;
+}
+.s_goods_title{
+    font-size: 12px;
+    color: #080808;
+}
+
+
+
+/*-----商品属性排序栏----------*/
+.searchbox{
+    background: #faf5fa;
+    width: 855px;
+    border: 1px solid #f1f1f1;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    z-index: 2;
+}
+.list{
+    background: #F7F7F7;
+    width: 855px;
+    height: 36px;
+    display: block;
+}
+.searchbox .left{
+    margin: 0px;
+    float: left;
+}
+.searchbox .left li{
+    border-right: 1px solid #e9e9e9;
+}
+.searchbox .list li{
+    padding-right: 0px;
+    float: left;
+}
+.searchbox .left li a{
+    color: #3C3C3C;
+    padding: 11px 15px;
+    display: block;
+    font-size: 12px;
+    text-decoration: none;
+}
+.searchbox .left li a:hover{
+    color:#f22222;
+
+}
+
+
+/*商品修改2016.1.20下午*/
+.good_con{
+    clear: both;
+    padding: 10px 9px 0px;
+    width: 855px;
+    position: relative;
+    z-index: 1;
+}
+.good_con li{
+    display: inline-block;
+    width: 200px;
+    padding: 0px 2px 6px;
+    margin: 0px 2px 10px;
+    border: 1px solid #fff;
+    float: left;
+}
+.good_con .listPic{
+    position: relative;
+}
+.listPic{
+    height: 200px;
+    margin: 0px 0px 5px;
+}
+.good_con .listPic a{
+    width: 200px;
+    height: 200px;
+}
+.good_con .listPic img{
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+
+}
+.good_con .discountPrice{
+    height: 20px;
+    font-weight: 700;
+    /*padding-left: 10px;*/
+    /*padding-right: 10px;*/
+    padding: 0px 10px 0px 10px;
+}
+.discountPrice{
+    height: 16px;
+    overflow: hidden;
+    position: relative;
+}
+.price_cash .text13{
+    font-size: 18px;
+    font-family:"Century Gothi";
+
+}
+.discountPrice .text13{
+    line-height: 20px;
+}
+.cof{
+    color: #f22e01;
+}
+.text13{
+    font-size: 13px;
+    line-height: 20px;
+}
+.price_cash .text18{
+    font-family:"Century Gothi" !important;
+}
+.discountPrice .text18{
+    font-size: 18px;
+    line-height: 15px;
+}
+.good_con .listDecri{
+    color: #3c3c3c;
+    margin: 0px 0px 8px;
+    text-align: left;
+    overflow: hidden;
+    word-break: break-all;
+    max-height: 36px;
+    padding: 0px 10px 0px 10px;
+
+
+}
+.listDecri a:hover{
+    color: #f22222;
+}
+.goods_sell_num{
+    font-size: 12px;
+    color: #999;
+    font-weight: 500;
+    padding-left: 10px;
+}
+.goods_button{
+    width: 100%;
+    height: 36px;
+    overflow: hidden;
+}
+.goods_button a{
+    width: 85px;
+    height: 26px;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 28px;
+    background-color: #ff5c4d;
+    border: 1px solid #ff4141;
+    border-radius: 2px;
+    text-decoration: none;
+    float: left;
+    text-align: center;
+    margin-left: 10px;
+}
+.goods_button a:hover{
+    background-color:#ff4141;
+}
+/*.sp1{*/
+/*display: inline;*/
+
+/*}*/
+/*----------------左边导航栏----------------*/
+.block .block-title {
+    padding: 10px;
+    background:#F54D56;
+    min-height: 35px;
+    background-size: 100%;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    max-width: 250px;
+}
+.block ul li a{
+    font-size: 14px;
+}
+/*.block ul li a:hover{*/
+/*color: #f22222;*/
+/*}*/
+.block a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 14px;
+}
+
+/*左边导航栏修改*/
+
+
+._menu{
+    margin-left: 26px;
+}
+._menu li{
+    color: #3C3C3C;
+    line-height: 36px;
+    padding-left: 30px;
+}
+
+/*._menuDetail li{*/
+/*color: #3C3C3C;*/
+/*line-height: 36px;*/
+/*padding-left: 30px;*/
+/*}1.22改重复*/
+._menuDetail li a:hover{
+    color: #f22222;
+
+}
+._menuDetail li a{
+    font-size: 14px;
+    padding-left:15px ;
+}
+/*2016.1.20修改*/
+.biggcla{
+    background-color: #F7F7F7;
+    border: 1px solid #EDEDED;
+    width: 200px;
+}
+
+
+
+
+
+/*--底部页码--*/
+.pag{
+    text-align: center;
+}
+.pagination>li>a, .pagination>li>span {
+    margin-right: 5px;
+}
+.pagination>li>a.active{
+    color: #FFFFFF;
+    background-color: #f54D56;
+    box-shadow: 0px 0px 10px red;
+    border: none;
+}
+
+/*----------------固定页面--------------------*/
+/*@media screen and (max-width: 1200px) {*/
+/*.header_top{*/
+/*width: 1120px; ;*/
+/*}*/
+/*.header_bottom{*/
+/*width: 1240px;*/
+/*}*/
+/*.container {*/
+/*width: 1050px;*/
+/*}*/
+/*.menu{*/
+/*width: 1227px;*/
+/*}*/
+/*.sidebar{*/
+/*width: 285px;*/
+/*}*/
+/*.md_right{*/
+/*width: 855px;*/
+/*}*/
+/*.men{*/
+/*width: 1189px;*/
+/*}*/
+/*.attribute_content{*/
+/*width: 855px;*/
+/*}*/
+/*.searchbox{*/
+/*width: 855px;*/
+/*}*/
+/*.good_con ,.list{*/
+/*width: 855px;*/
+/*}*/
+/*.good_con li{*/
+/*width: 200px;*/
+/*}*/
+
+
+
+/*}*/
+/* 大屏幕 */
+/*@media (min-width: 1200px) {*/
+/*.container{*/
+/*width: 1220px;*/
+/*margin: auto;*/
+/*}*/
+
+/*}*/
+
+/*/!* 平板电脑和小屏电脑之间的分辨率 *!/*/
+/*@media (min-width: 768px) and (max-width: 979px) {*/
+
+/*}*/
+
+/*/!* 横向放置的手机和竖向放置的平板之间的分辨率 *!/*/
+/*@media (max-width: 767px) {*/
+
+
+
+/*}*/
+
+/*/!* 横向放置的手机及分辨率更小的设备 *!/*/
+/*@media (max-width: 480px) {*/
+
+
+/*}*/
+
+
+/*筛选条件2016.1.18修改*/
+.cata_shop_right{
+    width: 855px;
+    margin: 0px;
+    position: relative;
+
+}
+.attribute_content{
+    font-family: arial;
+    font-size: 12px;
+    color: #333;
+    width: 855px;
+    margin-bottom: 30px;
+    position: relative;
+    border-bottom: 3px solid #f9f9f9;
+}
+.attrs{
+    border: 1px solid #ddd;
+}
+.attrs .m_tr:first-child{
+    border-top: medium none;
+}
+.attrs .m_tr{
+    line-height: 36px;
+    border-top: 1px dotted #DDD;
+    overflow: hidden;
+    background:#f9f9f9 ;
+}
+.attrs .g_left{
+    width: 130px;
+    height: 100%;
+    background-color:#f7f7f7;
+    float: left;
+}
+.attrs .g_left p{
+    color: #9c9c9c;
+    padding-right: 15px;
+    width: 115px;
+    text-align: right;
+}
+p{
+    margin: 0px;
+    padding: 0px;
+}
+.attrs .g_right{
+    width: 720px;
+    height: 100%;
+    background-color: #fff;
+    float: left;
+    position: relative;
+}
+.attrs .g_list .f_list.h76{
+    max-height: 98px;
+
+}
+.attrs .g_list .f_list{
+    float: left;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 680px;
+    max-height: 36px;
+    overflow: hidden;
+}
+.attrs .f_list li{
+    float: left;
+    padding: 0px;
+}
+.cata_shop_right li{
+    display: inline;
+    padding-right: 3px;
+}
+.attrs .f_list li a{
+    position: relative;
+    padding: 0px 15px 0px 20px;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: left;
+}
+.attrs .f_list li a:hover{
+    color: #f22222;
+}
+.attrs a{
+    text-decoration: none;
+    color: #333;
+}
+
+.attrs .m_tr:first-child{
+    border-top: medium none;
+
+}
+.attrs .m_tr{
+    line-height: 36px;
+    border-top: 1px dotted #DDDDDD;
+    overflow: hidden;
+    background-color: #f7f7f7;
+}
+.pagnav{
+    margin-left: 700px;
+    width: 160px;
+    font-size: 12px;
+
+}
+.searchbox .all_number{
+    float: left;
+    padding: 9px 17px;
+    color: #6c6c6c;
+
+}
+
+/*面包屑背景颜色原为灰色现改为白色*/
+.breadcrumb{
+    background-color: #FFFFFF;
+}
+/*--底部页码--*/
+.pag{
+    text-align: center;
+}
+.pagination>li>a, .pagination>li>span {
+    margin-right: 5px;
+}
+.pagination>li>a.active{
+    color: #FFFFFF;
+    background-color: #f54D56;
+    box-shadow: 0px 0px 10px red;
+    border: none;
+}
+/*图标样式*/
+.list-icon{
+    float: right;
+    margin: 10px;
+}

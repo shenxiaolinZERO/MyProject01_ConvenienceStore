@@ -1,0 +1,58 @@
+#myTabContent.tab-content{
+    padding:0;
+    margin-bottom: 50px;
+}
+.return,.exchange{
+    width: 70%;
+    margin-top:3px;
+}
+#return table td,#exchange table td{
+    font-size: 13px;
+    padding-top: 8px;
+    padding-bottom: 1px;
+}
+#return table tr>td:first-child,#exchange table tr>td:first-child{
+    padding-left:10px;
+}
+#return table td:nth-child(odd),#exchange table td:nth-child(odd){
+    width:5%;
+}
+#return table td:nth-child(even),#exchange table td:nth-child(even){
+    width:15%;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus{
+    border:0 !important;
+}
+.return table,.exchange table{
+    border-top:2px solid #01A9DB;
+    background-color: #fff;
+    margin-bottom:10px;
+}
+#return table td:nth-child(even),#exchange table td:nth-child(even){
+    color:#151515;
+}
+#return table tr:last-child button,#exchange table tr:last-child button{
+    border:0;
+    padding:5px 15px;
+    border-radius:3px;
+    color:#fff;
+    font-weight:600;
+    background-color: #007fff;
+}
+.app_reason{
+    vertical-align: top;
+}
+.reason{
+    text-indent: 2em;
+    height:80px;
+    width:80%;
+    word-wrap: break-word;
+    border:1px solid #BDBDBD;
+}
+.app_state{
+    text-align: center;
+}
+#return td.app_state+td ,#exchange td.app_state+td{
+    font-size: 18px;
+    color: #FF0040;
+}

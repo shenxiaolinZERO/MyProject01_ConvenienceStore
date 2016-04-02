@@ -1,0 +1,606 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>商品</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="便利商店"/>
+    <link href="css/bootstrap.min.css " rel="stylesheet">
+    <link href="css/addGoodsList.css" rel="stylesheet">
+
+    <link href="css/style.css" rel='stylesheet' type='text/css'/>
+    <link href="css/changge.css" rel="stylesheet">
+    <link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="css/fakeLoader.css" rel="stylesheet" type="text/css">
+
+
+
+</head>
+<body>
+
+<div id="fakeLoader"></div>
+<div class="header_top">
+    <div class="container">
+        <div class="header_top-box">
+            <div class="header-top-left">
+                <div class="hd-login label box ">
+                    <span class="hd_hi">Hi,</span>
+                    请
+                    <a id="global-hd-loginlink" rel="nofollow" href="login.html">登录</a>
+                    /
+                    <a rel="nofollow" href="register.ht ml">注册</a>
+                </div>
+                <div class=" label box haslogin" style="display: none;">
+                    <span class="hd_hi">Hi,</span>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-info" id="username"></button>
+                        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="usercenter.html">个人中心</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="http://192.168.113.14:8080/BSMD/logout.do" id="loginout">退出</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="box1 ">
+                    <span class="hd_hi">收货地：</span>
+                    <input readonly id="cityname" type="text" class="" data-positon="" data-cityname=""
+                           style="width: 200px;" placeholder="选择送货地址">
+                    <!-- 地址选择-->
+                    <div class=" hd-prochg" style="display: none;">
+                        <ul class="nav nav-tabs">
+                            <li class="active" id="toppro"><a href="#pro" data-toggle="tab">选择省</a></li>
+                            <li class="_none" id="topcit"><a href="#cit" data-toggle="tab">选择市</a></li>
+                            <li class="_none" id="topear"><a href="#ear" data-toggle="tab">选择区</a></li>
+                            <li class="_none" id="topvil"><a href="#vil" data-toggle="tab">选择小区</a></li>
+                        </ul>
+                        <div class="pro-wrap">
+                            <div class="tab-pane fade in active" id="pro" data-name="">
+                                <a href="#">福建省</a>
+                            </div>
+                            <div class="tab-pane fade in" id="cit" data-name="">
+
+                            </div>
+                            <div class="tab-pane fade in" id="ear" data-name="">
+
+                            </div>
+                            <div class="tab-pane fade in" id="vil" data-name="">
+
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="cssmenu">
+                <ul>
+                    <li class=""><a href="usercenter.html">我的便利店</a></li>
+                    <li><a href="wishlist.html">收藏夹</a></li>
+                    <li><a href="login.html">掌上便利店</a></li>
+                    <li><a href="register.html">客户服务</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+
+<div class="header_bottom">
+    <div class="container">
+        <div class="header_bottom-box">
+            <div class="header_bottom_left">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" alt=""/></a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="header_bottom_right">
+                <div class="search">
+                    <input id="mysearch" type="text" value="新品上架" onFocus="this.value = '';"
+                           onBlur="if (this.value == '') {this.value = '爆款返现，换购1元起';}">
+                    <input type="submit" value="" id="searchitem">
+
+                    <div class="findlist" style="display: none;">
+                        <ul>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="shoppingcart">
+                    <a href="cart.html" class="btn">
+                        <span class="glyphicon glyphicon-shopping-cart"></span> 购物车
+                        <span id="cartnum" class="badge"
+                              style="color: #FFFFFF; background-color: #f54D56 ;border:2px solid #FFFFFF; "></span>
+                    </a>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<div class="menu">
+    <div class="container">
+        <div class="menu_box">
+            <ul class="megamenu skyblue">
+                <li><a class="color10" id="allgoods">全部商品<span class="fr glyphicon glyphicon-th-list"style="padding: 10px;"> </span></a>
+                    <div id="nav" class="menu-container othermenu " style="display: none">
+                        <div class="s-nav other-nav">
+                            <div class=" mainmenu othermainmenu ">
+                                <div class="odd otherodd" data-order="0" data-id="1">
+                                    <p><a href="itemList.html">
+                                        <span class="glyphicon glyphicon-cutlery"> </span> 休闲零食/饮料</a>
+                                    </p>
+                                    <span>
+                                        <a href="#" target="">坚果类</a>
+                                        <a href="#">糖果</a>
+                                        <a href="#">饼干糕点</a>
+                                        <a href="#">肉脯肉干</a>
+                                    </span>
+                                </div>
+
+                                <div class="odd otherodd" data-order="1" data-id="2">
+                                    <p><a href="itemList.html">休闲零食/饮料</a></p>
+                                    <span>
+                                        <a href="#">坚果类</a>
+                                        <a href="#">糖果</a>
+                                        <a href="#">饼干糕点</a>
+                                        <a href="#">肉脯肉干</a>
+                                    </span>
+                                </div>
+
+                                <div class="odd otherodd" data-order="40" data-id="3">
+                                    <p><a href="itemList.html">休闲零食/饮料</a></p>
+                                    <span>
+                                        <a href="#">坚果类</a>
+                                        <a href="#">糖果</a>
+                                        <a href="#">饼干糕点</a>
+                                        <a href="#">肉脯肉干</a>
+                                    </span>
+                                </div>
+
+                                <div class="odd otherodd" data-order="60" data-id="4">
+                                    <p><a href="#">休闲零食/饮料</a></p>
+                                    <span>
+                                        <a href="#">坚果类</a>
+                                        <a href="#">糖果</a>
+                                        <a href="#">饼干糕点</a>
+                                        <a href="#">肉脯肉干</a>
+                                    </span>
+                                </div>
+
+                                <div class="odd otherodd" data-order="80" data-id="5">
+                                    <p><a href="#">休闲零食/饮料</a></p>
+                                    <span>
+                                        <a href="#">坚果类</a>
+                                        <a href="#">糖果</a>
+                                        <a href="#">饼干糕点</a>
+                                        <a href="#">肉脯肉干</a>
+                                    </span>
+                                </div>
+
+                                <div class="odd otherodd" data-order="100" data-id="6">
+                                    <p><a href="#">休闲零食/饮料</a></p>
+                                    <span>
+                                        <a href="#">坚果类</a>
+                                        <a href="#">糖果</a>
+                                        <a href="#">饼干糕点</a>
+                                        <a href="#">肉脯肉干</a>
+                                    </span>
+                                </div>
+
+                                <div class="odd otherodd" data-order="120" data-id="7">
+                                    <p><a href="#">休闲零食/饮料</a></p>
+                                    <span>
+                                    <a href="#">坚果类</a>
+                                    <a href="#">糖果</a>
+                                    <a href="#">饼干糕点</a>
+                                    <a href="#">肉脯肉干</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="active grid"><a class="color2" href="index.html">首页</a></li>
+                <li><a class="color7" href="cat.html">便利超市</a></li>
+                <li><a class="color3" href="#">今日优惠</a></li>
+                <li><a class="color8" href="voucher.html">便利钱包</a></li>
+                <div class="clearfix"></div>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="men">
+    <div class="container">
+        <ol class="breadcrumb ">
+
+
+            <!--<li ><a class="firstBread" href="#">  </a></li>-->
+
+            <!--<li ><a class="secondBread" href="#">  </a></li>-->
+            <!--<li ><a  href="#" class="thirdBread ">  </a></li>-->
+            <!--<li class="active"><a class="fourthBread " >  </a></li>-->
+
+
+        </ol>
+
+
+        <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 sidebar">
+            <div class="block block-layered-nav">
+                <div class="block-title">
+                    <strong><span>全部商品</span></strong>
+                </div>
+                <!-----------------------------左边导航栏--------------------->
+                <div class="block-content" id="menuList">
+
+
+                    <!--<div style="width: 240px;" >-->
+                    <!--<ul class="nav-tabs nav-stacked navlist _menu" id="order">-->
+                    <!--<li data-toggle="collapse" data-target="#myOrder" ><a>休闲零食/饮料</a> <span-->
+                    <!--class="glyphicon glyphicon-chevron-up"></span></li>-->
+                    <!--<ul class="collapse in nav-tabs nav-stacked navlist-l _menuDetail" id="myOrder">-->
+
+                    <!--<li  ><a href="#" class="secondClass">坚果类</a></li>-->
+                    <!--<li><a href="#" class="secondClass" >糖果</a></li>-->
+                    <!--<li><a href="#" class="secondClass">饼干糕点</a></li>-->
+                    <!--<li><a href="#" class="secondClass">肉脯肉干</a></li>-->
+
+                    <!--</ul>-->
+                    <!--<li data-toggle="collapse" data-target="#d2"><a>粮油果蔬调味</a> <span-->
+                    <!--class="glyphicon glyphicon-chevron-up"></span></li>-->
+                    <!--<ul class="collapse in navlist-l _menuDetail" id="d2">-->
+                    <!--<li><a href="#" class="secondClass">米面杂粮</a></li>-->
+                    <!--<li><a href="#" class="secondClass">食用油</a></li>-->
+                    <!--<li><a href="#" class="secondClass">水果</a></li>-->
+                    <!--<li><a href="#"class="secondClass">蔬菜</a></li>-->
+                    <!--<li><a href="#" class="secondClass">调味料</a></li>-->
+                    <!--<li><a href="#"class="secondClass">酱菜类</a></li>-->
+                    <!--</ul>-->
+                    <!--<li data-toggle="collapse" data-target="#d3"><a>粮油果蔬调味</a> <span-->
+                    <!--class="glyphicon glyphicon-chevron-up"></span></li>-->
+                    <!--<ul class="collapse in navlist-l _menuDetail" id="d3">-->
+                    <!--<li><a href="#" class="secondClass">食用油</a></li>-->
+                    <!--<li><a href="#" class="secondClass">水果</a></li>-->
+                    <!--<li><a href="#" class="secondClass">蔬菜</a></li>-->
+                    <!--<li><a href="#" class="secondClass">调味料</a></li>-->
+                    <!--<li><a href="#" class="secondClass">酱菜类</a></li>-->
+                    <!--</ul>-->
+                    <!--<li data-toggle="collapse" data-target="#d4">粮油果蔬调味 <span-->
+                    <!--class="glyphicon glyphicon-chevron-up"></span></li>-->
+                    <!--<ul class="collapse in navlist-l _menuDetail" id="d4">-->
+
+                    <!--<li><a href="#" class="secondClass">食用油</a></li>-->
+                    <!--<li><a href="#" class="secondClass">水果</a></li>-->
+                    <!--<li><a href="#" class="secondClass">蔬菜</a></li>-->
+                    <!--<li><a href="#" class="secondClass">调味料</a></li>-->
+                    <!--<li><a href="#" class="secondClass">酱菜类</a></li>-->
+                    <!--</ul>-->
+                    <!--</ul>-->
+                    <!--</div>-->
+
+
+                </div>
+            </div>
+            <!--<div class="block block-cart">-->
+            <!--<div class="block-title">-->
+            <!--<strong><span>本周热销榜</span></strong>-->
+            <!--</div>-->
+            <!--<div class="block-content">-->
+            <!--<ul class="s_ul">-->
+            <!--<li class="s_goods">-->
+            <!--<div class="s_goods_pic">-->
+            <!--<div class="s_hot_num">1</div>-->
+            <!--<a href="#" target="_blank">-->
+            <!--<img src="images/orange.jpg">-->
+            <!--</a>-->
+            <!--</div>-->
+            <!--<div class="s_goods_info">-->
+            <!--<a class="s_goods_title" target="_blank" href="#">-->
+            <!--橙子 500g-->
+            <!--</a>-->
+            <!--<span class="s_goods_price">￥3.90</span>-->
+            <!--</div>-->
+            <!--</li>-->
+            <!--</ul>-->
+            <!--<ul class="s_ul">-->
+            <!--<li class="s_goods">-->
+            <!--<div class="s_goods_pic">-->
+            <!--<div class="s_hot_num">2</div>-->
+            <!--<a href="#" target="_blank">-->
+            <!--<img src="images/orange.jpg">-->
+            <!--</a>-->
+            <!--</div>-->
+            <!--<div class="s_goods_info">-->
+            <!--<a class="s_goods_title" target="_blank" href="#">-->
+            <!--橙子 500g橙子 500g橙子-->
+            <!--</a>-->
+            <!--<span class="s_goods_price">￥3.90</span>-->
+            <!--</div>-->
+            <!--</li>-->
+            <!--</ul>-->
+            <!--<ul class="s_ul">-->
+            <!--<li class="s_goods">-->
+            <!--<div class="s_goods_pic">-->
+            <!--<div class="s_hot_num">3</div>-->
+            <!--<a href="#" target="_blank">-->
+            <!--<img src="images/orange.jpg">-->
+            <!--</a>-->
+            <!--</div>-->
+            <!--<div class="s_goods_info">-->
+            <!--<a class="s_goods_title" target="_blank" href="#">-->
+            <!--橙子 500g-->
+            <!--</a>-->
+            <!--<span class="s_goods_price">￥3.90</span>-->
+            <!--</div>-->
+            <!--</li>-->
+            <!--</ul>-->
+            <!--<ul class="s_ul">-->
+            <!--<li class="s_goods">-->
+            <!--<div class="s_goods_pic">-->
+            <!--<div class="s_hot_num">4</div>-->
+            <!--<a href="#" target="_blank">-->
+            <!--<img src="images/orange.jpg">-->
+            <!--</a>-->
+            <!--</div>-->
+            <!--<div class="s_goods_info">-->
+            <!--<a class="s_goods_title" target="_blank" href="#">-->
+            <!--橙子 500g-->
+            <!--</a>-->
+            <!--<span class="s_goods_price">￥3.90</span>-->
+            <!--</div>-->
+            <!--</li>-->
+            <!--</ul>-->
+            <!--<ul class="s_ul">-->
+            <!--<li class="s_goods">-->
+            <!--<div class="s_goods_pic">-->
+            <!--<div class="s_hot_num">5</div>-->
+            <!--<a href="#" target="_blank">-->
+            <!--<img src="images/orange.jpg">-->
+            <!--</a>-->
+            <!--</div>-->
+            <!--<div class="s_goods_info">-->
+            <!--<a class="s_goods_title" target="_blank" href="#">-->
+            <!--橙子 500g-->
+            <!--</a>-->
+            <!--<span class="s_goods_price">￥3.90</span>-->
+            <!--</div>-->
+            <!--</li>-->
+            <!--</ul>-->
+            <!--<p class="empty">.</p>-->
+
+            <!--</div>-->
+            <!--</div>-->
+            <!--<div class="block block-list block-compare">-->
+            <!--<div class="block-title">-->
+            <!--<strong><span>最近浏览过的                   </span></strong>-->
+            <!--</div>-->
+            <!--<div class="block-content">-->
+            <!--<ul class="s_ul">-->
+            <!--<li class="s_goods">-->
+            <!--<div class="s_goods_pic">-->
+            <!--<a href="#" target="_blank">-->
+            <!--<img src="images/orange.jpg">-->
+            <!--</a>-->
+            <!--</div>-->
+            <!--<div class="s_goods_info">-->
+            <!--<a class="s_goods_title" target="_blank" href="#">-->
+            <!--橙子 500g-->
+            <!--</a>-->
+            <!--<span class="s_goods_price">￥3.90</span>-->
+            <!--</div>-->
+            <!--</li>-->
+            <!--</ul>-->
+            <!--&lt;!&ndash; <p class="empty">You have no items to compare.</p>&ndash;&gt;-->
+            <!--</div>-->
+            <!--</div>-->
+        </div>
+        <div class="col-md-9 col-xs-9 col-sm-9 col-lg-9">
+            <!---筛选条件代码---><!--2016 1.18改---->
+            <div id="tracker_category" class="cata_shop_right">
+                <div class="attribute_content">
+                    <div class="attrs">
+                        <div id="filter1" class="m_tr">
+                            <div class="g_left">
+                                <p>品牌</p>
+                            </div>
+                            <div class="g_right" id="brand">
+                                <div class="g_list">
+                                    <ul class="f_list h76" style="height: 36px">
+                                        <li><a>乐事</a></li>
+                                        <li><a>可比克</a></li>
+                                        <li><a>上好佳</a></li>
+                                    </ul>
+                                    <div class="f_ext">
+                                        <span class="f_more brand" style="cursor: pointer">更多</span>
+                                        <i class="glyphicon glyphicon-chevron-down" style="cursor: pointer"></i>
+                                    </div>
+                                    <!--<div class="g_btns">-->
+                                    <!--<a class="u_confirm">确定</a>-->
+                                    <!--<a class="u_cancel">取消</a>-->
+                                    <!--</div>-->
+
+                                </div>
+                            </div>
+                        </div>
+                        <div id="filter2" class="m_tr">
+                            <div class="g_left">
+                                <p>店铺</p>
+                            </div>
+                            <div class="g_right">
+                                <div class="g_list" id="store">
+                                    <ul class="f_list h76" style="height: 36px">
+                                        <li><a>乐事</a></li>
+                                        <li><a>可比克</a></li>
+                                        <li><a>上好佳</a></li>
+                                    </ul>
+                                    <div class="f_ext">
+                                        <span class="f_more brand" style="cursor: pointer">更多</span>
+                                        <i class="glyphicon glyphicon-chevron-down" style="cursor: pointer"></i>
+                                    </div>
+                                    <!--<div class="g_btns">-->
+                                    <!--<a class="u_confirm">确定</a>-->
+                                    <!--<a class="u_cancel">取消</a>-->
+                                    <!--</div>-->
+
+                                </div>
+                            </div>
+                        </div>
+                        <div id="filter3" class="m_tr">
+                            <div class="g_left">
+                                <p>价格</p>
+                            </div>
+                            <div class="g_right">
+                                <div class="g_list" id="price">
+                                    <ul class="f_list h76" style="height: 36px">
+                                        <li><a>0-20</a></li>
+                                        <li><a>20-50</a></li>
+                                        <li><a>50-100</a></li>
+                                    </ul>
+                                    <div class="f_ext">
+                                        <span class="f_more brand" style="cursor: pointer">更多</span>
+                                        <i class="glyphicon glyphicon-chevron-down" style="cursor: pointer"></i>
+                                    </div>
+                                    <!--<div class="g_btns">-->
+                                    <!--<a class="u_confirm">确定</a>-->
+                                    <!--<a class="u_cancel">取消</a>-->
+                                    <!--</div>-->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="searchbox">
+                    <div class="list clearfix">
+                        <ul class="order_ul left text12">
+                            <li><a id="sortAll" href="#">综合</a></li>
+                            <li><a id="sortSellnum" lang="SellNum" href="#">销量<i
+                                    class="glyphicon glyphicon-arrow-up"></i></a></li>
+                            <li><a id="sortPrice" lang="ShopPrice" href="#">价格<i
+                                    class="glyphicon glyphicon-arrow-up"></i></a></li>
+                            <li><a id="sortNewgoods" lang="NewGoods" href="#">新品</a></li>
+                        </ul>
+                        <!--<div class="pagnav">-->
+                        <!--<div class="all_number">-->
+                        <!--<span>共94个商品</span>-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash;<div class="pagArea">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<a class="bg_img1"></a>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<span class="col1">1</span>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<span class="col1">2</span>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<a class="bg_img2"></a>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                        <!--</div>-->
+
+
+                    </div>
+
+
+                </div>
+            </div>
+
+
+            <!--<div class="mens-toolbar">-->
+            <!--<div class="sort">-->
+            <!--<div class="sort-by">-->
+
+            <!--<a id="sortAll" href="#">综合</a>-->
+            <!--<a id="sortSellnum" lang="SellNum" href="#">销量</a>-->
+            <!--<a id="sortPrice" lang="ShopPrice" href="#">价格</a>-->
+            <!--<a id="sortNewgoods" lang="NewGoods" href="#">新品</a>-->
+
+            <!--</div>-->
+            <!--</div>-->
+
+            <!--<div class="pager">-->
+            <!--<div class="limiter visible-desktop">-->
+
+            <!--<ul >-->
+            <!--<li><a href="#">上一页</a> </li>-->
+            <!--<li><a href="#">下一页</a> </li>-->
+
+            <!--</ul>-->
+            <!--</div>-->
+
+            <!--<div class="clearfix"></div>-->
+            <!--</div>-->
+            <!--<div class="clearfix"></div>-->
+            <!--</div>-->
+            <div id="goods_list" style="min-height: 400px">
+
+                <!--<div class="goods">-->
+                <!--<div class="goods_div" >-->
+                <!--<div class="goods_float_right" style="width: 25%">-->
+                <!--<dl></dl>-->
+                <!--</div>-->
+                <!--<div class="goods_pic">-->
+                <!--<a href="#" target="_blank">-->
+                <!--<img  class="goods_color" src="images/orange.png">-->
+                <!--</a>-->
+                <!--</div>-->
+                <!--<div class="goods_details hover">-->
+                <!--<a href="#" target="_blank">橙子 500g</a>-->
+                <!--</div>-->
+                <!--<div class="goods_price">-->
+                <!--<div class="pull-left">-->
+                <!--￥-->
+                <!--<strong class="goods_price_num">3.90</strong>-->
+                <!--<strong class="goods_price_num">&nbsp;&nbsp;&nbsp;销量：XX</strong>-->
+
+                <!--</div>-->
+                <!--</div>-->
+                <!--<div class="goods_button">-->
+                <!--<a target="_blank" href="#">加入购物车</a>-->
+                <!--<a  target="_blank" href="#">收藏</a>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!-- -->
+                <!--</div>-->
+
+            </div>
+        </div>
+        <!---页码--------------------------->
+
+        <div class="pag">
+            <ul class="pagination">
+
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+</div>
+<div class="footer">
+    <div class="container">
+        <img src="images/pay.png" class="img-responsive" alt=""/>
+        <ul class="footer_nav">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">新手帮助</a></li>
+            <li><a href="#">权益保障</a></li>
+            <li><a href="#">商家服务</a></li>
+            <li><a href="#">客服中心</a></li>
+            <li><a href="#">投诉建议</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+        </ul>
+        <p class="copy">Copyright &copy; 2015.便利店 </p>
+    </div>
+</div>
+
+</div>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!--<script type="text/javascript"  src="js/usercenter.js" charset="utf-8"></script>-->
+<script type="text/javascript" src="js/itemlist.js" charset="utf-8"></script>
+<script src="js/fakeLoader.js"></script>
+<!--<script src="js/provinceselect.js"></script>-->
+<script src="js/jquery.cookie.js"></script>
+<script src="js/topjs.js"></script>
+</body>
+</html>

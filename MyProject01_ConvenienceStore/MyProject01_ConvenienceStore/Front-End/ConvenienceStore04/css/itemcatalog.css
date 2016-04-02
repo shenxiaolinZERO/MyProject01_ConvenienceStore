@@ -1,0 +1,135 @@
+.f-left{
+    float: left;
+}
+.f-right{
+    float: right;
+}
+.searchItems{
+    box-shadow: none;
+    border: 1px solid #e9ecf2;
+    height: 32px;
+    font-size: 14px;
+    color: #555555;
+    line-height: 1.4;
+    border-radius: 4px;
+    width: auto;
+}
+.btnsearch{
+    width: 82px;
+    margin-left: 250px;
+}
+.resetSearch{
+    font-size: 12px;
+    color: #30a5ff;
+    margin-left: 15px;
+
+}
+.navlist{
+    margin-top: 20px;
+    height: 36px;
+    width: 1026px;
+    background-color: #f7f7f8;
+    border: 1px solid #f7f7f8;
+}
+.saleTitle{
+    margin-top: 10px;
+    color: #333;
+}
+.pag{
+    text-align: center;
+}
+/**/
+.s_hot_num{
+    /*position: absolute;*/
+    left: 0px;
+    top: 0px;
+    width: 15px;
+    height: 15px;
+    background: #F54D56 none repeat scroll 0%;
+    color: #fff;
+    line-height: 15px;
+    text-align: center;
+    font-size: 10px;
+}
+.panel-body span{
+    padding-bottom: 8px;
+}
+/*----列表------*/
+.table>thead>tr>th,.table>tbody>tr>td{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.itemlist{
+    background-color: #f7f7f8;
+}
+.item_all{
+    width: 6%;
+    vertical-align:middle;
+}
+.goods {
+    width: 25%;
+    text-align: left;
+}
+.goods img {
+    margin: 5px;
+    width: 80px;
+    border: 1px solid #eeeeee;
+}
+.picedit{
+    font-weight: bold;
+}
+.sprice {
+    width: 12%;
+    /*color: #3c3c3c;*/
+}
+.doitems a{
+    padding: 5px 15px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+}
+.doitems a:hover{
+    color: #4cae4c;
+    text-decoration: none;
+}
+/*编辑商品*/
+.img-box{
+    max-width: 100%;
+    /*max-height: 200px;*/
+}
+.mycontainer{
+    padding: 3em 7em;
+    margin-top: 4em;
+    margin-left:10%;
+    margin-right: 15%;
+    background-color:  #fefefe;
+}
+.mycontainer .f-left{
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    padding: 0px 0px 10px 4px;
+
+}
+.pic-box{
+    margin-bottom: 20px;
+}
+.checkbox-all{
+    margin:4px;
+    clear: both;
+}
+.pic-box{
+    margin-left: 4px;
+}
+
+.checkbox-pic{
+    margin:4px;
+}
+.top,.detail,.standard,.pic-thumbnail{
+    padding: 4px;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px
+}

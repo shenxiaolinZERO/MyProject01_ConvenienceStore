@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/usercenter.css">
+    <link href="css/style.css" rel='stylesheet' type='text/css'/>
+    <!--webfont-->
+    <!-- Import google fonts -->
+    <!--<link href='http://fonts.useso.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>-->
+    <link href="css/changge.css" rel="stylesheet">
+    <link href="css/addlist.css" rel="stylesheet">
+    <link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="css/fakeLoader.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<div id="fakeLoader"></div>
+<div class="header_top" id="backtop">
+    <div class="container">
+        <div class="header_top-box">
+            <div class="header-top-left">
+                <div class="hd-login label box ">
+                    <span class="hd_hi">Hi,</span>
+                    请
+                    <a id="global-hd-loginlink" rel="nofollow" href="login.html">登录</a>
+                    /
+                    <a rel="nofollow" href="register.ht ml">注册</a>
+                </div>
+                <div class=" label box haslogin" style="display: none;">
+                    <span class="hd_hi">Hi,</span>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-info" id="username"></button>
+                        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="usercenter.html">个人中心</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="http://192.168.113.14:8080/BSMD/logout.do" id="loginout">退出</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="box1 ">
+                    <span class="hd_hi">收货地：</span>
+                    <input readonly id="cityname" type="text" class="" data-positon="" data-cityname=""
+                           style="width: 200px;" placeholder="选择送货地址">
+                    <!-- 地址选择-->
+                    <div class=" hd-prochg" style="display: none;">
+                        <ul class="nav nav-tabs">
+                            <li class="active" id="toppro"><a href="#pro" data-toggle="tab">选择省</a></li>
+                            <li class="_none" id="topcit"><a href="#cit" data-toggle="tab">选择市</a></li>
+                            <li class="_none" id="topear"><a href="#ear" data-toggle="tab">选择区</a></li>
+                            <li class="_none" id="topvil"><a href="#vil" data-toggle="tab">选择小区</a></li>
+                        </ul>
+                        <div class="pro-wrap">
+                            <div class="tab-pane fade in active" id="pro" data-name="">
+                                <a href="#">福建省</a>
+                            </div>
+                            <div class="tab-pane fade in" id="cit" data-name="">
+
+                            </div>
+                            <div class="tab-pane fade in" id="ear" data-name="">
+
+                            </div>
+                            <div class="tab-pane fade in" id="vil" data-name="">
+
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="cssmenu">
+                <ul>
+                    <li class=""><a href="usercenter.html">我的便利店</a></li>
+                    <li><a href="wishlist.html">收藏夹</a></li>
+                    <li><a href="login.html">掌上便利店</a></li>
+                    <li><a href="register.html">客户服务</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+
+<div class="header_bottom">
+    <div class="container">
+        <div class="header_bottom-box">
+            <div class="header_bottom_left">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" alt=""/></a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="header_bottom_right">
+                <div class="search">
+                    <input id="mysearch" type="text" value="新品上架" onFocus="this.value = '';"
+                           onBlur="if (this.value == '') {this.value = '爆款返现，换购1元起';}">
+                    <input type="submit" value="" id="searchitem">
+
+                    <div class="findlist" style="display: none;">
+                        <ul>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="shoppingcart">
+                    <a href="cart.html" class="btn">
+                        <span class="glyphicon glyphicon-shopping-cart"></span> 购物车
+                          <span id="cartnum" class="badge"
+                                style="color: #FFFFFF; background-color: #f54D56 ;border:2px solid #FFFFFF; "></span>
+                    </a>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<div class="menu">
+    <div class="container">
+        <div class="menu_box">
+            <ul class="megamenu skyblue">
+                <li><a class="color10" id="allgoods">全部商品<span class="fr glyphicon glyphicon-th-list"
+                                                               style="padding: 10px;"> </span></a>
+                    <div id="nav" class="menu-container othermenu " style="display: none">
+                        <div class="s-nav other-nav">
+                            <div class=" mainmenu othermainmenu ">
+                                <div class="odd otherodd" data-order="0" data-id="1">
+                                    <p><a href="itemList.html">
+                                        <span class="glyphicon glyphicon-cutlery"> </span> 休闲零食/饮料</a>
+                                    </p>
+                                    <span>
+                                        <a href="#" target="">坚果类</a>
+                                        <a href="#">糖果</a>
+                                        <a href="#">饼干糕点</a>
+                                        <a href="#">肉脯肉干</a>
+                                    </span>
+                                </div>
+
+                                <div class="odd otherodd" data-order="1" data-id="2">
+                                    <p><a href="itemList.html">休闲零食/饮料</a></p>
+                                    <span>
+                                        <a href="#">坚果类</a>
+                                        <a href="#">糖果</a>
+                                        <a href="#">饼干糕点</a>
+                                        <a href="#">肉脯肉干</a>
+                                    </span>
+                                </div>
+
+                                <div class="odd otherodd" data-order="40" data-id="3">
+                                    <p><a href="itemList.html">休闲零食/饮料</a></p>
+                                    <span>
+                                        <a href="#">坚果类</a>
+                                        <a href="#">糖果</a>
+                                        <a href="#">饼干糕点</a>
+                                        <a href="#">肉脯肉干</a>
+                                    </span>
+                                </div>
+
+                                <div class="odd otherodd" data-order="60" data-id="4">
+                                    <p><a href="#">休闲零食/饮料</a></p>
+                                    <span>
+                                        <a href="#">坚果类</a>
+                                        <a href="#">糖果</a>
+                                        <a href="#">饼干糕点</a>
+                                        <a href="#">肉脯肉干</a>
+                                    </span>
+                                </div>
+
+                                <div class="odd otherodd" data-order="80" data-id="5">
+                                    <p><a href="#">休闲零食/饮料</a></p>
+                                    <span>
+                                        <a href="#">坚果类</a>
+                                        <a href="#">糖果</a>
+                                        <a href="#">饼干糕点</a>
+                                        <a href="#">肉脯肉干</a>
+                                    </span>
+                                </div>
+
+                                <div class="odd otherodd" data-order="100" data-id="6">
+                                    <p><a href="#">休闲零食/饮料</a></p>
+                                    <span>
+                                        <a href="#">坚果类</a>
+                                        <a href="#">糖果</a>
+                                        <a href="#">饼干糕点</a>
+                                        <a href="#">肉脯肉干</a>
+                                    </span>
+                                </div>
+
+                                <div class="odd otherodd" data-order="120" data-id="7">
+                                    <p><a href="#">休闲零食/饮料</a></p>
+                                    <span>
+                                    <a href="#">坚果类</a>
+                                    <a href="#">糖果</a>
+                                    <a href="#">饼干糕点</a>
+                                    <a href="#">肉脯肉干</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="active grid"><a class="color2" href="index.html">首页</a></li>
+                <li><a class="color7" href="cat.html">便利超市</a></li>
+                <li><a class="color3" href="#">今日优惠</a></li>
+                <li><a class="color8" href="voucher.html">便利钱包</a></li>
+                <div class="clearfix"></div>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="usermid">
+    <div class="container">
+        <div class="order">
+            <!-- 左侧列表-->
+            <div class="order_select">
+                <div class="bg">
+                    <div class="portrait">
+                        <img src="images/dotted.png">
+
+                        <p>某某某</p>
+                        <span class="glyphicon glyphicon-user" style="color: #f54D56"></span>
+                    </div>
+                    <ul class="nav-tabs nav-stacked navlist" id="order">
+                        <li data-toggle="collapse" data-target="#myOrder">我的订单 <span
+                                class="glyphicon glyphicon-chevron-up"></span></li>
+                        <ul class="collapse in nav-tabs nav-stacked navlist-l" id="myOrder">
+                            <li class="active"><a href="#t_order" data-toggle="tab">全部订单</a></li>
+                            <li><a href="#obli" data-toggle="tab">待付款</a><span></span></li>
+                            <li><a href="#obfa" data-toggle="tab">待接单</a><span></span></li>
+                            <li><a href="#reci" data-toggle="tab">待收货</a><span></span></li>
+                            <li><a href="#eval" data-toggle="tab">已完成</a><span></span></li>
+                        </ul>
+                        <li data-toggle="collapse" data-target="#d3">退货查询 <span
+                                class="glyphicon glyphicon-chevron-down"></span></li>
+                        <ul class="collapse in navlist-l" id="d3">
+                            <li><a href="#reex" data-toggle="tab">退换货</a><span></span></li>
+                        </ul>
+                        <li data-toggle="collapse" data-target="#d2">我的资产
+                            <span class="glyphicon glyphicon-chevron-down"></span></li>
+                        <ul class="collapse in navlist-l" id="d2">
+                            <li><a href="#voucher" data-toggle="tab">优惠特权</a></li>
+                        </ul>
+
+                        <li data-toggle="collapse" data-target="#d4">会员资料 <span
+                                class="glyphicon glyphicon-chevron-down"></span></li>
+                        <ul class="collapse in navlist-l" id="d4">
+                            <li><a href="#perdata" data-toggle="tab">个人资料</a></li>
+                            <li><a href="#addlist" data-toggle="tab">地址管理</a></li>
+                            <li><a href="#safeset" data-toggle="tab">安全设置</a></li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+
+            <!--结束 左侧列表 -->
+
+
+            <!-- 右边内容-->
+            <div class="order_content">
+                <div id="myTabContent" class="tab-content">
+                    <div id="t_order" class="tab-pane fade in active">
+                        <div class="order_section">
+                            <div class="order_title">
+                                <ul>
+                                    <li class="goods">商品</li>
+                                    <li class="sprice">单价(元)</li>
+                                    <li class="quantity">数量</li>
+                                    <li class="aftersale">售后</li>
+                                    <li class="rtotal">实付款(元)</li>
+                                    <li class="status">交易状态</li>
+                                    <li class="other">操作</li>
+                                </ul>
+                            </div>
+                            <div class="order_tcontent">
+                            </div>
+                            <div class="order_page">
+                                <ul class="pagination">
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="obli" class="tab-pane fade in ">
+                        <div class="order_section">
+                            <div class="order_title">
+                                <ul>
+                                    <li class="goods">商品</li>
+                                    <li class="sprice">单价(元)</li>
+                                    <li class="quantity">数量</li>
+                                    <li class="aftersale">售后</li>
+                                    <li class="rtotal">实付款(元)</li>
+                                    <li class="status">交易状态</li>
+                                    <li class="other">操作</li>
+                                </ul>
+                            </div>
+                            <div class="order_tcontent">
+                            </div>
+                            <div class="order_page">
+                                <ul class="pagination">
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="obfa" class="tab-pane fade in ">
+                        <div class="order_section">
+                            <div class="order_title">
+                                <ul>
+                                    <li class="goods">商品</li>
+                                    <li class="sprice">单价(元)</li>
+                                    <li class="quantity">数量</li>
+                                    <li class="aftersale">售后</li>
+                                    <li class="rtotal">实付款(元)</li>
+                                    <li class="status">交易状态</li>
+                                    <li class="other">操作</li>
+                                </ul>
+                            </div>
+                            <div class="order_tcontent">
+                            </div>
+                            <div class="order_page">
+                                <ul class="pagination">
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="reci" class="tab-pane fade in">
+                        <div class="order_section">
+                            <div class="order_title">
+                                <ul>
+                                    <li class="goods">商品</li>
+                                    <li class="sprice">单价(元)</li>
+                                    <li class="quantity">数量</li>
+                                    <li class="aftersale">售后</li>
+                                    <li class="rtotal">实付款(元)</li>
+                                    <li class="status">交易状态</li>
+                                    <li class="other">操作</li>
+                                </ul>
+                            </div>
+                            <div class="order_tcontent">
+
+                            </div>
+                            <div class="order_page">
+                                <ul class="pagination">
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="eval" class="tab-pane fade in">
+                        <div class="order_section">
+                            <div class="order_title">
+                                <ul>
+                                    <li class="goods">商品</li>
+                                    <li class="sprice">单价(元)</li>
+                                    <li class="quantity">数量</li>
+                                    <li class="aftersale">售后</li>
+                                    <li class="rtotal">实付款(元)</li>
+                                    <li class="status">交易状态</li>
+                                    <li class="other">操作</li>
+                                </ul>
+                            </div>
+                            <div class="order_tcontent">
+
+                            </div>
+                            <div class="order_page">
+                                <ul class="pagination">
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="reex" class="tab-pane fade in">
+                        <div class="return">
+                            <ul class="nav nav-tabs rexchange">
+                                <li class="active"><a href="#return" data-toggle="tab">退货</a></li>
+                                <li><a href="#exchange" data-toggle="tab">换货</a></li>
+                            </ul>
+                            <div class="tab-content" id="re_and_ex">
+                                <div class="tab-pane fade in active" id="return">
+                                    <table>
+                                        <tr>
+                                            <td>订单编号：</td>
+                                            <td>13255XX003235CU07</td>
+                                            <td>申请编号：</td>
+                                            <td>CUX0031</td>
+                                        </tr>
+                                        <tr>
+                                            <td>退单时间：</td>
+                                            <td>2016-03-05</td>
+                                            <td>店铺名称：</td>
+                                            <td>小星星便利店</td>
+                                        </tr>
+                                        <tr>
+                                            <td>商品名称：</td>
+                                            <td>乐事黄瓜味薯片<span>(200g/包)</span></td>
+                                            <td>申请数量：</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="app_reason">申请理由：</td>
+                                            <td colspan="3"><div class="reason_text">不错不错不错不错不错不错不错不错不错不错不错不错不错不错不错不错不错不错不错不错不错不错不错不错</div></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="app_state">状态：&nbsp;</td>
+                                            <td>未审核</td>
+                                            <td colspan="2">
+                                                <button class="callof">取消退货</button>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <table>
+                                        <tr>
+                                            <td>订单编号：</td>
+                                            <td>13255XX003235CU07</td>
+                                            <td>申请编号：</td>
+                                            <td>CUX0031</td>
+                                        </tr>
+                                        <tr>
+                                            <td>退单时间：</td>
+                                            <td>2016-03-05</td>
+                                            <td>店铺名称：</td>
+                                            <td>小星星便利店</td>
+                                        </tr>
+                                        <tr>
+                                            <td>商品名称：</td>
+                                            <td>乐事黄瓜味薯片<span>(200g/包)</span></td>
+                                            <td>申请数量：</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="app_reason">申请理由：</td>
+                                            <td colspan="3"><div class="reason_text"></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="app_state">状态：&nbsp;</td>
+                                            <td>未审核</td>
+                                            <td colspan="2">
+                                                <button class="callof">取消退货</button>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="tab-pane fade in" id="exchange">
+                                    <table>
+                                        <tr>
+                                            <td>订单编号：</td>
+                                            <td>13255XX003235CU07</td>
+                                            <td>申请编号：</td>
+                                            <td>CUX0031</td>
+                                        </tr>
+                                        <tr>
+                                            <td>退单时间：</td>
+                                            <td>2016-03-05</td>
+                                            <td>店铺名称：</td>
+                                            <td>小星星便利店</td>
+                                        </tr>
+                                        <tr>
+                                            <td>商品名称：</td>
+                                            <td>乐事黄瓜味薯片<span>(200g/包)</span></td>
+                                            <td>申请数量：</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="app_reason">申请理由：</td>
+                                            <td colspan="3"><div class="reason_text"></div></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="app_state">状态：&nbsp;</td>
+                                            <td>未审核</td>
+                                            <td colspan="2">
+                                                <button class="callof">取消换货</button>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="voucher" class="tab-pane fade in ">
+                        <!--<iframe src="voucher.html" width="950px" height="1600px" frameborder="0"></iframe>-->
+                        <div style="margin: 0px;padding: 0px;width: 100%;">
+
+                            <div class=" coupon">
+                                <div class="themes_title">
+                                    <h3>优惠特权</h3>
+                                </div>
+                                <ul class="nav nav-tabs " id="couponnav">
+                                    <li class="active c-4"><a href="#coupon-1" data-toggle="tab">我的优惠券</a></li>
+                                    <li class="c-4"><a href="#coupon-2" data-toggle="tab">我的积分</a></li>
+                                </ul>
+                                <div class="tab-pane fade in active coupon-list" id="coupon-1">
+                                    <!--<ul class="couponnav">-->
+                                    <!--<li class="th-01 c-2">优惠券类型</li>-->
+                                    <!--<li class="th-02 c-2">编号</li>-->
+                                    <!--<li class="th-03 c-4">使用说明</li>-->
+                                    <!--<li class="th-04 c-3">有效时间</li>-->
+                                    <!--<li class="th-04 c-1">状态</li>-->
+                                    <!--</ul>-->
+                                    <div id="myVoucher">
+                                        <style>
+                                            .per-voucher {
+                                                max-width: 250px;
+                                                max-height: 120px;
+                                                background-color: #F5A739;
+                                                margin-left: 20px;
+                                            }
+
+                                            #myVoucher .row {
+                                                margin: 0px auto;
+                                            }
+
+                                            #myVoucher h5 {
+                                                text-align: left;
+                                                margin-left: 50px;
+                                            }
+                                        </style>
+                                        <div class=" row">
+                                            <div class="col-lg-4 per-voucher">
+                                                <div class="fl">
+                                                    <span style="color: #fff">¥</span>
+                                                    <span class="money">20</span>
+                                                </div>
+                                                <div class="fl" style="margin-left: 30px">
+                                                    <p style="color: #fff">满100使用</p>
+                                                    <p style="color: #333;margin: 5px">优惠券</p>
+                                                    <a class="getvoucher" href="">立即使用</a>
+                                                </div>
+                                                <div style="clear: both"></div>
+                                                <span class="more-voucher" style="font-size: 12px">使用期限：2015.12.12.00:00<br/>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-2016.10.10.00：00</span>
+                                                <span>xxx店铺专用</span>
+                                            </div>
+                                            <div class="col-lg-4 per-voucher">
+                                                <div class="fl">
+                                                    <span style="color: #fff">¥</span>
+                                                    <span class="money">20</span>
+                                                </div>
+                                                <div class="fl" style="margin-left: 30px">
+                                                    <p style="color: #fff">满100使用</p>
+                                                    <p style="color: #333;margin: 5px">优惠券</p>
+                                                    <a class="getvoucher" href="">立即领取</a>
+                                                </div>
+                                                <div style="clear: both"></div>
+                                                <span class="more-voucher" style="font-size: 12px">使用期限：2015.12.12.00:00<br/>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-2016.10.10.00：00</span>
+                                            </div>
+                                            <div class="col-lg-4 per-voucher">
+                                                <div class="fl">
+                                                    <span style="color: #fff">¥</span>
+                                                    <span class="money">20</span>
+                                                </div>
+                                                <div class="fl" style="margin-left: 30px">
+                                                    <p style="color: #fff">满100使用</p>
+                                                    <p style="color: #333;margin: 5px">优惠券</p>
+                                                    <a class="getvoucher" href="">立即领取</a>
+                                                </div>
+                                                <div style="clear: both"></div>
+                                                <span class="more-voucher" style="font-size: 12px">使用期限：2015.12.12.00:00<br/>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-2016.10.10.00：00</span>
+                                            </div>
+                                            <div class="col-lg-4 per-voucher">
+                                                <div class="fl">
+                                                    <span style="color: #fff">¥</span>
+                                                    <span class="money">20</span>
+                                                </div>
+                                                <div class="fl" style="margin-left: 30px">
+                                                    <p style="color: #fff">满100使用</p>
+                                                    <p style="color: #333;margin: 5px">优惠券</p>
+                                                    <a class="getvoucher" href="">立即领取</a>
+                                                </div>
+                                                <div style="clear: both"></div>
+                                                <span class="more-voucher" style="font-size: 12px">使用期限：2015.12.12.00:00<br/>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-2016.10.10.00：00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade in coupon-list" id="coupon-2">
+                                    <div id="customerInfo">
+                                        <!--html2 -->
+                                        <div class="c-4 fl">
+                                            <div class="vip_img">
+                                                <img src="images/photo2.jpg" height="100px" width="100px">
+                                                <h3 class="fr">username</h3>
+                                            </div>
+                                        </div>
+                                        <div class="c-4 fl">
+                                            <p class="jifen"><span></span></p>
+                                        </div>
+                                        <div class="c-4 fl">
+                                            <a href="index.html" class="jifen" target="_blank">马上使用</a>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <!-- -->
+                                    </div>
+
+                                    <div>
+                                        <ul class="jifenlist">
+                                            <li class="th-01 c-2">积分</li>
+                                            <li class="th-02 c-6">详情</li>
+                                            <li class="th-04 c-2">时间</li>
+                                            <li class="th-04 c-2">备注</li>
+                                        </ul>
+                                        <div id="jifenDetail">
+                                            <!-- -->
+                                            <!--<ul class="jf-list">-->
+                                            <!--<li class="th-01 c-2">20</li>-->
+                                            <!--<li class="th-02 c-6">购买XXXXX</li>-->
+                                            <!--<li class="th-04 c-2">2015.2.23</li>-->
+                                            <!--<li class="th-04 c-2">？</li>-->
+                                            <!--</ul>-->
+                                            <!-- -->
+                                        </div>
+                                        <!--<ul class="jf-list">-->
+                                        <!--<li class="th-01 c-2">20</li>-->
+                                        <!--<li class="th-02 c-6">购买XXXXX</li>-->
+                                        <!--<li class="th-04 c-2">2015.2.23</li>-->
+                                        <!--<li class="th-04 c-2">？</li>-->
+                                        <!--</ul>-->
+
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="addlist" class="tab-pane fade in ">
+                        <iframe src="addressList.html" width="950px" height="1600px" frameborder="0"></iframe>
+                    </div>
+                    <div id="perdata" class="tab-pane fade in ">
+                        <iframe src="personalData.html" width="950px" height="1600px" frameborder="0"></iframe>
+                    </div>
+
+                    <div id="safeset" class="tab-pane fade in">
+                        <div class="safe_set">
+                            <div class="safe_content">
+                                <h3 class="safe_title">安全设置</h3>
+
+                                <!--<div class="safe_range">-->
+                                <!--<div class="srange"><span>你的账户安全等级：</span><span class="safe">高</span>-->
+                                <!--<span class="safe_middle">中</span><span class="unsafe">低</span>-->
+                                <!--</div>-->
+                                <!--安全等级暂无-->
+                                <!--<div class="progress">-->
+                                <!--<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80"-->
+                                <!--aria-valuemin="0"-->
+                                <!--aria-valuemax="100" id="degree">-->
+                                <!--</div>-->
+                            </div>
+                        </div>
+                        <!--<div class="info_name">-->
+                        <!--<span class="glyphicon glyphicon-record r_style"></span>-->
+
+                        <!--<div class="state">安全</div>-->
+                        <!--<div class="title">登录名：</div>-->
+                        <!--<span class="info">某某某</span>-->
+                        <!--</div>-->
+                        <!--<div class="info_number">-->
+                        <!--<span class="glyphicon glyphicon-record r_style"></span>-->
+                        <!--<span class="state">安全</span>-->
+                        <!--<div class="title">绑定手机号：</div>-->
+                        <!--<div class="info"></div>-->
+                        <!--<div class="setting">设置</div>-->
+                        <!--<div class="pnumber">-->
+                        <!--<p class="confirm">您已成功认证手机号码！</p>-->
+
+                        <!--<p>你已认证号码：-->
+                        <!--<span></span>-->
+                        <!--</p>-->
+                        <!--<button type="buttom" class="btn_style" onclick="eg.changePnumber2()">更换号码</button>-->
+                        <!--</div>-->
+                        <!--<div class="new_pnumber">-->
+                        <!--<p>当前手机号码：<span class="phone_number"></span>-->
+
+                        <!--<p><label>新手机号码：</label><input type="text" size="30" id="telephone"><span-->
+                        <!--class="error1">输入的格式不正确，请重新输入!</span></span>-->
+                        <!--</p>-->
+                        <!--<button type="button" class="btn_style" onclick="eg.changePnumber3()">确认</button>-->
+                        <!--</div>-->
+                        <!--<div class="new_result">-->
+                        <!--<p class="check_new">修改成功~~</p>-->
+
+                        <!--<p class="check_new">请登录您的邮箱进行验证</p>-->
+                        <!--<button type="button" class="btn_style" onclick="eg.changePnumber4()">确定</button>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="info_email">-->
+                        <!--<span class="glyphicon glyphicon-record r_style"></span>-->
+
+                        <!--<div-->
+                        <!--class="state">不安全-->
+                        <!--</div>-->
+                        <!--<div-->
+                        <!--class="title">邮箱验证：-->
+                        <!--</div>-->
+                        <!--<div class="info">未设置</div>-->
+                        <!--<div-->
+                        <!--class="setting">设置-->
+                        <!--</div>-->
+                        <!--<div class="email_confirm">-->
+                        <!--<label>邮箱：</label><input name="emial" type="email">-->
+                        <!--<button type="submit" class="btn_style">发送认证邮件</button>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <div class="info_password">
+                            <span class="glyphicon glyphicon-record r_style"></span>
+
+                            <div class="state">安全</div>
+                            <div class="title">登录密码</div>
+                            <div class="info">已设置</div>
+                            <div class="setting">修改密码</div>
+                            <div class="set_password">
+                                <div class="change-grid">
+                                    <input id="psw" type="password" class="form-control" placeholder="请输入原有的密码">
+                                    <span class="psw1msg msg _none"></span>
+                                </div>
+                                <div class="change-grid _none">
+                                    <input id="newpsw" type="password" class="form-control" placeholder="请输入新密码">
+                                    <span class="pswmsg msg _none"></span>
+
+                                </div>
+                                <div class="change-grid _none">
+                                    <input id="checknum" type="text" class="form-control" placeholder="验证码">
+                                    <input id="checkbtn" type="button" value="点击获取验证码">
+                                    <span class="checkmsg msg _none"></span>
+                                </div>
+                                <button type="button" class="btn_style" id="check">确定</button>
+                                <button type="button" class="btn_style _none" id="modify">修改</button>
+                                <p id="tip"></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="container">
+        <img src="images/pay.png" class="img-responsive" alt=""/>
+        <ul class="footer_nav">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">新手帮助</a></li>
+            <li><a href="#">权益保障</a></li>
+            <li><a href="#">商家服务</a></li>
+            <li><a href="#">客服中心</a></li>
+            <li><a href="#">投诉建议</a></li>
+            <li><a href="addressList.html">联系我们</a></li>
+        </ul>
+        <p class="copy">Copyright &copy; 2015.便利店 </p>
+    </div>
+</div>
+<!--删除提示-->
+<div class="modal fade " id="deletemodle" role="dialog">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content" style="height: auto;width:auto;">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <span style="font-size: 14px">你确定要删除这笔订单吗？<br>删除后将永久删除</span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary">确定</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="returnModal" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close"
+                        data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    申请退货/换货
+                </h4>
+            </div>
+            <div id="iteminf"></div>
+            <div class="modal-body">
+                <div class="re-main clearfix">
+                    <div class="re-inf">
+                        <p class="follow-tip">请选择类型：</p>
+                        <ul>
+
+                            <li data-id="0"><span class="re-btn">我要退货且退款</span></li>
+                            <li data-id="0"><span class="re-btn" data-id="0">我要退款（无需退货）</span></li>
+                            <li data-id="1"><span class="re-btn">我要换货</span></li>
+
+                        </ul>
+
+                        <textarea class="re-text" placeholder="填写退货/换货说明，处理审核更快" id="returnInf" cols="30" rows="4"
+                                  style="color: rgb(204,204,204)"></textarea>
+                        <p class="follow-tip">最多200个字</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                        data-dismiss="modal">取消
+                </button>
+                <button type="button" class="btn btn-primary">
+                    确认
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.luara.0.0.1.min.js"></script>
+<!--<script src="js/provinceselect.js"></script>-->
+<script src="js/jquery.cookie.js"></script>
+<script src="js/fakeLoader.js"></script>
+<script src="js/topjs.js"></script>
+<script src="js/usercenter.js"></script>
+</body>
+</html>

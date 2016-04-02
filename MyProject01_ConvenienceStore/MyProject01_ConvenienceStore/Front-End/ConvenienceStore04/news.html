@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>公告发布</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/datepicker3.css" rel="stylesheet">
+    <link href="css/bootstrap-table.css" rel="stylesheet">
+    <link href="css/styles_back.css" rel="stylesheet">
+    <link href="css/onsaleItems.css" rel="stylesheet">
+    <link href="css/news.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#sidebar-collapse">
+                <span class="sr-only">后台管理系统</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><span>星星</span>便利店</a>
+            <ul class="user-menu">
+                <li class="dropdown pull-right">
+                    <a href="#" id="user" class="dropdown-toggle" data-toggle="dropdown"><span
+                            class="glyphicon glyphicon-user"></span> User <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> </a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-cog"></span> 设置</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> 退出</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+    <ul class="nav menu">
+        <li class=""><a href="index_Back.html"><span class="glyphicon glyphicon-dashboard"></span>首页</a></li>
+        <li class="parent ">
+            <a href="#">
+                <span class="glyphicon glyphicon-list"></span> 外卖管理
+                <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right">
+                    <em class="glyphicon glyphicon-s glyphicon-minus"></em></span>
+            </a>
+            <ul class="children collapse in" id="sub-item-1">
+                <li class="">
+                    <a class="" href="widgets.html">
+                        <span class="glyphicon glyphicon-share-alt"></span>订单管理
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="returnItems.html">
+                        <span class="glyphicon glyphicon-share-alt"></span>退换货管理
+                    </a>
+                </li>
+
+            </ul>
+        </li>
+        <li class="parent">
+            <a href=""><span class="glyphicon glyphicon-list-alt"></span>营销管理
+            <span data-toggle="collapse" href="#sub-item-4" class="icon pull-right">
+                <em class="glyphicon glyphicon-s glyphicon-minus"></em></span></a>
+
+            <ul class="children collapse in" id="sub-item-4">
+                <li class="role-2">
+                    <a href="promoManage.html"><span class="glyphicon glyphicon-share-alt"></span>促销管理</a>
+                </li>
+                <li>
+                    <a class="" href="hotManage.html">
+                        <span class="glyphicon glyphicon-share-alt"></span>热门商品管理
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="">
+                        <span class="glyphicon glyphicon-share-alt"></span>优惠券管理
+                    </a>
+                </li>
+
+            </ul>
+        </li>
+        <li class="parent active ">
+            <a href="#">
+                <span class="glyphicon glyphicon-list"></span> 信息管理 <span data-toggle="collapse" href="#sub-item-2"
+                                                                          class="icon pull-right"><em
+                    class="glyphicon glyphicon-s glyphicon-minus"></em></span>
+            </a>
+            <ul class="children collapse in" id="sub-item-2">
+                <li class="role-2 choose">
+                    <a class="" href="news.html">
+                        <span class="glyphicon glyphicon-share-alt"></span>公告发布
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="ItemsCatalog.html">
+                        <span class="glyphicon glyphicon-share-alt"></span>商品目录管理
+                    </a>
+                </li>
+
+                <li class="role-2">
+                    <a class="" href="adupload.html">
+                        <span class="glyphicon glyphicon-share-alt"></span>广告图片管理
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li ><a href="SysStatistic.html"><span class="glyphicon glyphicon-pencil"></span> 系统统计</a></li>
+        <li class="parent"><a href=""><span class="glyphicon glyphicon-info-sign"></span>信息配置
+            <span data-toggle="collapse" href="#sub-item-3" class="icon pull-right">
+                <em class="glyphicon glyphicon-s glyphicon-minus"></em></span></a>
+            <ul class="children collapse in" id="sub-item-3">
+                <li class="role-2">
+                    <a class="" href="manager.html">
+                        <span class="glyphicon glyphicon-share-alt"></span>后台管理员管理
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="registerUser.html">
+                        <span class="glyphicon glyphicon-share-alt"></span>前台注册用户
+                    </a>
+                </li>
+                <li class="role-2">
+                    <a class="" href="Sysconfig.html">
+                        <span class="glyphicon glyphicon-share-alt"></span>系统配置
+                    </a>
+                </li>
+
+            </ul>
+        </li>
+        <li role="presentation" class="divider"></li>
+        <!--<li><a href="login.html"><span class="glyphicon glyphicon-user"></span> Login Page</a></li>-->
+    </ul>
+
+</div>
+
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    <div class="row">
+        <ol class="breadcrumb">
+            <li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
+            <li class="active">公告管理</li>
+        </ol>
+    </div><!--/.row-->
+
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">公告发布</h1>
+        </div>
+    </div>
+    <!--/.row-->
+    <ul id="myTab" class="nav nav-tabs">
+        <li class="active">
+            <a href="#news" data-toggle="tab">
+                发布公告
+            </a>
+        </li>
+        <li><a href="#releaseNew" data-toggle="tab">公告记录</a></li>
+
+    </ul>
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade in active" id="news">
+            <div class="editIt">
+                <div>
+                    <i>*</i><span>标题</span>
+                    <input class="searchItems" id="Title" type="text" maxlength="25" style="width:355px">
+                </div>
+                <div>
+                    <i>*</i><span>内容</span>
+                    <textarea name="a" id="content" maxlength="100" style="width:380px;height:200px;"></textarea>
+                </div>
+                <div>
+                    <i>*</i><span> url </span>
+                    <input id="url" type="url">
+                </div>
+                <div>
+                    <button id="publishnews" class="btn btn-primary " style="width: 82px; margin-left: 100px">发布
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="releaseNew">
+            <table>
+                <thead>
+                <tr>
+                    <td><input type="checkbox" id="allSelect" value="" onchange="selectall()"><span>全选</span>
+                        <button type="submit" class="btn btn-primary " id="batchDelete">批量删除</button>
+                    </td>
+                    <td>公告标题</td>
+                    <td>公告内容</td>
+                    <td>url</td>
+                    <td>时间</td>
+                    <td>管理员</td>
+                    <td>操作</td>
+                </tr>
+                </thead>
+                <tbody>
+                <!--<tr>-->
+                <!--<td class="item_all"><input type="checkbox" class="cart-checkbox cart-checkbox-checked" value="">-->
+                <!--</td>-->
+                <!--<td>商品大降价！！！</td>-->
+                <!--<td>春节来临，商品大促销</td>-->
+                <!--<td>https://hao.360.cn/?src=lm&ls=n6075a44d8c</td>-->
+                <!--<td>2016-03-09 12:02</td>-->
+                <!--<td>管理员</td>-->
+                <!--<td><a>删除</a></td>-->
+                <!--</tr>-->
+                </tbody>
+            </table>
+            <!--<table class="table" style="margin-top: 20px">-->
+            <!--<thead class="itemlist">-->
+            <!--<tr>-->
+            <!--<th><input type="checkbox" id="allSelect" value="" onchange="selectall()"><span-->
+            <!--style="display: inline">全选</span>-->
+            <!--<button type="submit" class="btn btn-primary " id="batchDelete"style="width: 82px;">批量删除-->
+            <!--</button>-->
+            <!--</th>-->
+            <!--<th>公告标题</th>-->
+            <!--<th>公告内容</th>-->
+            <!--<th>url</th>-->
+            <!--<th>时间</th>-->
+            <!--<th>管理员</th>-->
+            <!--<th>操作</th>-->
+            <!--</tr>-->
+            <!--</thead>-->
+            <!--<tbody id="newsContent">-->
+            <!--<tr>-->
+            <!--<td class="item_all"><input type="checkbox" class="cart-checkbox cart-checkbox-checked" value="">-->
+            <!--</td>-->
+            <!--<td>商品大降价！！！</td>-->
+            <!--<td>春节来临，商品大促销</td>-->
+            <!--<td>https://hao.360.cn/?src=lm&ls=n6075a44d8c</td>-->
+            <!--<td>2016-03-09 12:02</td>-->
+            <!--<td>管理员</td>-->
+            <!--<td><a>删除</a></td>-->
+            <!--</tr>-->
+            <!--</tbody>-->
+            <!--</table>-->
+            <div class="pag">
+                <ul class="pagination">
+                    <!--<li><a href="#" >&laquo;</a></li>-->
+                    <!--<li><a href="#">1</a></li>-->
+                    <!--<li><a href="#">2</a></li>-->
+                    <!--<li><a href="#">3</a></li>-->
+                    <!--<li><a href="#">…</a></li>-->
+                    <!--<li><a href="#">99</a></li>-->
+                    <!--<li><a href="#">100</a></li>-->
+                    <!--<li><a href="#">&raquo;</a></li>-->
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.cookie.js"></script>
+<script src="js/publicjs.js"></script>
+<script src="js/news.js"></script>
+
+<script>
+
+    !function ($) {
+        $(document).on("click", "ul.nav li.parent > a > span.icon", function () {
+            $(this).find('em:first').toggleClass("glyphicon-minus");
+        });
+        $(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
+    }(window.jQuery);
+
+
+</script>
+
+</body>
+</html>

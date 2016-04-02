@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网上便利店—订单支付</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/changge.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/addlist.css">
+    <link href="css/fakeLoader.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+
+<div id="fakeLoader"></div>
+<div class="header_top">
+    <div class="container">
+        <div class="header_top-box">
+            <div class="header-top-left">
+                <div class="hd-login label box ">
+                    <span class="hd_hi">Hi,</span>
+                    请
+                    <a id="global-hd-loginlink" rel="nofollow" href="login.html">登录</a>
+                    /
+                    <a rel="nofollow" href="register.ht ml">注册</a>
+                    <div class=" label box haslogin" style="display: none;">
+                        <span class="hd_hi">Hi,</span>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-info" id="username"></button>
+                            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="caret"></span>
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="usercenter.html">个人中心</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="http://192.168.113.14:8080/BSMD/logout.do" id="loginout">退出</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                <div class="box1 ">
+                    <span class="hd_hi">收货地：</span>
+                    <input id="cityname" type="text" class="" data-positon="" data-cityname="" style="width: 200px;"
+                           placeholder="选择送货地址">
+                    <!-- 地址选择-->
+                    <div class=" hd-prochg" style="display: none;">
+                        <ul class="nav nav-tabs">
+                            <li class="active" id="toppro"><a href="#pro" data-toggle="tab">福建省</a></li>
+                            <li class="_none" id="topcit"><a href="#cit" data-toggle="tab">福州市</a></li>
+                            <li class="_none" id="topear"><a href="#ear" data-toggle="tab">鼓楼区</a></li>
+                            <li class="_none" id="topvil"><a href="#vil" data-toggle="tab">阳光小区</a></li>
+                        </ul>
+                        <div class="pro-wrap">
+                            <div class="tab-pane fade in active" id="pro" data-name="">
+
+                                <a href="#">福建省</a>
+
+                            </div>
+                            <div class="tab-pane fade in" id="cit" data-name="">
+
+
+                            </div>
+                            <div class="tab-pane fade in" id="ear" data-name="">
+
+
+                            </div>
+                            <div class="tab-pane fade in" id="vil" data-name="">
+
+
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="cssmenu">
+                <ul>
+                    <li class="active"><a href="usercenter.html">我的便利店</a></li>
+                    <li><a href="wishlist.html">收藏夹</a></li>
+                    <li><a href="login.html">掌上便利店</a></li>
+                    <li><a href="register.html">客户服务</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<div class="head-step">
+    <div class="container">
+        <div class="cart-head-step">
+            <div class="col-lg-6" style="font-size: 16px;font-weight:bold;font-family: Consolas;color:#666666">
+                网上便利店 <span style="font-size: 14px;color:#dddddd">订单支付</span>
+            </div>
+            <div class="col-lg-6">
+                <ul class="cart-step">
+                    <li class="process-step">1</li>
+                    <li>
+                        <hr class="stephr" style="width:100px;" noshade>
+                    </li>
+                    <li class="process-step">2</li>
+                    <li>
+                        <hr class="stephr" style="width:100px;" noshade>
+                    </li>
+                    <li class="process-step">3</li>
+                    <li>
+                        <hr class="stephr">
+                    </li>
+                    <li>
+                        <hr class="stephr-no" style="width: 50px;" noshade>
+                    </li>
+                    <li class="process-step-no">4</li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="container ">
+        <div class="col-lg-6"></div>
+        <div class="col-lg-6">
+            <div>
+                <ul class="cart-step">
+                    <li class="process-stepb">购物车</li>
+                    <li class="process-stepbn">确认订单</li>
+                    <li class="process-stepbn">支付</li>
+                    <li class="process-stepbn">完成</li>
+                </ul>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+</div>
+<div class="container">
+
+
+<table class="table-bordered table-responsive" >
+    <form class="form-horizontal" role="form">
+    <legend class="title" >支付方式</legend>
+    <div class="form-group">
+
+
+            <h3><input type="radio"  >个人账户支付</h3><br>
+            <label  class=" control-label"> 您当前的账户余额为：</label>XXX.XX元<br>
+
+
+            <label for="password" class=" control-label">请输入支付密码：</label>
+                <input type="text" id="password"
+                       placeholder="请输入支付密码">
+            <a href="#"> 忘记密码</a>
+            <br>
+        <hr size="1" color="#F54D56">
+
+        <div class="onlinepay">
+                   <h3><input type="radio">在线支付</h3>
+            <label  class=" control-label"> 通过网上银行或支付平台支付</label><br>
+            <div class="col-sm-4" >
+                <img src="images/jianshebank.jpg">
+            </div>
+            <div class="col-sm-4">
+                <img src="images/nongyebank.jpg">
+            </div>
+            <div class="col-sm-4">
+                <img src="images/gongshangbank.jpg">
+            </div>
+            <br>
+            <a href="#"><img src="images/zhifubao.jpg"></a>
+
+        </div>
+
+        <hr size="1" color="#F54D56">
+        <div class="left">
+            <button type="submit" class="btn btn-danger" ><a href="pay_success.html" >确认支付</a></button>
+        </div>
+    </div>
+   </form>
+</table>
+</div>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!--<script src="js/jquery.spinner.js"></script>-->
+<!--<script src="js/provinceselect.js"></script>-->
+    <script src="js/fakeLoader.js"></script>
+<script src="js/jquery.cookie.js"></script>
+</body>
+</html>
